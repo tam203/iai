@@ -11,7 +11,6 @@ DEPLOYMENT_NAME = os.getenv("DEPLOYMENT_NAME")
 ENDPOINT_URL = os.getenv("ENDPOINT_URL")
 
 
-
 DEFAULT_SEARCH_QUERIES = [
     "topic:python language:python stars:>1000",
     "org:google language:go",
@@ -21,11 +20,22 @@ GOVERNMENT_ACCOUNTS_URL = "https://raw.githubusercontent.com/github/government.g
 
 TARGET_REPOS = [
     "alphagov",
-    "i-dot-ai"]
-# ,
-#     "canada-ca",
-#     "govtechsg",
-#     "GSA",
-#     "ec-europa",
-#     "opengovsg",
-# ]
+    "i-dot-ai",
+    "canada-ca",
+    "govtechsg",
+    "GSA",
+    "ec-europa",
+    "opengovsg",
+]
+
+TOPIC_LIST = [
+    "ai",
+    "data",
+    "data science",
+    "cybersecurity",
+    "ai agents",
+    "ai ethics",
+    "ai regulation",
+    "automation",
+    "innovation",
+]

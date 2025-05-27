@@ -25,105 +25,11 @@ class GitHubScanner:
             logger.warning(
                 "GitHub API token is not set or is using a default placeholder. API rate limits may be encountered."
             )
-        # Initialize your GitHub API client here if you use one, e.g., PyGithub
-        # self.github_client = Github(self.api_token)
 
-    def _fetch_projects_from_github(self, query: str) -> List[Dict[str, Any]]:
-        """
-        Placeholder: Fetches project data from GitHub based on a query.
-        Replace this with your actual API call logic from the notebook.
-        This might involve pagination.
-        """
-        logger.info(f"Fetching projects for query: {query} (Run ID: {self.run_id})")
-        # Example:
-        # response = requests.get(f"https://api.github.com/search/repositories?q={query}",
-        #                         headers={"Authorization": f"token {self.api_token}"})
-        # response.raise_for_status()
-        # raw_project_data = response.json().get("items", [])
-
-        # Simulate fetching data
-        raw_project_data = [
-            {
-                "id": 1,
-                "name": f"project_A_from_{query.replace(':', '_')}",
-                "stars": 100,
-                "url": "http://example.com/a",
-            },
-            {
-                "id": 2,
-                "name": f"project_B_from_{query.replace(':', '_')}",
-                "stars": 200,
-                "url": "http://example.com/b",
-            },
-        ]
-        logger.info(f"Fetched {len(raw_project_data)} raw projects for query: {query}")
-
-        # If you have intermediate temporary files from fetching, save them here:
-        # temp_fetch_file = get_filepath_in_run_data(self.run_id, f"raw_fetch_{query.replace(':', '_').replace('>', 'gt')}.json")
-        # with open(temp_fetch_file, 'w') as f:
-        #     json.dump(raw_project_data, f, indent=2)
-        # logger.info(f"Saved raw fetched data to {temp_fetch_file}")
-
-        return raw_project_data
-
-    def _process_and_catalogue_projects(
-        self, raw_projects: List[Dict[str, Any]]
-    ) -> pd.DataFrame:
-        """
-        Placeholder: Processes raw project data into a catalogued format.
-        Replace this with your data transformation logic from the notebook.
-        """
-        logger.info(
-            f"Processing {len(raw_projects)} raw projects into a DataFrame. (Run ID: {self.run_id})"
-        )
-        catalogued_projects = []
-        for project in raw_projects:
-            # Example processing:
-            catalogued_projects.append(
-                {
-                    "project_name": project.get("name"),
-                    "repository_url": project.get("url"),
-                    "stars_count": project.get("stars"),
-                    "details": project,  # or selected fields
-                }
-            )
-        logger.info(f"Processed into {len(catalogued_projects)} catalogued projects.")
-        if not catalogued_projects:
-            return pd.DataFrame()  # Return empty DataFrame if no projects
-        return pd.DataFrame(catalogued_projects)
-
-    def scan_and_save_catalog(
-        self,
-        search_queries: List[str],
-        output_filename: str = "catalogued_projects.json",
-    ):
-        """
-        Orchestrates the scanning, processing, and saving of the project catalog.
-        """
-        all_project_dfs: List[pd.DataFrame] = []
-        for query in search_queries:
-            raw_data = self._fetch_projects_from_github(query)
-            processed_df = self._process_and_catalogue_projects(raw_data)
-            if not processed_df.empty:
-                all_project_dfs.append(processed_df)
-
-        output_path = get_filepath_in_run_data(self.run_id, output_filename)
-
-        if not all_project_dfs:
-            logger.info("No projects found to catalogue. Saving an empty catalog.")
-            final_catalog_df = pd.DataFrame()
-        else:
-            final_catalog_df = pd.concat(all_project_dfs, ignore_index=True)
-
-        final_catalog_df.to_json(output_path, orient="records", indent=2, lines=False)
-        logger.info(
-            f"Successfully saved catalog of {len(final_catalog_df)} projects to {output_path}"
-        )
-        return output_path
 
     # --- Methods for Government Repositories Scan ---
 
-    def _fetch_gov_github_accounts_yaml(
+    def fetch_gov_github_accounts_yaml(
         self, url: str
     ) -> Optional[Dict[str, List[str]]]:
         """Fetches and parses the YAML file listing government GitHub accounts."""
@@ -277,9 +183,20 @@ class GitHubScanner:
         output_path = get_filepath_in_run_data(self.run_id, output_filename)
 
         if not gov_repos_data:
-            logger.info(f"No government repository data to save. Creating an empty CSV: {output_path}")
+            logger.info(
+                f"No government repository data to save. Creating an empty CSV: {output_path}"
+            )
             # Define columns for an empty CSV to ensure consistency
-            columns = ['account', 'name', 'description', 'stars', 'forks', 'language', 'url', 'readme_snippet']
+            columns = [
+                "account",
+                "name",
+                "description",
+                "stars",
+                "forks",
+                "language",
+                "url",
+                "readme_snippet",
+            ]
             df = pd.DataFrame(columns=columns)
         else:
             df = pd.DataFrame(gov_repos_data)
@@ -288,7 +205,9 @@ class GitHubScanner:
             # df = df.reindex(columns=columns_order) # Ensures all columns exist, in order, filling missing with NaN
 
         df.to_csv(output_path, index=False, encoding="utf-8")
-        logger.info(f"Saved government repositories catalog ({len(df)} rows) to {output_path}")
+        logger.info(
+            f"Saved government repositories catalog ({len(df)} rows) to {output_path}"
+        )
         return str(output_path)
 
     def scan_and_save_gov_repos_catalog(
@@ -310,7 +229,7 @@ class GitHubScanner:
             )
             return None
 
-        gov_yaml_data = self._fetch_gov_github_accounts_yaml(url_to_fetch)
+        gov_yaml_data = self.fetch_gov_github_accounts_yaml(url_to_fetch)
         if not gov_yaml_data:
             return None
 

@@ -1,0 +1,644 @@
+name,description,stars,forks,language,url,readme,account,topic,summary
+accessible-autocomplete,"An autocomplete component, built to be accessible.",942,149,JavaScript,https://github.com/alphagov/accessible-autocomplete,"# Accessible autocomplete
+
+The accessible autocomplete is a component that helps users choose answers from a list you provide. You can also use it to ",alphagov,accessibility-tools,"The repository provides an accessible autocomplete component designed to help users select answers from a predefined list. It ensures improved usability and accessibility, adhering to standards for users with disabilities. The component can be customized and integrated into various applications to enhance user experience."
+hamagen-react-native,Israel's Ministry of Health's COVID-19 Exposure Prevention App,510,153,TypeScript,https://github.com/MohGovIL/hamagen-react-native,"# Hamagen
+![Build](https://github.com/MohGovIL/hamagen-react-native/workflows/Build/badge.svg)
+[![CodeCov](https://codecov.io/gh/MohGovIL/hamagen-reac",MohGovIL,public-health-tech,"Hamagen is a COVID-19 exposure prevention app developed by Israel's Ministry of Health. Built using React Native, the app helps users determine potential exposure to confirmed COVID-19 cases by cross-referencing their location history with epidemiological data. It prioritizes user privacy by conducting all data processing locally on the device. The repository includes the app's source code, build instructions, and relevant documentation."
+falcon,Falcon: The Hyperledger Fabric Deployment Helper for Kubernetes is an open-source project designed to streamline the deployment and management of Hyperledger Fabric based blockchain networks on K8.,403,42,Smarty,https://github.com/npci/falcon,"## Falcon: Hyperledger Fabric Deployment Helper for Kubernetes
+
+[![NPCIOSS Lifecycle](https://img.shields.io/badge/oss_lifecyce-active-green)](OSSMETA",npci,blockchain-deployment,"Falcon is an open-source tool designed to simplify the deployment and management of Hyperledger Fabric blockchain networks on Kubernetes. It provides automated workflows and configurations to streamline setup, ensuring scalability and ease of use for blockchain applications. Ideal for developers and organizations working with Hyperledger Fabric, Falcon enhances efficiency and reduces manual effort in Kubernetes-based environments."
+pdf2md,A PDF to Markdown converter,315,57,JavaScript,https://github.com/opengovsg/pdf2md,"# pdf2md
+
+JavaScript npm library to parse PDF files and convert them into Markdown
+
+## Major Changes
+
+See [Releases](https://github.com/opendocsg/pdf2",opengovsg,pdf-to-markdown,"**pdf2md** is a JavaScript npm library designed to parse PDF files and convert them into Markdown format. It enables users to streamline the process of transforming PDF content into an editable, lightweight Markdown structure. For details on updates and changes, users can refer to the [Releases](https://github.com/opendocsg/pdf2)."
+FormSG,Form builder for the Singapore Government,298,95,TypeScript,https://github.com/opengovsg/FormSG,"<p align=""left"">
+  <a href=""https://form.gov.sg""><img src=""https://file.go.gov.sg/form-logo-background-rmved.png""></a>
+</p>
+
+---
+
+[![Contributor Coven",opengovsg,government-tech,"This repository provides a form builder platform designed for the Singapore Government, enabling the creation and management of digital forms. It features tools tailored for secure, efficient, and user-friendly form generation, catering to public sector needs. The platform supports easy deployment and scalability while adhering to government standards."
+autenticacao.gov,"Middleware Oficial de Identificação Eletrónica em Portugal - Cartão de Cidadão, da Chave Móvel Digital e Sistema de Certificação de atributos profissionais",190,34,C++,https://github.com/amagovpt/autenticacao.gov,"# Middleware Oficial de Identificação Eletrónica em Portugal - Cartão de Cidadão, da Chave Móvel Digital e Sistema de Certificação de atributos profis",amagovpt,government-tech,"This GitHub repository provides the official middleware for electronic identification in Portugal. It includes tools for the Citizen Card, Digital Mobile Key, and Professional Attribute Certification System, enabling secure authentication and digital signature functionalities."
+airflow-pipeline,An Airflow docker image preconfigured to work well with Spark and Hadoop/EMR,174,59,Python,https://github.com/dsaidgovsg/airflow-pipeline,"# Airflow Pipeline Docker Image Set-up
+
+![CI Status](https://img.shields.io/github/workflow/status/dsaidgovsg/airflow-pipeline/CI/master?label=CI&logo",dsaidgovsg,data,This GitHub repository provides a preconfigured Apache Airflow Docker image optimized for integration with Spark and Hadoop/EMR. It includes an efficient setup for running data pipelines seamlessly in distributed computing environments. The repository appears to focus on simplifying deployment and workflow orchestration in big data ecosystems.
+Open_First_Whitepaper,Open First Whitepaper - Livre blanc Ouvert en premier,171,54,JavaScript,https://github.com/canada-ca/Open_First_Whitepaper,"(Le français suit)
+
+# Open First Whitepaper (DRAFT)
+
+The Treasury Board of Canada Secretariat is writing this whitepaper to pull together our thinking",canada-ca,government-tech,"The ""Open First Whitepaper"" is a draft document being developed by the Treasury Board of Canada Secretariat to consolidate its perspectives on open practices. It aims to outline strategies and principles for adopting openness in government processes, with a specific focus on transparency, collaboration, and innovation. The repository serves as a working space for drafting and refining this whitepaper. Content is bilingual, with portions available in English and French."
+geo-deep-learning,Deep learning applied to georeferenced datasets,168,53,Python,https://github.com/NRCan/geo-deep-learning,"
+![Logo](./docs/img/logo.png)
+
+## **About**
+
+The **Geo-Deep-Learning** project stems from an initiative at NRCan's [CCMEO](https://www.nrcan.gc.ca/ear",NRCan,geospatial-ai,"The **Geo-Deep-Learning** repository focuses on applying deep learning techniques to georeferenced datasets. Developed by NRCan's CCMEO, the project aims to leverage advanced machine learning methods for geospatial analysis and processing. It is designed to enable users to explore, train, and deploy deep learning models for various geospatial applications effectively."
+Taipei-City-Dashboard,The Open-Source Repository of Taipei City Dashboard. Try it out by clicking the link below!,160,559,Python,https://github.com/taipei-doit/Taipei-City-Dashboard,"# <img src='Taipei-City-Dashboard-FE/src/assets/images/TUIC.svg' height='28'> Taipei City Dashboard
+
+## Introduction
+
+Taipei City Dashboard is a data ",taipei-doit,government-tech,The Taipei City Dashboard is an open-source project designed to visualize and interact with data related to Taipei City. It provides users with an accessible dashboard interface for exploring city metrics and statistics. The repository includes resources for the front-end implementation using modern web technologies. Users can try the dashboard via the provided link.
+FGI-GSRx,FGI-GSRx Open Source multi-GNSS software receiver,146,59,MATLAB,https://github.com/nlsfi/FGI-GSRx,"### FGI-GSRx v2.0.1
+
+FGI's GNSS Jamming and Spoofing Datasets can be found [here](https://www.maanmittauslaitos.fi/en/research/research/gnss-specialis",nlsfi,geospatial-ai,"FGI-GSRx is an open-source multi-GNSS software receiver developed by FGI. It supports research and development in GNSS technologies, including resistance to jamming and spoofing. The repository links to GNSS jamming and spoofing datasets for further exploration and testing."
+europa-component-library,ECL - Europa Component Library,136,35,JavaScript,https://github.com/ec-europa/europa-component-library,"# ECL v4 - Europa Component Library
+
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://",ec-europa,design-systems,"ECL (Europa Component Library) is a design system and component library for building consistent and reusable user interfaces, primarily designed for Europa, the European Commission's web platform. The library includes styled components and follows coding standards such as Prettier for code formatting. It aims to streamline UI development and maintain design consistency across projects."
+oobee,"Oobee (formerly known as Purple A11y) is a customisable, automated web accessibility testing tool that allows software development teams to find and fix accessibility problems to improve persons with disabilities (PWDs) access to digital services.",135,46,EJS,https://github.com/GovTechSG/oobee,"# Oobee (CLI)
+
+[Oobee](https://go.gov.sg/oobee-cli) (formerly known as Purple A11y) is a customisable, automated accessibility testing tool that allow",govtechsg,accessibility-tools,"Oobee is a customizable, automated web accessibility testing tool designed to help software development teams identify and address accessibility issues, enhancing digital service access for people with disabilities (PWDs). Previously known as Purple A11y, it is available as a CLI tool and aims to streamline the process of improving web accessibility. The tool supports automated testing and customization to fit various project needs."
+redbox,Bringing Generative AI to the way the Civil Service works,119,48,Jupyter Notebook,https://github.com/i-dot-ai/redbox,[![Integration Tests](https://github.com/i-dot-ai/redbox/actions/workflows/integration.yml/badge.svg?branch=main)](https://github.com/i-dot-ai/redbox/,i-dot-ai,government-tech,"This GitHub repository focuses on integrating generative AI solutions into Civil Service workflows to enhance efficiency and innovation. It includes tools, frameworks, and workflows tailored for public sector use, emphasizing AI-driven optimization. The repository is actively maintained, with integration tests in place, ensuring reliability and robust development."
+GoGovSG,The official link shortener of the Singapore Government,106,39,TypeScript,https://github.com/opengovsg/GoGovSG,"# GoGovSG
+
+[![Build Status](https://travis-ci.com/opengovsg/GoGovSG.svg?branch=develop)](https://travis-ci.com/opengovsg/GoGovSG)
+[![Coverage Status](",opengovsg,government-tech,"GoGovSG is the official link shortener service used by the Singapore Government. Designed to provide trusted and efficient URL shortening, it supports public sector agencies in sharing secure and concise links. The repository includes build status and code coverage badges, showcasing its maintained and tested functionality."
+openprocurement.api,API interface to OpenProcurement database,104,73,Python,https://github.com/openprocurement/openprocurement.api,".. image:: https://travis-ci.org/openprocurement/openprocurement.api.svg?branch=master
+    :target: https://travis-ci.org/openprocurement/openprocurem",openprocurement,government-tech,"The repository provides an API interface for interacting with the OpenProcurement database, enabling efficient access and management of procurement data. It includes tools for seamless integration and adheres to OpenProcurement standards. Continuous integration is implemented via Travis CI for stable and reliable performance."
+awesome-gov-datasets,A curated set of references to useful UK Government datasets ,104,6,Python,https://github.com/i-dot-ai/awesome-gov-datasets,"# Awesome UK Government Datasets
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](h",i-dot-ai,government-tech,"The repository, **Awesome UK Government Datasets**, provides a curated collection of references to valuable datasets published by the UK Government. It is designed to serve as a resource for researchers, developers, and anyone interested in accessing official government data. The project aligns with the ""Awesome"" list format, offering structured and well-maintained links to enhance usability."
+cloud-guardrails,Minimum guardrails for GC's cloud operationalization framework.,98,32,JavaScript,https://github.com/canada-ca/cloud-guardrails,"# GC Cloud Guardrails
+
+([Français](#mesures-de-protection-du-nuage-du-gc))
+
+**The latest version of the GC Cloud Guardrails can be found on [canada.ca",canada-ca,government-tech,"The GC Cloud Guardrails repository outlines the minimum standards for the Canadian Government's cloud operationalization framework. It provides foundational guidelines to ensure secure and compliant cloud usage across GC systems. The latest version of the guardrails is hosted on Canada.ca, serving as a centralized resource for adherence."
+mockpass,A mock SingPass/CorpPass/MyInfo server for dev purposes,95,86,CSS,https://github.com/opengovsg/mockpass,"# MockPass
+
+A mock Singpass/Corppass/Myinfo v3/sgID v2 server for dev purposes
+
+## Quick Start (hosted remotely on Gitpod)
+
+[![Gitpod Ready-to-Code](h",opengovsg,government-tech,"MockPass is a mock server that emulates SingPass, CorpPass, MyInfo v3, and sgID v2 functionalities for development purposes. It can be quickly started remotely using Gitpod, providing developers with a convenient environment for testing and integration without depending on live government services."
+multimodal-learning-hands-on-tutorial,No description,93,13,Jupyter Notebook,https://github.com/dsaidgovsg/multimodal-learning-hands-on-tutorial,"# Classifying Multimodal Data using Transformers
+
+## Motivation
+The increasing prevalence of multimodal data in our society has led to the increased n",dsaidgovsg,multimodal-data-processing,"This repository explores the use of Transformers for classifying multimodal data, addressing the growing significance of multimodal information in modern contexts. It appears to focus on leveraging advanced deep learning techniques to handle and integrate multiple data modalities effectively. Specific implementation details or datasets may not be included in the visible README fragment."
+accessibility-tool-audit,Automated accessibility tools audit,84,31,HTML,https://github.com/alphagov/accessibility-tool-audit,"# Accessibility tool audit
+
+Automated accessibility checkers can be used to help identify accessibility issues in digital services. They're good for f",alphagov,accessibility-tools,This GitHub repository focuses on auditing automated accessibility tools to identify accessibility issues in digital services. It provides resources and guidance on leveraging these tools effectively to enhance accessibility. The repository aims to support developers and designers in creating more inclusive digital experiences.
+terraform-modules,Reusable Terraform modules,78,23,HCL,https://github.com/dsaidgovsg/terraform-modules,"# Terraform modules
+
+This repository contains a set of (opinionated) [Terraform](https://www.terraform.io/)
+[modules](https://www.terraform.io/docs/mo",dsaidgovsg,infrastructure-as-code,"This GitHub repository offers a collection of reusable and opinionated Terraform modules designed to simplify infrastructure as code deployment. The modules are tailored for specific use cases, aligning with best practices. This resource is suitable for developers looking to standardize and accelerate their Terraform-based workflows."
+PCTF-CCP,Pan-Canadian Trust Framework | Cadre de Confiance Pancanadien,77,13,CSS,https://github.com/canada-ca/PCTF-CCP,"# Public Sector Profile of the Pan-Canadian Trust Framework | Cadre de Confiance pancanadien
+
+## Overview
+
+The latest update [PCTF Version 1.5 Consult",canada-ca,government-tech,"The GitHub repository contains the Public Sector Profile of the Pan-Canadian Trust Framework (PCTF), designed to establish standards for digital identity and trust across Canada. The framework ensures consistency, security, and interoperability in digital services for public sector organizations. It includes resources to support the implementation and consultation of PCTF Version 1.5. The repository focuses on enhancing trust in digital interactions within a Canadian context."
+welcome,Start here! readme for our organization / Commencez ici! readme pour notre organisation,70,11,None specified,https://github.com/canada-ca/welcome,"# Welcome
+
+Welcome to the Canada-ca repository where we invite you to
+build on ideas and prototype methods for engaging Canadians and open public
+poli",canada-ca,government-tech,The Canada-ca repository serves as a starting point for collaboration and innovation focused on engaging Canadians and developing open public policy methods. It invites contributions and prototyping of ideas to enhance public engagement.
+repos,Collection of repos to help develop habesha apps. Created by @nathenapse,65,22,HTML,https://github.com/ethiopian/repos,"
+Useful Projects (Repos) related to Ethiopia
+==============================
+
+This repository is a collection of repos that are concerned with developi",ethiopian,ethiopian-app-development,"This GitHub repository, created by @nathenapse, serves as a collection of resources and repositories aimed at supporting the development of apps and projects related to Ethiopian culture, community, or needs (""Habesha apps""). It provides a curated list of useful tools and projects focused on Ethiopia."
+postmangovsg,Templated message sending for public officers,64,20,TypeScript,https://github.com/opengovsg/postmangovsg,"<a href=""https://postman.gov.sg""><img src=""frontend/src/assets/img/brand/app-logo.svg"" title=""Postman"" alt=""Postman.gov.sg""></a>
+
+# Postman.gov.sg
+
+> ",opengovsg,government-tech,"Postman.gov.sg is a platform designed to streamline templated message sending for public officers. It provides tools for crafting, managing, and dispatching communications efficiently, ensuring consistency in messaging. The repository includes the frontend and backend components to support the application's functionality."
+aia-eia-js,Algorithmic Impact Assessment - Évaluation de l'incidence algorithmique (TS/JS),63,43,Vue,https://github.com/canada-ca/aia-eia-js,"[![Build Status](https://travis-ci.com/canada-ca/aia-eia-js.svg?branch=master)](https://travis-ci.com/canada-ca/aia-eia-js/)
+
+([Français](#gabarit-pou",canada-ca,ai ethics,"The repository provides a tool for conducting Algorithmic Impact Assessments (AIA) using TypeScript and JavaScript. It includes resources and templates designed to evaluate the potential impacts of algorithms, ensuring transparency, fairness, and accountability. The project appears to be maintained by or associated with the Canadian Government, based on its context. It supports both English and French audiences."
+sumo,"'Search for Unidentified Maritime Objects' - JRC, owner GREIDANUS Harm (JRC-ISPRA) <Harm.GREIDANUS@ec.europa.eu>",61,18,Java,https://github.com/ec-europa/sumo,"## IMPORTANT: Software not actively maintained and with known security vulnerabilities
+
+# SUMO
+SUMO is a Java software package to perform ship detecti",ec-europa,geospatial-ai,"SUMO (Search for Unidentified Maritime Objects) is a Java-based software package designed for ship detection. The repository is not actively maintained and contains known security vulnerabilities. Created by JRC (Joint Research Centre), it aims to support maritime observation and analysis. Users should exercise caution due to its outdated state."
+rn-contact-tracing,React Native Library For Contact Tracing Over BLE (Bluetooth Low Energy) To Fight COVID-19 Pandemic,59,16,Java,https://github.com/MohGovIL/rn-contact-tracing,"<p align=""center"">
+  <h1 font-weight=bold align=""center"">RN-Contact-Tracing</h1>
+</p>
+
+
+<p align=""center"">
+  <a href=""https://www.npmjs.com/package/rn",MohGovIL,public-health-tech,RN-Contact-Tracing is a React Native library designed for contact tracing using Bluetooth Low Energy (BLE) technology to help combat the COVID-19 pandemic. It enables cross-platform integration for tracking interactions between users' devices while maintaining privacy and anonymity. The library is available via npm and serves as a tool for developers to create contact tracing applications efficiently.
+atramhasis,An online SKOS editor,59,11,Python,https://github.com/OnroerendErfgoed/atramhasis,"Atramhasis
+==========
+
+.. image:: https://img.shields.io/pypi/v/atramhasis.svg
+        :target: https://pypi.python.org/pypi/atramhasis
+.. image:: htt",onroerenderfgoed,structured-data-editing,"Atramhasis is an online editor for SKOS (Simple Knowledge Organization System) ontologies. It is distributed as a Python package and provides tools for creating, managing, and editing SKOS-based knowledge structures. The project appears to be actively maintained and offers integration with Python environments for streamlined usage."
+digital-playbook-guide-numerique,Government of Canada Digital Playbook / Guide numérique du gouvernement du Canada,58,21,HTML,https://github.com/canada-ca/digital-playbook-guide-numerique,"<!-- markdownlint-disable MD041 -->
+[Français](#user-content-guide-numérique-du-gouvernement-du-canada-ébauche)
+<!-- markdownlint-enable MD041 -->
+
+# ",canada-ca,government-tech,"The GitHub repository contains the Government of Canada Digital Playbook, which serves as a guide for designing and delivering digital services in alignment with principles and best practices. It includes resources, standards, and methodologies to help teams create user-centered, accessible, and secure digital solutions. The playbook promotes innovation, collaboration, and continuous improvement across government services."
+HASlib,Galileo High Accuracy Service decoder library,57,17,Python,https://github.com/nlsfi/HASlib,"# HASlib
+
+The Galileo HAS Decoder library is a repository for Python 3, capable of decoding raw Galileo C/Nav pages received by an E6 capable signal r",nlsfi,satellite-data-processing,The Galileo HAS Decoder library (HASlib) is a Python 3-based tool designed to decode raw Galileo C/Nav pages obtained from E6-capable signals. It facilitates the extraction of high-accuracy service (HAS) data provided by Galileo navigation satellites. The library is tailored for applications requiring precise satellite navigation data processing.
+calendars,Serves /bank-holidays and /when-do-the-clocks-change on GOV.UK,53,16,Ruby,https://github.com/alphagov/calendars,"**calendars functionality is now provided by frontend.**
+
+## Calendars
+
+Serves calendars in a clear and accessible format, along with JSON and iCal ex",alphagov,government-tech,"This repository provides functionality to serve calendar-related data, specifically endpoints for bank holidays and clock changes, on the GOV.UK platform. It delivers the information in clear and accessible formats, including JSON and iCal exports. Note that the calendar functionality is now handled by the frontend."
+cdn-acceptance-tests,CDN Acceptance Tests,50,10,Go,https://github.com/alphagov/cdn-acceptance-tests,"# CDN Acceptance Tests
+
+Acceptance tests for our Content Delivery Network(s).
+
+These are written using Go's [testing][testing] package because it prov",alphagov,automation,This repository contains acceptance tests for verifying the functionality of Content Delivery Networks (CDNs). The tests are implemented using Go's testing package.
+cmits,Configuration Management for IT Systems,47,1,Puppet,https://github.com/afseo/cmits,"-----------------------------------------------------------
+Configuration Management for Information Technology Systems
+----------------------------",afseo,infrastructure-as-code,"This GitHub repository focuses on configuration management for IT systems. It provides tools, scripts, or resources aimed at automating and standardizing system setups and maintenance tasks. The repository likely aids in improving efficiency, consistency, and reliability across IT infrastructures."
+oobee-desktop,"Oobee Desktop (formerly Purple A11y) is a customisable, automated web accessibility testing tool that allows software development teams to find and fix accessibility problems to improve persons with disabilities (PWDs) access to digital services.",46,7,HTML,https://github.com/GovTechSG/oobee-desktop,"# Oobee
+
+Oobee (formerly known as Purple A11y) is an accessibility site scanner - a customisable, automated web accessibility testing tool that allows",govtechsg,accessibility-tools,"Oobee (formerly Purple A11y) is a customizable and automated web accessibility testing tool designed to help software development teams identify and resolve accessibility issues on websites. It aims to improve digital access for persons with disabilities (PWDs) by scanning and reporting potential barriers. The tool provides flexibility for teams to tailor their testing processes to meet specific needs, fostering inclusive digital experiences."
+ezd-analizy-it,No description,46,22,HTML,https://github.com/Ministerstwo-Cyfryzacji/ezd-analizy-it,"Analizy IT projektu B+R EZD RP
+==============================
+
+Niniejsze repozytorium zawiera wybrane analizy IT tworzone w ramach projektu badawczo-r",Ministerstwo-Cyfryzacji,government-tech,"This repository contains selected IT analyses created as part of the R&D project ""EZD RP."" It focuses on research and technical examinations related to the project. Specific details or scope of the analyses are not provided in the README."
+architecture,Repository for the storage of architectural modeling ,44,19,JavaScript,https://github.com/canada-ca/architecture,"# Open Government of Canada Architecture Git Repository
+
+The canada-ca/architecture repository is meant for the storage of architecture models for use",canada-ca,government-tech,"This repository, titled ""Open Government of Canada Architecture Git Repository,"" is designed for storing architectural models. It serves as a centralized location for models utilized by the Canadian government. The repository focuses on organizing and housing resources related to architecture for public or governmental reference."
+camp-design-system,The Design System used at Open Government Products,42,11,TypeScript,https://github.com/opengovsg/camp-design-system,"# Open Government Products Design System
+
+Exports components which follow the design and accessibility guidelines in the OGP design system.
+
+Read the ",opengovsg,design-systems,The Open Government Products Design System repository provides reusable components adhering to OGP's design and accessibility guidelines. These components ensure consistency and accessibility across applications developed by Open Government Products.
+joinup-dev,The Joinup project moved to https://git.fpfis.eu/ec-europa/digit-joinup-reference,41,21,PHP,https://github.com/ec-europa/joinup-dev,"# Joinup website
+
+This is the source code for https://joinup.ec.europa.eu/
+
+[![Build Status](https://status.continuousphp.com/git-hub/ec-europa/joinup",ec-europa,government-tech,"The Joinup repository contains the source code for the Joinup website (https://joinup.ec.europa.eu/), a platform supporting collaboration and sharing of interoperability solutions among public administrations in Europe. The project has been relocated to a new repository at https://git.fpfis.eu/ec-europa/digit-joinup-reference."
+platform-dev,NextEuropa platform,41,41,PHP,https://github.com/ec-europa/platform-dev,"# NextEuropa
+
+## Requirements
+
+* Composer 1
+* PHP Phar extension
+* PhantomJS (in order to run JavaScript during Behat tests)
+* PHP 7.3 or higher
+
+## I",ec-europa,infrastructure-as-code,"NextEuropa is a platform requiring PHP 7.3+ with the PHP Phar extension, Composer 1, and PhantomJS for running JavaScript during Behat tests. It appears to be a software project tailored to specific technical environments and testing needs. The documentation is minimal, primarily outlining prerequisite tools and dependencies for operation."
+themefinder,A topic modelling Python package for analysing one-to-many question-answer data.,39,5,Python,https://github.com/i-dot-ai/themefinder,"# ThemeFinder
+
+ThemeFinder is a topic modelling Python package designed for analysing one-to-many question-answer data (i.e. survey responses, public ",i-dot-ai,qualitative-data-analysis,"ThemeFinder is a Python package for topic modeling, specifically designed to analyze one-to-many question-answer data, such as survey responses or public feedback. It helps identify recurring themes or topics within textual data for insightful analysis."
+ore-ero,Open Resource Exchange - Échange de ressources ouvert,39,35,HTML,https://github.com/canada-ca/ore-ero,"([Français](#échange-de-ressources-ouvert))
+
+# Open Resource Exchange
+
+<https://code.open.canada.ca/en/index.html>
+
+Explore how the Government of Cana",canada-ca,government-tech,"The ""Open Resource Exchange"" is a platform by the Government of Canada aimed at sharing open resources and code to promote transparency, collaboration, and innovation. Its purpose is to provide easily accessible tools, data, and code repositories to facilitate resource sharing among developers and organizations. The repository presumably supports the broader open government initiative in Canada."
+open-source-logiciel-libre,Open Source Software Requirements and Guidance (Draft) - Exigences et guides liés aux logiciels libres (Ébauche),38,18,HTML,https://github.com/canada-ca/open-source-logiciel-libre,"([Français](#logiciels-libres))
+
+# Open Source Software
+
+Treasury Board of Canada Secretariat’s **draft** standards to support the implementation of T",canada-ca,government-tech,"This GitHub repository contains draft standards created by the Treasury Board of Canada Secretariat to support the implementation of open-source software within governmental practices. The repository includes requirements and guidance for utilizing open-source tools effectively, aiming to enhance transparency and collaboration. The documentation is currently a work in progress and is available in both English and French."
+tracker,Track Government of Canada domains for adherence to digital security best practices and federal requirements.,38,10,JavaScript,https://github.com/canada-ca/tracker,"# Tracker
+
+This project tracks Government of Canada domains for adherence to digital security best practices and federal requirements.
+
+## Application",canada-ca,cybersecurity,"This repository is a tracker designed to monitor Government of Canada domains for compliance with digital security best practices and federal requirements. It allows for the assessment and reporting of domain adherence to these standards, ensuring improved digital security. The application is tailored specifically for federal oversight and audits."
+OS-Advisory_Conseil-SO,Open Source Advisory Board - Conseil consultatif du logiciel libre,38,27,JavaScript,https://github.com/canada-ca/OS-Advisory_Conseil-SO,"# OS-Advisory_Conseil-SO
+
+[![Build Status](https://travis-ci.org/canada-ca/OS-Advisory_Conseil-SO.svg?branch=master)](https://travis-ci.org/canada-ca/",canada-ca,government-tech,"The repository ""OS-Advisory_Conseil-SO"" serves as the Open Source Advisory Board for Canada. It is focused on consulting and providing guidance related to open-source software and practices within the Canadian government. The repository includes resources, documentation, and tools to support open-source initiatives and collaboration."
+accelerators_accelerateurs-azure,[AZURE] Tools and templates to accelerate GC service delivery. Outils et modèles pour accélérer la prestation de services du GC.,37,14,PowerShell,https://github.com/canada-ca/accelerators_accelerateurs-azure,"([Français](#gc-accelerateurs-azure))
+
+## Azure Landing Zones for Canadian Public Sector
+
+Microsoft Canada has open-sourced Azure Landing Zone for Can",canada-ca,government-tech,"The repository provides tools and templates to accelerate Azure service delivery for the Canadian public sector, specifically targeting Government of Canada (GC) projects. It offers open-source Azure Landing Zones, which are pre-configured environments designed to streamline cloud adoption and ensure best practices. The resources aim to simplify deployment, improve scalability, and ensure compliance with government standards."
+cloud-guardrails-O365,Recommended configuration guidance for Microsoft O365 / Conseils de configuration recommandés pour Microsoft O365,36,11,JavaScript,https://github.com/canada-ca/cloud-guardrails-O365,"# GC Cloud Guardrails for O365
+
+([Français](#mesures-de-sécurité-dinformatique-en-nuage-du-gc-pour-o365))
+
+This project will host the minimum guardrai",canada-ca,cybersecurity,This repository provides recommended configuration guidelines and minimum security guardrails for Microsoft Office 365 usage within the Government of Canada (GC). It aims to ensure secure and standardized O365 deployments by outlining key practices and controls. The project focuses on enhancing cloud security and compliance in alignment with GC requirements. Content is available in both English and French.
+epitaph_ips,Library for Indoor Positioning purposes,36,8,Dart,https://github.com/it-at-m/epitaph_ips,"# Epitaph
+
+Epitaph has a wide array of utilities to position your user in a building. The project is intended to be used to only calculate the positio",it-at-m,indoor-positioning,Epitaph is a library designed for indoor positioning applications. It provides various utilities to calculate and determine a user's position within a building. The project is specifically focused on precise indoor localization.
+toolkit,Toolkit packaged for Drupal projects based on Robo.,35,42,PHP,https://github.com/ec-europa/toolkit,"# Toolkit
+
+The Toolkit is a composer package designed to speed up the development of Drupal websites in Drupal 9+. Its main core is the robo based bui",ec-europa,automation,"The repository provides a Toolkit for Drupal 9+ projects, packaged as a Composer library to streamline and accelerate Drupal development. Its core functionality is built on Robo, a PHP task runner."
+doc-AUTENTICACAO,Documentação técnica relativa ao serviço de autenticação do Autenticação.Gov e Chave Móvel Digital,33,7,None specified,https://github.com/amagovpt/doc-AUTENTICACAO,"# Documentação técnica relativa ao serviço de autenticação do Autenticação.Gov<span> e Chave Móvel Digital
+
+
+
+## Introdução
+
+O Autenticação.Gov<span> ",amagovpt,government-tech,"This GitHub repository provides technical documentation for the authentication service of Autenticação.Gov and Chave Móvel Digital, which are digital identity solutions used in Portugal. It contains detailed information about the functioning and integration of these services to assist developers in implementing secure authentication mechanisms. The documentation is designed to facilitate usage and improve understanding of the system's technical aspects."
+D-Portal,No description,31,23,JavaScript,https://github.com/IATI/D-Portal,"Summary
+=======
+
+ Product  | D-portal
+--- | ---
+Description | Search IATI data on development and humanitarian activities on specific events or the",IATI,humanitarian-data,"The repository is for **D-portal**, a tool for searching and exploring IATI (International Aid Transparency Initiative) data on development and humanitarian activities. It focuses on providing information related to specific events or initiatives."
+CanFlood,Flood Risk modelling toolbox for Canada,30,7,Python,https://github.com/NRCan/CanFlood,"[![Documentation Status (dev)](https://readthedocs.org/projects/canflood/badge/?version=dev)](https://canflood.readthedocs.io/en/dev/)
+[![Documentatio",NRCan,flood-risk-modeling,"The repository provides a flood risk modeling toolbox specifically designed for Canada. It features tools and documentation for analyzing, predicting, and managing flood risks, with resources hosted on ReadTheDocs for further guidance. The project is likely aimed at researchers, policymakers, and engineers working on flood mitigation and environmental planning."
+geo_sim_processing,No description,30,6,Python,https://github.com/NRCan/geo_sim_processing,"# geo_sim_processing
+
+geo_sim_processing is a QGIS plugin that aims to simplify/generalize line and polygon features. It is composed of 3 processing t",NRCan,geospatial-ai,geo_sim_processing is a QGIS plugin designed to simplify and generalize line and polygon features for geospatial data processing. It integrates as a processing tool within QGIS to streamline these tasks efficiently.
+mucgpt,MUCGPT provides a web interface based for a given large language model (LLM). It includes different modes of interaction and lets users create individual assistant.,30,1,TypeScript,https://github.com/it-at-m/mucgpt,"<!-- PROJECT LOGO -->
+<div align=""center"">
+  <a href=""#"">
+    <img src=""app/frontend/src/assets/mucgpt_black_filled.png"" alt=""Logo"" height=""200"" style",it-at-m,ai agents,MUCGPT is a web-based interface for interacting with large language models (LLMs). It offers multiple interaction modes and enables users to customize and create their own AI assistants. The platform is designed to enhance user experience and adaptability when working with LLMs.
+design-system,Canada.ca design system - user-proven patterns and templates. En français : https://github.com/canada-ca/systeme-conception,30,16,HTML,https://github.com/canada-ca/design-system,"# Canada.ca design library - evidence-based patterns &amp; templates
+
+In order to move towards a more flexible design system, the plan is to “decouple",canada-ca,design-systems,The Canada.ca Design System is a flexible and evidence-based library of user-tested patterns and templates designed to enhance the consistency and usability of Canadian government digital services. It aims to support a modern and adaptable design approach by decoupling components for greater flexibility. The repository provides resources to assist developers and designers in creating accessible and user-centered digital experiences. An equivalent French version of the system is also available.
+egov-requirements,Изисквания към интеграцията на системи в рамките на електронното управление,29,4,None specified,https://github.com/governmentbg/egov-requirements,"Изисквания към интеграцията, сигурността и качеството на системи в рамките на електронното управление
+------------------------------------------------",governmentbg,government-tech,"This GitHub repository outlines the requirements for the integration, security, and quality of systems within the framework of e-Government. It provides guidelines and standards to ensure seamless interoperability, robust security, and high-quality performance in electronic governance systems. The content is intended to facilitate the development and maintenance of compliant and efficient systems in the e-Government ecosystem."
+engineering-practices,No description,28,3,None specified,https://github.com/opengovsg/engineering-practices,"# Engineering Practices at Open Government Products
+
+This directory contains the engineering practices that are observed at
+the Open Government Produc",opengovsg,government-tech,"This repository documents the engineering practices followed by Open Government Products. It serves as a reference for the team's workflows, standards, and methodologies."
+cloud-guardrails-azure,Tools to support cloud guardrails implementation and compliance checks for Microsoft Azure.,27,9,PowerShell,https://github.com/canada-ca/cloud-guardrails-azure,"# GC Cloud Guardrails Checks for Azure
+
+This project will host the minimum guardrails as part of the GC Cloud Operationalization Framework for Microso",canada-ca,government-tech,The repository provides tools to support the implementation and compliance checks of cloud guardrails for Microsoft Azure. It hosts the minimum guardrails defined by the GC Cloud Operationalization Framework to ensure secure and controlled cloud operations.
+geoscience_language_models,GloVe and BERT language models re-trained using geoscientific text. ,27,5,Jupyter Notebook,https://github.com/NRCan/geoscience_language_models,"# Geoscience Language Models
+
+## Introduction
+Language models are the foundation for the predictive text tools that billions of people in their eve",NRCan,geospatial-ai,This repository focuses on re-training GloVe and BERT language models specifically for geoscientific text. These geoscience-adapted models are intended to enhance natural language processing tasks within the geosciences field by leveraging domain-specific data.
+accessibility-personas,Experience the web as personas with access needs,26,6,JavaScript,https://github.com/alphagov/accessibility-personas,"# Accessibility Personas
+
+These pages include:
+
+* Documentation how to set up devices or browsers with 7 accessibility profiles
+* Basic introduction t",alphagov,accessibility-tools,"The GitHub repository ""Accessibility Personas"" offers documentation on setting up devices or browsers to simulate seven different accessibility profiles, enabling users to experience the web as individuals with various access needs. It provides a basic introduction to accessibility personas, helping developers understand and design for inclusive user experiences."
+formsg-javascript-sdk,JavaScript SDK for integrating with FormSG,26,11,TypeScript,https://github.com/opengovsg/formsg-javascript-sdk,"_Please note that this is an SDK for webhooks integration, and_ **_not_** _the FormSG system._
+
+[![Build Status](https://travis-ci.com/opengovsg/forms",opengovsg,government-tech,"This GitHub repository provides a JavaScript SDK designed for integrating with FormSG via webhooks. It offers tools and functionalities to simplify webhook integration with the FormSG system, but is not the FormSG platform itself. The repository includes documentation on implementation and setup for developers."
+ColouriseSG,A deep learning colouriser prototype specifically for old Singaporean photos.,26,1,None specified,https://github.com/opengovsg/ColouriseSG,"# ColouriseSG
+A deep learning colouriser prototype specifically for old Singaporean photos.
+",opengovsg,ai,ColouriseSG is a deep learning-based tool designed to colorize old Singaporean photos. It serves as a prototype aimed at preserving and revitalizing historical images by adding realistic color enhancements.
+openprocurement.auction,OpenProcurement Auction,26,31,Python,https://github.com/openprocurement/openprocurement.auction,"Introduction
+============
+
+OpenProcurement Auction Software
+",openprocurement,government-tech,"OpenProcurement Auction is a software solution designed to support auction processes. It provides tools and functionality for conducting auctions efficiently and transparently. The software is part of the OpenProcurement ecosystem, likely aimed at procurement and bidding systems."
+Lukas,A PHP Search Query Parser,25,7,PHP,https://github.com/OnroerendErfgoed/Lukas,"Lukas - Search Query Handler
+============================
+
+Lukas is a library that helps in implementing a custom search query language.
+It offers so",onroerenderfgoed,custom-search-query-parsing,"Lukas is a PHP library designed to assist developers in creating and handling custom search query languages. It simplifies the parsing and processing of search queries, enabling flexible and efficient query handling."
+consult,No description,25,7,Python,https://github.com/i-dot-ai/consult,"# Consult
+
+Consult is a machine learning and LLM-powered tool to automate the processing of public consultations.
+
+> [!IMPORTANT]
+> Incubation Project",i-dot-ai,government-tech,"Consult is a machine learning and LLM-based tool designed to automate the processing of public consultations. It is currently an incubation project, indicating it is in its early development stage."
+ucvdcc,User-Centric Verifiable Digital Credential Challenge,24,2,HTML,https://github.com/canada-ca/ucvdcc,"# User-Centric Verifiable Digital Credentials Challenge
+
+![UCVDCC Logo](images/ucvdcc.png)
+
+## Public Demo Day April 21, 2021
+The conclusion of Phase ",canada-ca,blockchain-deployment,"The ""User-Centric Verifiable Digital Credentials Challenge"" repository focuses on designing and implementing solutions for verifiable digital credentials that prioritize user control and privacy. It introduced a public demo showcasing its outcomes on April 21, 2021, as part of a multi-phase initiative. The project emphasizes secure, decentralized approaches to managing digital identities and credentials."
+analytics-platform-shiny-server,Analytical Platform Shiny Server • This repository is defined and managed in Terraform,23,8,JavaScript,https://github.com/ministryofjustice/analytics-platform-shiny-server,"# Analytics Platform Shiny Server
+
+This is a 'shiny server', for serving Shiny applications over the web.
+
+MOJ has developed this this one because the",ministryofjustice,infrastructure-as-code,"The repository contains the infrastructure and configuration for a Shiny Server used to host Shiny web applications for the Ministry of Justice (MOJ). The server setup and management are implemented using Terraform, ensuring version-controlled, reproducible infrastructure."
+cloud-guardrails-gcp,Recommended configuration guidance for Google Cloud Platform / Conseils de configuration recommandés pour Platforme infonuagique de Google,23,14,Open Policy Agent,https://github.com/canada-ca/cloud-guardrails-gcp,"# GC Cloud Guardrails Checks for Google Cloud Platform
+
+This repository will provide the tools required to validate the minimum guardrails for the GC ",canada-ca,cybersecurity,"This GitHub repository provides tools to validate minimum guardrails for Google Cloud Platform, offering recommended configuration guidance to ensure adherence to best practices. It is designed to assist in maintaining secure and effective setups for the Canadian Government's cloud infrastructure. The repository focuses on automated checks for essential guardrails."
+alphagov.github.io,GitHub organisation site for GDS. Also an Apache Maven repository.,23,5,HTML,https://github.com/alphagov/alphagov.github.io,"# GitHub organisation site for GDS
+
+This is the GitHub organisation site for GDS.
+
+[View this site on GitHub Pages](https://alphagov.github.io/).
+",alphagov,government-tech,"This repository serves as the GitHub organization site for GDS (Government Digital Service) and includes an Apache Maven repository. It hosts the organization's site, which is accessible via GitHub Pages at the provided link. The content is minimal, mainly serving as a central point for the organization's online presence."
+AISKAO,АИСКАО - Автоматизирана информационна система за комплексно административно обслужване,22,8,JavaScript,https://github.com/governmentbg/AISKAO,Windows: [![Windows Status](http://img.shields.io/appveyor/ci/vgvassilev/aiskao.svg?style=flat-square)](https://ci.appveyor.com/project/vgvassilev/ais,governmentbg,automation,"АИСКАО is an automated information system designed for comprehensive administrative services. The repository includes tools and resources for implementing and managing such a system, with a focus on streamlining administrative workflows. It provides compatibility with Windows environments and supports continuous integration with AppVeyor."
+devex,Main app for GC developers exchange,21,4,JavaScript,https://github.com/canada-ca/devex,"# GCDevExchange Application
+
+The [GCDevExchange](https://gcdevexchange-carrefourproggc.org) is a platform for providing new ways for the Government of",canada-ca,government-tech,The GCDevExchange Application is the main platform designed for facilitating collaboration and innovation among developers working with or for the Government of Canada. It provides tools and resources to enable new ways of interacting with government technology projects. The platform aims to enhance digital services and foster developer engagement.
+opensource.muenchen.de,Content for opensource.muenchen.de,21,8,Vue,https://github.com/it-at-m/opensource.muenchen.de,"# opensource.muenchen.de
+
+Content repository for [opensource.muenchen.de](https://opensource.muenchen.de).
+
+## Development
+
+Made with [vitepress](http",it-at-m,open-source-initiatives,"This repository contains the source content for the website [opensource.muenchen.de](https://opensource.muenchen.de), developed using Vitepress. It serves as a platform for open-source initiatives related to Munich."
+Ramzor,No description,21,11,Kotlin,https://github.com/MohGovIL/Ramzor,"# Vaccination/Recovery Certificates
+
+These days Israel is moving to an international standard of the vaccination and recovery certificates that the EU",MohGovIL,public-health-tech,"This repository pertains to vaccination and recovery certificates, highlighting Israel's adoption of an international standard aligned with the EU. It likely focuses on systems or processes related to these certificates in the context of public health and global interoperability."
+accessibility-community-notes-and-discussion,Draft accessibility guidance,21,5,None specified,https://github.com/alphagov/accessibility-community-notes-and-discussion,"The  documents and wiki notes are available for discussion but do not constitute offical guidance
+",alphagov,accessibility-guidance,"This GitHub repository hosts draft accessibility guidance, including documents and wiki notes intended for discussion. The materials are not finalized and do not represent official guidance."
+queuesg,"Queue is a simple queue management system that utilises Trello as a backend admin, for a quick and simple way to create pop-up queues",20,12,JavaScript,https://github.com/opengovsg/queuesg,"# Queue
+
+Queue is an open source project for creating a simple queue management system. The unique proposition is that there is no custom backend syst",opengovsg,open-source-initiatives,"Queue is an open-source queue management system that leverages Trello as its backend, eliminating the need for a custom backend system. It provides a quick and straightforward solution for creating pop-up queues, making it easy to manage and deploy. Designed for simplicity, it is ideal for scenarios requiring lightweight queue management."
+AccessMonitor,AccessMonitor is the a11y validator of the PT Observatory of the Web Accessibility,20,8,JavaScript,https://github.com/amagovpt/AccessMonitor,"# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Avai",amagovpt,accessibility-tools,AccessMonitor is an accessibility (a11y) validator developed as part of the PT Observatory of Web Accessibility. The project is built using React and leverages the Create React App framework for initialization. It aims to evaluate and promote web accessibility in line with modern standards.
+uwotm8,Converting American English to British English,20,1,Python,https://github.com/i-dot-ai/uwotm8,"# uwotm8
+
+[![Release](https://img.shields.io/github/v/release/i-dot-ai/uwotm8)](https://img.shields.io/github/v/release/i-dot-ai/uwotm8)
+[![Build stat",i-dot-ai,american-to-british-english-conversion,"The ""uwotm8"" repository provides a tool for converting American English to British English. It includes functionality for translating words, spellings, and phrases between the two dialects. The repository appears to be actively maintained, with version releases highlighted in the README."
+crawl,R package for modeling animal movement with continuous-time correlated random walk models,20,7,R,https://github.com/NMML/crawl,"<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+
+[![crawl status
+badge](https://dsjohnson.r-universe.dev",NMML,animal-movement-modeling,"This repository provides an R package designed for modeling animal movement using continuous-time correlated random walk (CTCRW) models. It facilitates the analysis of movement data, allowing researchers to effectively capture and interpret spatial and temporal patterns in animal trajectories. The package is equipped with tools for fitting and simulating movement models, enabling robust ecological and behavioral studies."
+caddy-chatbot,Caddy is an AI powered co-pilot for customer service functions everywhere.,20,8,Python,https://github.com/i-dot-ai/caddy-chatbot,"# Caddy Chatbot
+
+Caddy is an LLM powered co-pilot for customer service functions everywhere. This contains the logic for the chatbot and responses, an",i-dot-ai,ai agents,"Caddy is an AI-powered chatbot designed to serve as a co-pilot for customer service functions. It leverages large language models (LLMs) to handle conversations and provide intelligent responses. The repository contains the core logic for the chatbot's functionality and response generation, catering to a variety of customer service use cases."
+template-gabarit,Open source code repo template - Gabarit de dépôt de code source ouvert,19,21,JavaScript,https://github.com/canada-ca/template-gabarit,"([Français](#gabarit-pour-dépôts-de-code-source-ouvert-du-gouvernement-du-canada))
+
+## Template for Government of Canada open source code repositories",canada-ca,government-tech,This repository provides a template for creating open source code repositories for the Government of Canada. It offers a standardized structure and guidelines to ensure consistency and compliance with government practices when releasing and managing open source projects. The goal is to streamline the development and collaboration process for public sector open source initiatives.
+k-shortest-path,Implements K shortest path algorithms for networkx,19,4,Python,https://github.com/dsaidgovsg/k-shortest-path,"# k-shortest-path
+[![Build Status](https://travis-ci.com/datagovsg/k-shortest-path.svg?token=QdYT7V5eiyXqAzGySBss&branch=dev)](https://travis-ci.com/d",dsaidgovsg,pathfinding-algorithms,"This repository implements K-shortest path algorithms for use with the NetworkX library in Python. It provides functionality to compute multiple shortest paths in a graph, which can be useful for various network analysis tasks. The project includes testing and continuous integration support via Travis CI."
+digiwf-core,central workflow automation and integration platform based on the free process framework Camunda.,19,5,Java,https://github.com/it-at-m/digiwf-core,"## ⚠️DigiWF discontinued see https://github.com/it-at-m/digiwf-core/issues/1869
+
+# DigiWF
+
+__DigiWF__ is the central workflow automation and integrati",it-at-m,automation,"DigiWF is a centralized workflow automation and integration platform built on the Camunda process framework. However, the project has been discontinued. For further details, refer to issue #1869 in the repository."
+fargate-gitlab-runner-terraform,No description,19,5,HCL,https://github.com/GovTechSG/fargate-gitlab-runner-terraform,"# Terraform module for deploying ECS service for Fargate GitLab runner
+
+This repo is part of a set of repos for the complete setup of ECS Service for ",govtechsg,infrastructure-as-code,This repository provides a Terraform module for deploying an ECS service tailored for running GitLab runners on AWS Fargate. It is part of a larger collection of repositories designed to facilitate the complete setup of such a service. This module streamlines infrastructure provisioning for GitLab CI/CD workflows using AWS.
+butler-bot,Telegram bot for booking meeting rooms,19,15,JavaScript,https://github.com/GovTechSG/butler-bot,"# Butler Bot
+[![Build Status](https://travis-ci.org/GovTechSG/butler-bot.svg?branch=master)](https://travis-ci.org/GovTechSG/butler-bot)
+[![Known Vuln",govtechsg,automation,"Butler Bot is a Telegram bot designed for booking meeting rooms efficiently. It integrates with scheduling systems to streamline the reservation process and ensure easy room management. The repository includes setup and deployment instructions, and its functionality is supported by continuous integration via Travis CI."
+ecl-twig,ECL Twig Components,18,5,JavaScript,https://github.com/ec-europa/ecl-twig,"# ECL-Twig Library
+
+[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/ecl-twig/status.svg)](https://drone.fpfis.eu/ec-europa/ecl-twig)
+[![c",ec-europa,design-systems,"The ECL-Twig Library is a collection of reusable Twig components designed to integrate with the European Commission's ECL (Europa Component Library). It provides a framework-agnostic implementation for creating consistent, easily maintainable web interfaces. The repository includes components, templates, and styles customizable for various web projects aligned with ECL design principles."
+IATI-Dashboard,"A dashboard of various metrics, generated nightly from IATI data",18,20,Python,https://github.com/IATI/IATI-Dashboard,"IATI Dashboard
+==============
+
+[![Coverage Status](https://coveralls.io/repos/github/IATI/IATI-Dashboard/badge.svg?branch=merge-codeforiati-and-publis",IATI,humanitarian-data,The IATI Dashboard repository provides a tool to visualize various metrics derived from IATI (International Aid Transparency Initiative) data. The dashboard is updated nightly and includes components such as data quality assessments and coverage statistics. It supports improving transparency and accessibility of aid-related data through automated metric generation and visualization tools. The repository also integrates continuous testing and code coverage tracking.
+backdrop,Storing and querying data for the Performance Platform,18,11,Python,https://github.com/alphagov/backdrop,"# Backdrop
+
+[![Build Status](https://travis-ci.org/alphagov/backdrop.png?branch=master)](https://travis-ci.org/alphagov/backdrop?branch=master)
+
+[![De",alphagov,data,"Backdrop is a tool designed for storing and querying data for the Performance Platform. It supports the collection, storage, and retrieval of performance-related metrics to aid analysis and informed decision-making. The repository includes features for managing data workflows and integrates with CI pipelines, as indicated by its build status."
+aws-security-alarms,CloudTrail and CloudWatch configuration with some basic security alarms.,18,5,HCL,https://github.com/alphagov/aws-security-alarms,"# CloudWatch Metrics and Alarms for CloudTrail logs #
+
+_Work in progress:_ We're currently investigating the best ways to monitor our AWS usage. This ",alphagov,cybersecurity,"This repository focuses on configuring AWS CloudTrail and CloudWatch with essential security alarms. It aims to help monitor AWS usage effectively by utilizing CloudWatch metrics and alarms based on CloudTrail logs. Currently a work in progress, it explores optimal strategies for enhancing security monitoring in AWS environments."
+credits-generator,Attributes the authors of your first-level package.json dependencies,17,6,JavaScript,https://github.com/opengovsg/credits-generator,"# credits-generator
+
+Takes in package.json and outputs a CREDITS.md file attributing the authors of your dependencies
+
+## Usage
+
+1. `npx @opengovsg/cr",opengovsg,open-source-initiatives,"This GitHub repository, **credits-generator**, is a tool that takes a `package.json` file and generates a `CREDITS.md` file to attribute the authors of your first-level dependencies. It simplifies recognition of external contributors and packages used in a project. The tool can be executed using the command `npx @opengovsg/cr`."
+ansible-rbenv,rbenv Ansible playbook,17,6,Shell,https://github.com/erasme/ansible-rbenv,"rbenv Ansible playbook
+======================
+
+[![Travis
+CI](http://img.shields.io/travis/erasme/ansible-rbenv.svg?style=flat)](http://travis-ci.org/e",erasme,automation,"This GitHub repository contains an Ansible playbook for installing and managing rbenv, a tool for handling Ruby environments. It includes configurations to streamline the deployment process and is integrated with Travis CI for continuous integration testing. The repository is designed to help automate Ruby environment setup using rbenv in a consistent and reproducible manner."
+docs.autenticacao.gov,No description,17,8,HTML,https://github.com/amagovpt/docs.autenticacao.gov,"# Documentação do Middleware Oficial de Identificação Eletrónica em Portugal - Cartão de Cidadão, da Chave Móvel Digital e Sistema de Certificação de ",amagovpt,government-tech,"The repository provides official documentation for the electronic identification middleware in Portugal, covering the Citizen Card (Cartão de Cidadão), Digital Mobile Key (Chave Móvel Digital), and Certification System. It offers guidelines and resources for integrating these identification tools."
+about,Information about this organization and the projects in it,17,2,None specified,https://github.com/governmentbg/about,"# Относно хранилището
+
+_[(English version)](README.en.md)_
+
+[**egov.government.bg** – Министерство на електронното управление](https://egov.government",governmentbg,government-tech,This GitHub repository belongs to the Ministry of e-Governance in Bulgaria and provides information about the organization and its projects. It includes resources and documentation related to e-governance initiatives and digital services. An English version of the README is available for non-Bulgarian readers.
+Taipei-City-Dashboard-Documentation,The documentation website of Taipei City Dashboard,17,24,Vue,https://github.com/taipei-doit/Taipei-City-Dashboard-Documentation,"# <img src='public/images/contributors/doit.png' height='28'> Taipei City Dashboard Documentation
+
+[Docs Website](https://tuic.gov.taipei/documentatio",taipei-doit,government-tech,"The Taipei City Dashboard Documentation repository hosts the source code for the documentation website of Taipei City's data-driven dashboard. The dashboard provides insights, tools, and resources related to Taipei City's governance and public data. Users can access the documentation through an online website, enabling better understanding and usage of the city's data services."
+data-gov-bg,"Проект BG05SFOP001-2.001-0001 „Подобряване на процесите, свързани с предоставянето,  достъпа и повторното използване на информацията от обществения сектор“; Licensed under the EUPL",17,8,PHP,https://github.com/governmentbg/data-gov-bg,README not available,governmentbg,government-tech,"The GitHub repository is associated with the Bulgarian project BG05SFOP001-2.001-0001, which focuses on improving processes related to the provision, access, and reuse of public sector information. The project is licensed under the European Union Public License (EUPL). No README.md content is available in the repository."
+datagovro,Open Data Portal,17,4,Shell,https://github.com/govro/datagovro,"# data.gov.ro
+
+[![Build Status](https://travis-ci.org/govro/datagovro.svg?branch=master)](https://travis-ci.org/govro/datagovro)
+
+[data.gov.ro](http:/",govro,government-tech,"The repository, titled ""data.gov.ro,"" relates to an Open Data Portal designed to provide access to public datasets from Romania. It appears to involve the maintenance and development of the portal, with a Travis CI integration for build monitoring. The project facilitates transparency and enables users to interact with government data sets."
+skosprovider,A python abstraction for SKOS vocabularies,17,9,Python,https://github.com/OnroerendErfgoed/skosprovider,"skosprovider: vocabulary abstraction
+====================================
+
+This library helps abstract vocabularies (thesauri, controlled lists, autho",onroerenderfgoed,structured-data-editing,"skosprovider is a Python library designed to create abstractions for SKOS (Simple Knowledge Organization System) vocabularies, such as thesauri, controlled vocabularies, and authority files. It simplifies the management and interaction with structured vocabularies for various use cases."
+analytics-platform-ops,Analytical Platform Ops • This repository is defined and managed in Terraform,17,5,HCL,https://github.com/ministryofjustice/analytics-platform-ops,"# MOJ Analytics Platform Ops and Infrastructure
+
+[Kubernetes]-based data analysis platform, using [Terraform], [Kops] and [Helm] charts.
+
+Contact alex",ministryofjustice,infrastructure-as-code,"This GitHub repository manages the infrastructure for the MOJ Analytics Platform using Terraform. It supports a Kubernetes-based data analysis platform with tools like Kops and Helm charts for deployment and configuration. The repository facilitates scalable and efficient operations for data analytics tasks. For inquiries, the contact person is Alex."
+accessible-autocomplete-multiselect,"An autocomplete multi-select component, built to be accessible.",17,2,JavaScript,https://github.com/alphagov/accessible-autocomplete-multiselect,"# Accessible autocomplete multi select (DEPRECATED)
+
+> **NOTE**: This project is deprecated and is [planned to be retired](https://trello.com/c/zLNLSK",alphagov,accessibility-tools,"This GitHub repository provides an autocomplete multi-select component designed with accessibility in mind. However, the project is deprecated and is planned for retirement, as noted in the README. Users are advised not to rely on it for future projects."
+scraper-sniim,Scraper de precios de productos básicos basado en la pagina del SNIIM.,17,12,Python,https://github.com/mxabierto/scraper-sniim,"# Scraper Sistema Nacional de Información e Integración de Mercados
+
+Scraper de precios de productos básicos basado en la pagina del SNIIM.
+
+## Requer",mxabierto,web-scraping,This repository provides a web scraper for fetching prices of basic goods from the Sistema Nacional de Información e Integración de Mercados (SNIIM) website. It includes requirements and instructions for extracting market price data programmatically. The tool is designed to automate data collection to analyze and monitor market trends efficiently.
+askgovsg,Answers from the Singapore Government,17,6,TypeScript,https://github.com/opengovsg/askgovsg,"# AskGov
+Answers from the Singapore Government
+
+## Tech Stack
+
+#### Front-end
+
+- Front-end Framework: `React`
+- Styling: `SASS` switching to [Chakra ",opengovsg,government-tech,"AskGov is a platform providing answers from the Singapore Government, leveraging React for its front-end development and utilizing SASS for styling, with plans to adopt Chakra UI. The repository emphasizes transparency and accessibility of government information. It focuses on delivering a user-friendly experience for accessing official answers to public queries."
+LOD4Stats,No description,17,6,Python,https://github.com/UNStats/LOD4Stats,"Linked Open Data for SDG statistics
+======
+
+This repository contains resources related to a pilot LOD infrastructure for Sustainable Development Goals",UNStats,linked-open-data,This repository provides resources for a pilot Linked Open Data (LOD) infrastructure aimed at supporting statistics related to the Sustainable Development Goals (SDGs).
+accelerators_accelerateurs-aws,[AWS] Tools and templates to accelerate GC service delivery. Outils et modèles pour accélérer la prestation de services du GC.,16,3,None specified,https://github.com/canada-ca/accelerators_accelerateurs-aws,"# GC Accelerators (AWS)
+
+AWS has developed a project called the AWS Secure Environment Accelerator (ASEA) with the goal to accelerate the GC’s Amazon ",canada-ca,government-tech,"The repository provides tools and templates to accelerate the Government of Canada's (GC) service delivery using AWS. It features the AWS Secure Environment Accelerator (ASEA), a project designed to facilitate rapid and secure adoption of AWS services for GC organizations. The repository includes resources to streamline secure cloud environment setup and align with GC-specific requirements."
+CATS-STAE,Cyber Authentication Technology - Technologie d’authentification électronique,16,1,Shell,https://github.com/canada-ca/CATS-STAE,"# Cyber Authentication Technology
+
+Cyber authentication allows individuals and businesses to securely access
+government services that are available on",canada-ca,cybersecurity,Cyber Authentication Technology is a solution designed to enable secure access to government services for individuals and businesses. The repository focuses on electronic authentication methods to ensure safe and reliable interactions with government systems. The project aims to enhance cybersecurity and streamline processes for accessing sensitive services online.
+postgresql-open-data-lv,Skripti atvērto datu par Latviju importēšanai un uzturēšanai PostgreSQL,16,0,PLpgSQL,https://github.com/CSBLatvia/postgresql-open-data-lv,"# Skripti atvērto datu par Latviju importēšanai un uzturēšanai PostgreSQL
+
+Repozitorijā apkopoti Centrālajā statistikas pārvaldē veidoti un izmantoti ",CSBLatvia,government-tech,This GitHub repository contains scripts designed for importing and maintaining open data about Latvia in PostgreSQL databases. The scripts have been created and utilized by the Central Statistical Bureau of Latvia.
+canada-ca.github.io,Stories and insights about the design of Canada.ca,16,14,HTML,https://github.com/canada-ca/canada-ca.github.io,"# canada-ca.github.io
+Github pages: content to redirect to new blog space(s)
+
+[Alpha Blog](https://canada-ca.github.io/) current content relating to U",canada-ca,design-systems,"This repository contains resources and redirects for blog content related to the design of Canada.ca. It includes links to the Alpha Blog, which features insights and updates on the development and design work for the website."
+analytical-platform,Analytical Platform • This repository is defined and managed in Terraform,16,7,HCL,https://github.com/ministryofjustice/analytical-platform,"# Ministry of Justice Analytical Platform
+
+[![repo standards badge](https://img.shields.io/endpoint?labelColor=231f20&color=005ea5&style=for-the-badge",ministryofjustice,government-tech,"This repository is part of the Ministry of Justice Analytical Platform and is managed using Terraform resources. It facilitates the infrastructure-as-code setup for the platform, ensuring consistency, scalability, and reproducibility of the analytical environment. The repository adheres to established standards, reflecting good practices for managing cloud-based analytical solutions."
+einvoice,No description,16,2,JavaScript,https://github.com/slovak-egov/einvoice,"# E-Invoice
+
+## Documentation
+
+### OpenAPI 3 / Swagger
+
+[OpenAPI 3 definition](docs/swagger.yml).
+
+You can view it on this [website](https://generator",slovak-egov,government-tech,"The repository appears to provide resources related to E-Invoice functionality, including an OpenAPI 3 (Swagger) definition for API documentation. The OpenAPI specification is provided in the `swagger.yml` file located in the `docs` folder and can be accessed via a linked website for easier visualization. It seems focused on facilitating integration or exploration of E-Invoice APIs."
+vigilantgantry," Face segmentation algorithm that the VigilantGantry uses to identify potential missed out causes by current thermal systems (due to occlusion from fringe, cap, head-gear).",16,4,Python,https://github.com/dsaidgovsg/vigilantgantry,"<h2 align=""center"">VigilantGantry</h2>
+
+<p align=""center"">
+<img alt=""Python: v3.7"" src=""https://img.shields.io/badge/python-v3.7-blue"">
+<a href=""https",dsaidgovsg,public-health-tech,"The VigilantGantry repository provides a Python-based face segmentation algorithm designed to identify areas potentially missed by thermal imaging systems due to occlusions like fringe, caps, or headgear. The tool enhances the accuracy of detecting such occlusions, making thermal systems more reliable in critical applications. It is compatible with Python 3.7 and prioritizes precision in face segmentation for improved thermal analysis."
+IATI-Schemas,Schema development for the International Aid Transparency Initiative.,16,9,XSLT,https://github.com/IATI/IATI-Schemas,"International Aid Transparency Initiative (IATI) XML Schemas
+============================================================
+
+.. image:: https://github.c",IATI,humanitarian-data,"The repository focuses on schema development for the International Aid Transparency Initiative (IATI), which involves creating XML schemas to standardize data reporting and transparency in international aid efforts. It provides tools and guidance to facilitate the implementation of IATI standards."
+plumber,"Automate your pipelines, streamline your workflows.",16,7,TypeScript,https://github.com/opengovsg/plumber,"![](./plumber.svg)
+
+# Plumber
+
+_Automate your pipelines and streamline your workflows._
+
+Plumber is a no-code solution that helps public officers auto",opengovsg,government-tech,"Plumber is a no-code tool designed to automate pipelines and streamline workflows, primarily targeting public officers. It simplifies complex processes without requiring programming knowledge, enabling users to improve efficiency and productivity in their operations."
+fargate-gitlab-runner,No description,15,6,Shell,https://github.com/GovTechSG/fargate-gitlab-runner,"# Docker image for ECS task for Fargate GitLab runner managers, using [GitLab custom executor driver for AWS Fargate](https://gitlab.com/gitlab-org/ci",govtechsg,infrastructure-as-code,"This repository contains a Docker image tailored for running ECS tasks with AWS Fargate, specifically designed for GitLab CI/CD runners using the GitLab custom executor driver for AWS Fargate. It facilitates seamless integration between GitLab and AWS Fargate to enable efficient task execution."
+platform-security_securite-de-plateforme,Guidance on Securing Containers and Microservices,15,3,JavaScript,https://github.com/canada-ca/platform-security_securite-de-plateforme,"# Guidance on Secure Containers and Microservices
+
+([Français](#gabarit-pour-dépôts-de-code-source-ouvert-du-gouvernement-du-canada))
+
+With the introd",canada-ca,cybersecurity,"This repository provides guidance on securing containers and microservices, focusing on best practices for their deployment and management. It aims to ensure security throughout the lifecycle of containerized applications. The content likely includes recommendations, tools, and frameworks to safeguard container ecosystems."
+eappointment,The current appointment system of the city of Munich will be replaced by Zeitmanagementsystem (ZMS) provided by the state of Berlin.,15,1,PHP,https://github.com/it-at-m/eappointment,"<div id=""top""></div>
+
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargaz",it-at-m,government-tech,"The GitHub repository focuses on transitioning the city of Munich's appointment system to the Zeitmanagementsystem (ZMS) provided by the state of Berlin. It includes resources and code to facilitate the migration, setup, and operation of the new system. The README.md provides project badges and placeholders for contributors, forks, and stars but lacks detailed documentation."
+python-spark,"Docker image for a Python installation with Spark, Hadoop and Sqoop binaries",15,9,None specified,https://github.com/dsaidgovsg/python-spark,"# python-spark
+
+This image is based off the [`python:2.7`](https://hub.docker.com/_/python/) image and
+contains Hadoop, Sqoop and Spark binaries. Inst",dsaidgovsg,big-data,"This repository provides a Docker image based on Python 2.7, pre-installed with Hadoop, Spark, and Sqoop binaries. It is designed to facilitate environments that require these big data tools alongside Python."
+dms-public,Public redistribution of examples/code/schemas,15,5,None specified,https://github.com/skat/dms-public,"# Welcome to DMS-public, please read below for important info
+
+DMS-Public contains many guides designed to show you how to start using DMS.
+
+  1. If y",skat,data,"DMS-Public is a GitHub repository that offers guides, examples, code, and schemas to help users get started with DMS (presumably a system or tool). Its purpose is to provide publicly accessible resources for learning and implementation. The repository emphasizes ease of adoption for users."
+YouBike-Optimization,"A project focused on YouBike optimization, including improvement of dispatch strategies and prediction of potential demand.",15,2,Python,https://github.com/taipei-doit/YouBike-Optimization,"# Description
+YouBike plays an extremely significant role in Taipei City's transportation system. Many people use YouBike as their primary commuting o",taipei-doit,data science,This GitHub repository focuses on optimizing Taipei City's YouBike system by improving bike dispatch strategies and predicting potential user demand. It aims to enhance the efficiency and reliability of the bike-sharing service.
+openprocurement.github.io,Development of Open Procurement system,15,11,HTML,https://github.com/openprocurement/openprocurement.github.io,"openprocurement
+===============
+
+Development of Open Procurement system.
+",openprocurement,government-tech,"The repository, **OpenProcurement**, focuses on the development of an Open Procurement system. It aims to provide tools or infrastructure to facilitate transparent and efficient procurement processes. The README contains minimal information, briefly stating its purpose without further technical or functional details."
+local-gov-hack,No description,15,7,None specified,https://github.com/i-dot-ai/local-gov-hack,"# 🏙️ Local Government Innovation Hackathon
+
+> **NOTICE: The Local Government Innovation Hackathon (30 April - 1 May 2025) has now concluded. This repo",i-dot-ai,government-tech,"The repository is for the Local Government Innovation Hackathon, which took place from April 30 to May 1, 2025. It seems to contain resources, code, or outcomes related to the event, aimed at fostering innovation in local government practices. The README provides minimal details, likely focusing on administrative updates rather than specific project content."
+eubfr-data-lake,EU Budget for Results - Data Lake,14,7,JavaScript,https://github.com/ec-europa/eubfr-data-lake,# EU Budget for Results - Data Lake [![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/eubfr-data-lake/status.svg)](https://drone.fpfis.eu/e,ec-europa,government-tech,"The ""EU Budget for Results - Data Lake"" repository serves as a data lake for managing and processing data related to the EU budget's performance and results. It provides tools and resources for collecting, storing, and analyzing budget data, supporting transparency and efficiency in EU financial initiatives. The repository also includes CI/CD integration for automated builds and updates."
+cloud-guardrails-aws,Tools to support cloud guardrails implementation and compliance checks for AWS.,14,9,Shell,https://github.com/canada-ca/cloud-guardrails-aws,"# GC Cloud Guardrails Checks for AWS
+
+This project will provide tools to validate the implementation of the minimum guardrails as part of the GC Cloud",canada-ca,cybersecurity,This repository provides tools to validate and support the implementation of minimum cloud guardrails and compliance checks for AWS environments. It aims to ensure adherence to governance and security standards in cloud operations.
+checkfirst,Don't Know? CheckFirst. A tool to build eligibility checkers and calculators for Singapore Government policies,14,6,TypeScript,https://github.com/opengovsg/checkfirst,"# CheckFirst
+
+Don't Know? CheckFirst. A tool to build eligibility checkers and calculators for Singapore Government policies
+
+## Quick Start
+
+```
+git ",opengovsg,government-tech,CheckFirst is a tool designed to create eligibility checkers and calculators for Singapore Government policies. It allows developers to quickly set up and customize tools to help users determine their eligibility for various schemes or calculate benefits. The repository provides an easy setup guide and resources for implementation.
+language-tags,Dealing with IANA language tags in Python,14,4,Python,https://github.com/OnroerendErfgoed/language-tags,"IANA Language Tags for Python
+=============================
+
+.. image:: https://badge.fury.io/py/language-tags.png
+        :target: http://badge.fury.",onroerenderfgoed,language-tag-handling,"This GitHub repository provides a Python library for handling IANA language tags, which are standardized codes used to identify languages (e.g., ""en-US"" for U.S. English). It simplifies parsing, validating, and interacting with these tags, making it useful for applications requiring language tag management. The project appears to include features like compliance with IANA standards and easy integration into Python projects."
+IATI-Standard-SSOT,Single Source of Truth (SSOT) for IATI,14,9,Python,https://github.com/IATI/IATI-Standard-SSOT,"IATI Standard SSOT
+==================
+
+.. image:: https://github.com/IATI/IATI-Standard-SSOT/workflows/CI/badge.svg
+    :target: https://github.com/IA",IATI,linked-open-data,"The ""IATI Standard SSOT"" GitHub repository serves as the Single Source of Truth (SSOT) for the International Aid Transparency Initiative (IATI) standard. It contains resources and workflows central to maintaining and validating the IATI standard, leveraging continuous integration practices. The repository is a cornerstone for ensuring consistency and accuracy in the implementation of the transparency framework for aid data."
+myinfo-gov-client,A lightweight client to easily call MyInfo,14,3,TypeScript,https://github.com/opengovsg/myinfo-gov-client,"# myinfo-gov-client
+
+A lightweight client to easily call the MyInfo Person v3.2 endpoint for the Singapore government. Tested with NodeJS version >=12",opengovsg,government-tech,"The `myinfo-gov-client` is a lightweight Node.js client designed to streamline interactions with the MyInfo Person v3.2 endpoint, a service provided by the Singapore government. It is compatible with Node.js versions 12 and above."
+analytics-platform,Parent repository for the MOJ Analytics Platform,14,1,None specified,https://github.com/ministryofjustice/analytics-platform,"# Analytical Platform
+
+This is the root repository for the MOJ Analytical Platform.
+
+Repositories: The platform is all open source - see all the repos",ministryofjustice,open-source-initiatives,The MOJ Analytical Platform is an open-source project serving as the parent repository for related components. It provides a foundation for analytics tools and includes links to all associated repositories for further development and usage.
+hakunapi,OGC API Features Java server,14,3,Java,https://github.com/nlsfi/hakunapi,"<img src=""hakunapi_logo_v1.png"" alt=""hakunapi logo"" width=""350""/>
+
+# Hakunapi OGC API Features Server
+
+A server implementation of OGC API Features
+* ",nlsfi,geospatial-data,"Hakunapi is a Java server implementation of the OGC API Features standard, which enables access to geospatial features via web services. It provides tools to build and serve APIs compliant with OGC standards for managing and retrieving geospatial data. Designed for interoperability, it simplifies integration with geospatial systems."
+design-system,Design system for @undataforum websites.,14,3,JavaScript,https://github.com/UNStats/design-system,"# @undataforum/design-system
+
+This monorepo contains the design system for United Nations World Data Forum
+websites:
+
+- [@undataforum/assets](https://",UNStats,design-systems,This repository is a monorepo containing the design system for the United Nations World Data Forum websites. It includes components and assets such as [@undataforum/assets] to ensure consistent design and functionality across its web platforms.
+blinken,RETIRED. Superseded by https://github.com/alphagov/blinkenjs,13,7,Clojure,https://github.com/alphagov/blinken,"# Blinken [![Build Status](https://travis-ci.org/alphagov/blinken.png?branch=master)](https://travis-ci.org/alphagov/blinken)
+
+A dashboard to integrat",alphagov,dashboard-integration-tool,"This repository, **Blinken**, is a retired project previously serving as a dashboard tool. It has been superseded by a newer project, [Blinkenjs](https://github.com/alphagov/blinkenjs). As the development and maintenance have shifted to the new repository, users are encouraged to refer to Blinkenjs for continued updates and support."
+main,No description,13,6,Jupyter Notebook,https://github.com/molit-korea/main,"# 국토교통 데이터 활용 지원 저장소
+
+국토교통 빅데이터 해커톤 및 국토교통 데이터를 활용하는데 도움이 되는 리소스(프로젝트, 파일 등) 큐레이션 서비스입니다.
+
+## 목차
+- [2024 국토교통 데이터활용 경진대회 참가작](/Pages/2024%20국토교통%20데이터",molit-korea,geospatial-data,"This repository serves as a resource hub for utilizing South Korea's land and transportation big data. It provides curated materials, such as projects and files, to support activities like the Land and Transportation Big Data Hackathon and related competitions, including the 2024 Data Utilization Contest."
+refarch-templates,All templates for the Reference Architecture of it@M,13,6,Java,https://github.com/it-at-m/refarch-templates,"<!-- General project links -->
+[open-issues]: https://github.com/it-at-m/refarch-templates/issues
+[new-issue]: https://github.com/it-at-m/refarch-temp",it-at-m,architecture-templates,This GitHub repository contains templates for the Reference Architecture used by it@M. It provides resources for standardizing and streamlining architectural frameworks. The project includes issue tracking and encourages contributions through the provided links.
+Azure_LZBCA-AIZDB,Azure Landing Zone Base Cloud Architecture - Architecture infonuagique zone d'atterrissage de base,13,6,PowerShell,https://github.com/canada-ca/Azure_LZBCA-AIZDB,"# Azure_LZBCA-AIZDB
+Azure Landing Zone Base Cloud Architecture - Architecture infonuagique zone d'atterrissage de base
+
+This initiative is a contribut",canada-ca,architecture-templates,"Azure Landing Zone Base Cloud Architecture (Azure_LZBCA-AIZDB) provides foundational guidelines and resources for implementing a scalable and secure cloud architecture on Azure, known as a landing zone. The repository appears to be an initiative for contributing to the development of best practices and tools for cloud infrastructure deployment. Due to incomplete information in the README.md, further specifics are unclear."
+cove-frontend,COVID-19-Verdachtsfall-Verwaltung,13,3,Vue,https://github.com/it-at-m/cove-frontend,"# COVe Frontend
+
+## Inhaltsverzeichnis
+
+* [Über das Projekt](#über-das-projekt)
+  * [Architektur](#architektur)
+  * [Verwendete Technologien](#verwend",it-at-m,public-health-tech,"The repository ""COVID-19-Verdachtsfall-Verwaltung"" provides a frontend solution, called ""COVe Frontend,"" for managing suspected COVID-19 cases. It includes information about the project's architecture and the technologies used. The repository appears to focus on facilitating efficient case tracking and management in response to the pandemic."
+isomer,Monorepo for Isomer Next,12,2,TypeScript,https://github.com/opengovsg/isomer,"# Isomer Next
+
+This is a monorepo for the Isomer Next project.
+
+## Getting Started
+
+This monorepo uses Turborepo. To get started, first install the `t",opengovsg,design-systems,"Isomer Next is a monorepo project utilizing Turborepo, designed for efficient development workflows. It serves as the codebase for building and managing the Isomer Next platform. The repository is structured to streamline modular project development processes."
+Kindona,"Kindona is a flutter-based application for helping users orientate inside of buildings. It provides the user with a map (like google maps and the like), with the option to differentiate between the different floors inside the building.",12,7,Dart,https://github.com/it-at-m/Kindona,"# Kindona
+
+Kindona is a flutter-based application for helping users orientate inside of buildings. It provides the user
+with a map (similar google map",it-at-m,indoor-positioning,"Kindona is a Flutter-based application designed to assist users with indoor navigation. It provides an interactive map with the ability to differentiate between various floors within a building, offering a user experience similar to Google Maps for interior spaces."
+calidad-del-aire,No description,12,3,Jupyter Notebook,https://github.com/mxabierto/calidad-del-aire,"# Ventilando datos abiertos sobre calidad del aire.
+
+<!-- TOC depthFrom:2 orderedList:true -->
+
+1. [Contexto](#contexto)
+2. [Descripción de notebooks]",mxabierto,air-quality-analysis,This repository focuses on analyzing open data related to air quality. It includes notebooks that explore and process air quality datasets to provide insights. The primary aim is to promote transparency and better understanding of air pollution through open data.
+iOneMySgMap,A tile server to serve map tiles for Singapore based off the Singapore Metro Extract,12,4,Shell,https://github.com/GovTechSG/iOneMySgMap,"# iOneMySgMap
+
+A tile server to serve map tiles for Singapore based off the
+[Geofabrik OSM Data Extracts](http://download.geofabrik.de/index.html)
+
+##",govtechsg,geospatial-data,"iOneMySgMap is a tile server designed to serve map tiles for Singapore, utilizing data from the Geofabrik OpenStreetMap (OSM) extracts, specifically the Singapore Metro Extract. The repository provides tools to set up and host map tiles for use in mapping applications."
+TBS-OCIO-ESP,Workload management for the Enterprise Strategic Planning directorate of the Office of the CIO for Canada,12,4,HTML,https://github.com/canada-ca/TBS-OCIO-ESP,"<h1> Metrics for Government of Canada Technology Consumption </h1>
+
+
+| **Category**                                      | **Metric**                 ",canada-ca,government-tech,"This GitHub repository focuses on workload management for the Enterprise Strategic Planning directorate of the Office of the CIO in Canada. It provides metrics related to technology consumption within the Government of Canada. The repository likely includes tools or frameworks to track and optimize technology usage across departments, assisting in strategic planning and decision-making."
+calculators,Serves the Child benefit tax calculator on GOV.UK,11,13,Ruby,https://github.com/alphagov/calculators,"**This service is now provided by [Smart Answers](https://github.com/alphagov/smart-answers)**
+
+Child Benefit tax calculator
+===========
+
+This calcula",alphagov,government-tech,"This repository previously served as the Child Benefit tax calculator for GOV.UK. However, the functionality has now been migrated to the [Smart Answers](https://github.com/alphagov/smart-answers) service, and this repository is no longer in use."
+Usabilidade-Gov-PT,Recursos e ferramentas para melhorar a experiência de utilização de sítios públicos.,11,4,HTML,https://github.com/amagovpt/Usabilidade-Gov-PT,"# Usabilidade-Gov-PT
+Recursos e ferramentas para melhorar a experiência de utilização de sítios públicos.
+",amagovpt,accessibility-guidance,Usabilidade-Gov-PT is a repository that provides resources and tools aimed at improving the user experience of public websites. It is focused on enhancing usability and accessibility for users interacting with government or public sector online platforms.
+acronyms,"List of abbreviations used within the MoJ, and their definitions.",11,6,CSS,https://github.com/ministryofjustice/acronyms,"# Ministry of Justice Acronyms
+
+[![repo standards badge](https://img.shields.io/endpoint?labelColor=231f20&color=005ea5&style=for-the-badge&label=MoJ%",ministryofjustice,government-tech,"This GitHub repository contains a list of acronyms and abbreviations used within the UK Ministry of Justice (MoJ), along with their definitions. It serves as a reference tool to help users understand organizational terminology. The repository aims to improve clarity and communication by providing consistent definitions for commonly used terms."
+passport-openidconnect,OpenID Connect authentication strategy for Passport and Node.js.,11,5,JavaScript,https://github.com/GovTechSG/passport-openidconnect,"# Passport OpenID Connect
+
+> **Note**: Fork of [Jared Hansen's Passport](https://www.passportjs.org/) strategy for authenticating with [OpenID Connect",govtechsg,cybersecurity,Passport OpenID Connect is a Node.js authentication strategy designed as a fork of Jared Hansen's Passport framework. It implements OpenID Connect protocol for integrating secure authentication in applications. The repository provides tools to authenticate users via identity providers that support OpenID Connect.
+asset-manager,"Manages uploaded assets (images, PDFs etc.) for applications on GOV.UK",11,9,Ruby,https://github.com/alphagov/asset-manager,"# Asset Manager
+
+Manages uploaded assets (images, PDFs etc.) for applications in the GOV.UK Publishing stack.
+
+The app receives uploaded files from pu",alphagov,government-tech,"Asset Manager is a service within the GOV.UK Publishing stack that handles uploaded assets such as images and PDFs for applications on GOV.UK. It manages the storage, retrieval, and serving of these files to ensure seamless integration and functionality across GOV.UK services."
+qgis-plugin-dev-tools,"QGIS plugin development and packaging tools, which make managing runtime dependencies easy.",11,1,Python,https://github.com/nlsfi/qgis-plugin-dev-tools,"# qgis-plugin-dev-tools
+
+QGIS plugin development and packaging tools, which make managing runtime dependencies easy.
+
+## Prerequisites
+
+Your plugin pa",nlsfi,geospatial-data,"The repository, *qgis-plugin-dev-tools*, provides tools to streamline QGIS plugin development and packaging, with a focus on simplifying the management of runtime dependencies. It includes prerequisites and guidance for setting up a plugin development environment, making it a helpful resource for developers creating and distributing QGIS plugins."
+cbdc-smart-contracts,Smart contracts for the CBDC collaboration,11,2,TypeScript,https://github.com/opengovsg/cbdc-smart-contracts,"<h1 align=""center"">
+  <br>
+  <a href=""https://github.com/opengovsg/cbdc-smart-contracts/wiki"" width=""2000""><img src=""https://user-images.githubusercon",opengovsg,blockchain-deployment,"The repository contains smart contracts designed for Central Bank Digital Currency (CBDC) collaborations. It includes code and documentation to implement, test, and deploy blockchain-based financial solutions for CBDCs. For more details, the project's wiki is linked in the documentation."
+mec-opendata,Portal de Datos Abiertos del Ministerio de Educación y Cultura del Paraguay,11,1,Ruby,https://github.com/mecpy/mec-opendata,"== Portal de Datos Abiertos del Ministerio de Educación y Cultura del Paraguay
+
+Este portal pone a disposición de todo el mundo los datos de esta inst",mecpy,open-data,The repository is for the Open Data Portal of the Ministry of Education and Culture of Paraguay. It aims to make public data from the ministry accessible to everyone.
+chyf,Web application that provides hydrology services based on the Common Hydrology Features (CHyF) data model,11,4,Java,https://github.com/NRCan/chyf,"# About CHyF Software
+
+The Common Hydrology Features (CHyF) open source software, demonstrated on the CHyF Pilot Demo,
+was developed by Refractions R",NRCan,geospatial-data,The GitHub repository hosts an open-source web application based on the Common Hydrology Features (CHyF) data model. It provides hydrology-related services and showcases functionalities demonstrated in the CHyF Pilot Demo. The software was developed by Refractions Research and aims to support hydrology workflows using standardized data modeling.
+firma-digital,Firma Digital,10,10,Java,https://github.com/mecpy/firma-digital,"# **App-Signer**, Firma Digital de Documentos
+
+## ¿Qué es?
+Una aplicación Java que utiliza la tecnología Java Web Start para ejecutarse localmente en ",mecpy,digital-signature-tool,"App-Signer is a Java application for digitally signing documents. It uses Java Web Start technology to run locally on users' machines, providing a secure and efficient way to apply digital signatures. The tool simplifies the process of signing documents electronically."
+alexapoc-vdpalexa,Proof-of-concept for delivering service on Alexa / Validation de principe pour la prestation de service via Alexa,10,1,None specified,https://github.com/canada-ca/alexapoc-vdpalexa,"# alexapoc-vdpalexa
+
+## [English] Proof-of-concept for delivering service on Alexa
+
+To learn more, please visit our [Wiki](https://github.com/canada-c",canada-ca,voice-assistant-integration,"This repository, **alexapoc-vdpalexa**, is a proof-of-concept for delivering services through Amazon Alexa. It explores service integration via Alexa voice commands. Additional details and documentation can be found in the repository's Wiki."
+TDBSCAN,TDBSCAN with Move Ability: Spatiotemporal Density Clustering ,10,4,Python,https://github.com/dsaidgovsg/TDBSCAN,"![python versions](https://img.shields.io/badge/python-3.6.4-blue.svg)
+
+TDBSCAN
+======
+Python implementation of [TDBSCAN: Spatiotemporal Density
+Clust",dsaidgovsg,geospatial-data,"This repository provides a Python implementation of TDBSCAN, an extension of DBSCAN tailored for spatiotemporal clustering with support for mobility. The method identifies clusters based on spatial and temporal constraints, making it suitable for analyzing moving objects or dynamic datasets. It is compatible with Python 3.6.4 and focuses on density-based clustering in spatiotemporal domains."
