@@ -270,48 +270,34 @@ class GitHubScanner:
         )
         return full_repo_details
 
-    def _save_gov_repos_to_markdown(
+    def _save_gov_repos_to_csv(
         self, gov_repos_data: List[Dict[str, Any]], output_filename: str
     ) -> str:
-        """Saves the fetched government repository data to a Markdown file."""
+        """Saves the fetched government repository data to a CSV file."""
         output_path = get_filepath_in_run_data(self.run_id, output_filename)
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(f"# Government Repositories Catalog - Run ID: {self.run_id}\n\n")
-            f.write(
-                "| Account | Repository Name | Description | Stars | Forks | Language | URL | README Snippet |\n"
-            )
-            f.write(
-                "|---------|-----------------|-------------|-------|-------|----------|-----|----------------|\n"
-            )
-            for repo in gov_repos_data:
-                readme_snippet = repo.get("readme_snippet", "")
-                # Sanitize for Markdown table: escape pipes, remove newlines
-                readme_display = (
-                    readme_snippet.replace("|", "\|")
-                    .replace("\n", " ")
-                    .replace("\r", "")[:50]
-                    + "..."
-                )
-                description_display = (
-                    (repo.get("description", "N/A") or "No description")
-                    .replace("|", "\|")
-                    .replace("\n", " ")
-                    .replace("\r", "")
-                )
 
-                f.write(
-                    f"| {repo.get('account', 'N/A')} | {repo.get('name', 'N/A')} | {description_display} | {repo.get('stars', 0)} | {repo.get('forks', 0)} | {repo.get('language', 'N/A')} | [{repo.get('url')}]({repo.get('url')}) | {readme_display} |\n"
-                )
-        logger.info(f"Saved government repositories catalog to {output_path}")
+        if not gov_repos_data:
+            logger.info(f"No government repository data to save. Creating an empty CSV: {output_path}")
+            # Define columns for an empty CSV to ensure consistency
+            columns = ['account', 'name', 'description', 'stars', 'forks', 'language', 'url', 'readme_snippet']
+            df = pd.DataFrame(columns=columns)
+        else:
+            df = pd.DataFrame(gov_repos_data)
+            # Optionally, ensure specific column order if needed, though DataFrame constructor from list of dicts is usually fine.
+            # columns_order = ['account', 'name', 'description', 'stars', 'forks', 'language', 'url', 'readme_snippet']
+            # df = df.reindex(columns=columns_order) # Ensures all columns exist, in order, filling missing with NaN
+
+        df.to_csv(output_path, index=False, encoding="utf-8")
+        logger.info(f"Saved government repositories catalog ({len(df)} rows) to {output_path}")
         return str(output_path)
 
     def scan_and_save_gov_repos_catalog(
         self,
         gov_accounts_url: Optional[str] = None,
-        output_filename: str = "gov_repositories_catalog.md",
+        output_filename: str = "gov_repositories_catalog.csv",
     ) -> Optional[str]:
         """
-        Orchestrates fetching government account data, their repositories, and saving to a Markdown catalog.
+        Orchestrates fetching government account data, their repositories, and saving to a CSV catalog.
         """
         url_to_fetch = gov_accounts_url or GOVERNMENT_ACCOUNTS_URL
         logger.info(
@@ -358,6 +344,7 @@ class GitHubScanner:
             logger.info(
                 "No repository details were fetched from any government account."
             )
-            return None
+            # Save an empty catalog file with headers
+            return self._save_gov_repos_to_csv([], output_filename)
 
-        return self._save_gov_repos_to_markdown(all_repos_details, output_filename)
+        return self._save_gov_repos_to_csv(all_repos_details, output_filename)
