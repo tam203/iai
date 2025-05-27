@@ -1,6 +1,5 @@
 import argparse
 import logging
-from pathlib import Path
 
 import pandas as pd
 
@@ -38,6 +37,13 @@ def main():
         default="classified_gov_repositories.csv",
         help="Filename for the output CSV within the run_id directory.",
     )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Limit the number of repositories to classify (processed in descending order of stars). "
+             "Default: no limit.",
+    )
     args = parser.parse_args()
 
     logger.info(f"Starting LLM classification for Run ID: {args.run_id}")
@@ -67,9 +73,37 @@ def main():
 
     if df.empty:
         logger.info("Input DataFrame is empty. No repositories to classify.")
-        # Save an empty CSV with expected columns if needed, or just skip.
-        # For now, we'll let it proceed, and LLMClassAnalysis should handle empty df.
-        # If classify_repos creates columns, an empty df with those columns will be saved.
+        # If the DataFrame is empty, we can't sort or limit.
+        # LLMClassAnalysis should handle an empty df, producing an empty classified_df.
+    else:
+        # Sort by stars if the column exists
+        if "stars" in df.columns:
+            logger.info("Sorting repositories by 'stars' in descending order.")
+            df = df.sort_values(by="stars", ascending=False)
+        elif args.limit is not None and args.limit > 0:
+            # Only warn about missing 'stars' if a limit is actually going to be applied
+            logger.warning(
+                "'stars' column not found. Cannot sort by stars. "
+                "If a limit is applied, it will be based on the current order of rows in the CSV."
+            )
+
+        # Apply limit
+        if args.limit is not None and args.limit > 0:
+            original_count = len(df)
+            if original_count > args.limit:
+                logger.info(f"Limiting classification to the top {args.limit} repositories (out of {original_count}).")
+                df = df.head(args.limit)
+            else:
+                logger.info(
+                    f"Limit of {args.limit} requested, but only {original_count} "
+                    "repositories available. Processing all available."
+                )
+        elif args.limit is not None and args.limit <= 0:
+            logger.warning(
+                f"Invalid limit '{args.limit}' (must be a positive integer). Processing all repositories."
+            )
+        # Reset index after sorting/limiting to ensure clean indexing for subsequent operations
+        df = df.reset_index(drop=True)
 
     # Ensure 'description' and 'readme_snippet' (to be renamed to 'readme') columns exist
     if "description" not in df.columns:
@@ -86,6 +120,11 @@ def main():
             "'readme_snippet' or 'readme' column not found. 'readme' content will be treated as empty for classification."
         )
         df["readme"] = ""
+
+    if df.empty and args.limit is not None and args.limit > 0 : # Check if df became empty after limiting
+        logger.info("DataFrame is empty after applying the limit. No repositories to classify.")
+        # classified_df will be empty, and an empty CSV will be saved.
+
 
     # Initialize LLMClassAnalysis
     # API token, deployment, and endpoint will be picked from iai.config by default

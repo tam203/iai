@@ -11,7 +11,6 @@ DEPLOYMENT_NAME = os.getenv("DEPLOYMENT_NAME")
 ENDPOINT_URL = os.getenv("ENDPOINT_URL")
 
 
-
 DEFAULT_SEARCH_QUERIES = [
     "topic:python language:python stars:>1000",
     "org:google language:go",
@@ -19,9 +18,7 @@ DEFAULT_SEARCH_QUERIES = [
 
 GOVERNMENT_ACCOUNTS_URL = "https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml"
 
-TARGET_REPOS = [
-    "alphagov",
-    "i-dot-ai"]
+TARGET_REPOS = ["alphagov", "i-dot-ai"]
 # ,
 #     "canada-ca",
 #     "govtechsg",
