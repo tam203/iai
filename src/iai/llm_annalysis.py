@@ -9,6 +9,7 @@ from langchain_core.exceptions import OutputParserException
 
 df = repos_df.copy()
 
+
 def classify_repos(df, topic_list, model_name="gpt-4o"):
     # Initialize Azure OpenAI client
     llm = AzureChatOpenAI(
@@ -17,24 +18,26 @@ def classify_repos(df, topic_list, model_name="gpt-4o"):
         azure_endpoint=endpoint,
         api_key=subscription_key,
     )
-    
+
     summary_prompt = PromptTemplate(
         input_variables=["description", "readme"],
         template="""
         Please provide a summary of the following GitHub repository based on its description and README.md content. If the README.md is not in English, please first translate it to English and then generate a summary. The summary should be concise and in fewer than 5 sentences.
-        
+
         Repository description:
         {description}
-        
+
         README.md content:
         {readme}
-        
+
         Summary:
-        """
+        """,
     )
-    
+
     response_schemas = [
-        ResponseSchema(name="topic", description="The selected topic for the repository.")
+        ResponseSchema(
+            name="topic", description="The selected topic for the repository."
+        )
     ]
     output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
 
@@ -80,10 +83,10 @@ def classify_repos(df, topic_list, model_name="gpt-4o"):
             topic_list.append(topic)
 
         return topic
-    
+
     tqdm.pandas(desc="Classifying repositories")
     df["topic"] = df["readme"].progress_apply(classify_repo)
-    
+
     df["summary"] = df.apply(generate_summary, axis=1)
-    
+
     return df, topic_list
