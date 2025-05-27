@@ -224,8 +224,8 @@ O Autenticação.Gov<span> ",amagovpt,government-tech,"This GitHub repository pr
 D-Portal,No description,31,23,JavaScript,https://github.com/IATI/D-Portal,"Summary
 =======
 
- Product  | D-portal  
---- | --- 
+ Product  | D-portal
+--- | ---
 Description | Search IATI data on development and humanitarian activities on specific events or the",IATI,humanitarian-data,"The repository is for **D-portal**, a tool for searching and exploring IATI (International Aid Transparency Initiative) data on development and humanitarian activities. It focuses on providing information related to specific events or initiatives."
 CanFlood,Flood Risk modelling toolbox for Canada,30,7,Python,https://github.com/NRCan/CanFlood,"[![Documentation Status (dev)](https://readthedocs.org/projects/canflood/badge/?version=dev)](https://canflood.readthedocs.io/en/dev/)
 [![Documentatio",NRCan,flood-risk-modeling,"The repository provides a flood risk modeling toolbox specifically designed for Canada. It features tools and documentation for analyzing, predicting, and managing flood risks, with resources hosted on ReadTheDocs for further guidance. The project is likely aimed at researchers, policymakers, and engineers working on flood mitigation and environmental planning."
@@ -272,7 +272,7 @@ OpenProcurement Auction Software
 Lukas,A PHP Search Query Parser,25,7,PHP,https://github.com/OnroerendErfgoed/Lukas,"Lukas - Search Query Handler
 ============================
 
-Lukas is a library that helps in implementing a custom search query language. 
+Lukas is a library that helps in implementing a custom search query language.
 It offers so",onroerenderfgoed,custom-search-query-parsing,"Lukas is a PHP library designed to assist developers in creating and handling custom search query languages. It simplifies the parsing and processing of search queries, enabling flexible and efficient query handling."
 consult,No description,25,7,Python,https://github.com/i-dot-ai/consult,"# Consult
 
@@ -413,7 +413,7 @@ Scraper de precios de productos básicos basado en la pagina del SNIIM.
 
 ## Requer",mxabierto,web-scraping,This repository provides a web scraper for fetching prices of basic goods from the Sistema Nacional de Información e Integración de Mercados (SNIIM) website. It includes requirements and instructions for extracting market price data programmatically. The tool is designed to automate data collection to analyze and monitor market trends efficiently.
 askgovsg,Answers from the Singapore Government,17,6,TypeScript,https://github.com/opengovsg/askgovsg,"# AskGov
-Answers from the Singapore Government 
+Answers from the Singapore Government
 
 ## Tech Stack
 
@@ -532,7 +532,7 @@ hakunapi,OGC API Features Java server,14,3,Java,https://github.com/nlsfi/hakunap
 
 # Hakunapi OGC API Features Server
 
-A server implementation of OGC API Features 
+A server implementation of OGC API Features
 * ",nlsfi,geospatial-data,"Hakunapi is a Java server implementation of the OGC API Features standard, which enables access to geospatial features via web services. It provides tools to build and serve APIs compliant with OGC standards for managing and retrieving geospatial data. Designed for interoperability, it simplifies integration with geospatial systems."
 design-system,Design system for @undataforum websites.,14,3,JavaScript,https://github.com/UNStats/design-system,"# @undataforum/design-system
 
@@ -625,7 +625,7 @@ mec-opendata,Portal de Datos Abiertos del Ministerio de Educación y Cultura del
 Este portal pone a disposición de todo el mundo los datos de esta inst",mecpy,open-data,The repository is for the Open Data Portal of the Ministry of Education and Culture of Paraguay. It aims to make public data from the ministry accessible to everyone.
 chyf,Web application that provides hydrology services based on the Common Hydrology Features (CHyF) data model,11,4,Java,https://github.com/NRCan/chyf,"# About CHyF Software
 
-The Common Hydrology Features (CHyF) open source software, demonstrated on the CHyF Pilot Demo, 
+The Common Hydrology Features (CHyF) open source software, demonstrated on the CHyF Pilot Demo,
 was developed by Refractions R",NRCan,geospatial-data,The GitHub repository hosts an open-source web application based on the Common Hydrology Features (CHyF) data model. It provides hydrology-related services and showcases functionalities demonstrated in the CHyF Pilot Demo. The software was developed by Refractions Research and aims to support hydrology workflows using standardized data modeling.
 firma-digital,Firma Digital,10,10,Java,https://github.com/mecpy/firma-digital,"# **App-Signer**, Firma Digital de Documentos
 

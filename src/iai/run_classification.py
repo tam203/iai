@@ -42,7 +42,7 @@ def main():
         type=int,
         default=None,
         help="Limit the number of repositories to classify (processed in descending order of stars). "
-             "Default: no limit.",
+        "Default: no limit.",
     )
     args = parser.parse_args()
 
@@ -91,7 +91,9 @@ def main():
         if args.limit is not None and args.limit > 0:
             original_count = len(df)
             if original_count > args.limit:
-                logger.info(f"Limiting classification to the top {args.limit} repositories (out of {original_count}).")
+                logger.info(
+                    f"Limiting classification to the top {args.limit} repositories (out of {original_count})."
+                )
                 df = df.head(args.limit)
             else:
                 logger.info(
@@ -121,16 +123,19 @@ def main():
         )
         df["readme"] = ""
 
-    if df.empty and args.limit is not None and args.limit > 0 : # Check if df became empty after limiting
-        logger.info("DataFrame is empty after applying the limit. No repositories to classify.")
+    if (
+        df.empty and args.limit is not None and args.limit > 0
+    ):  # Check if df became empty after limiting
+        logger.info(
+            "DataFrame is empty after applying the limit. No repositories to classify."
+        )
         # classified_df will be empty, and an empty CSV will be saved.
-
 
     # Initialize LLMClassAnalysis
     # API token, deployment, and endpoint will be picked from iai.config by default
     analyzer = LLMClassAnalysis(run_id=args.run_id)
 
-    topic_list=TOPIC_LIST
+    topic_list = TOPIC_LIST
     logger.info(f"Starting classification with initial topics: {topic_list}")
 
     classified_df, updated_topic_list = analyzer.classify_repos(df, topic_list)

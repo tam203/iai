@@ -4,6 +4,7 @@ from iai import GitHubScanner, generate_run_id
 from iai.config import DEFAULT_SEARCH_QUERIES, GITHUB_API_TOKEN  # Assuming config.py
 from iai.utils import DATA_DIR  # To inform user where data is stored
 
+
 def main():
     """Main function to run the GitHub scan and catalogue process."""
     logging.basicConfig(

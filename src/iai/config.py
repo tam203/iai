@@ -19,7 +19,7 @@ DEFAULT_SEARCH_QUERIES = [
 GOVERNMENT_ACCOUNTS_URL = "https://raw.githubusercontent.com/github/government.github.com/gh-pages/_data/governments.yml"
 
 TARGET_REPOS = [
-    "alphagov", 
+    "alphagov",
     "i-dot-ai",
     "canada-ca",
     "govtechsg",
@@ -28,4 +28,14 @@ TARGET_REPOS = [
     "opengovsg",
 ]
 
-TOPIC_LIST = ["ai", "data", "data science", "cybersecurity", "ai agents", "ai ethics", "ai regulation", "automation", "innovation" ]
+TOPIC_LIST = [
+    "ai",
+    "data",
+    "data science",
+    "cybersecurity",
+    "ai agents",
+    "ai ethics",
+    "ai regulation",
+    "automation",
+    "innovation",
+]

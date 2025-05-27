@@ -16,9 +16,9 @@ This is the repository for the UK Government's guidance and standards for develo
 helpful-intranet,GOV.UK-style intranet WordPress theme,0,0,PHP,https://github.com/eddZA/helpful-intranet,"# Helpful intranet #
 ================
 
-Contributors: lukeoatham  
-Link: http://www.helpfultechnology.com  
-Tags: intranet, gov.uk  
+Contributors: lukeoatham
+Link: http://www.helpfultechnology.com
+Tags: intranet, gov.uk
 Requires at least:",eddZA
 Leaflet,JavaScript library for mobile-friendly interactive maps,0,0,JavaScript,https://github.com/eddZA/Leaflet,"<img src=""http://leafletjs.com/docs/images/logo.png"" alt=""Leaflet"" />
 
@@ -96,7 +96,7 @@ ck-admin-v2,No description,0,0,Vue,https://github.com/RoyalBoroughKingston/ck-ad
 This is a [Vue.js](https://vuejs.org/) SPA (Single Page App) using [Vue Router](https://router.vuejs.org) for the routi",RoyalBoroughKingston
 ck-api,Connected Kingston API,3,0,PHP,https://github.com/RoyalBoroughKingston/ck-api,"# Connected Kingston
 
-A scheme run by RBK to help residents take control of their own health 
+A scheme run by RBK to help residents take control of their own health
 by connecting them with services and events in their loc",RoyalBoroughKingston
 ck-api-v2,No description,0,0,PHP,https://github.com/RoyalBoroughKingston/ck-api-v2,"# Connected Places
 
@@ -266,7 +266,7 @@ Things you may want to cover:
 codespostaux-ui,UI codes postaux PF,0,0,HTML,https://github.com/sipf/codespostaux-ui,,sipf
 config-service,"This project is used for proof of concept only. Of course, you can contribute, you just need to fork and PR your feature. The docker hub links : https://hub.docker.com/r/sipf/config-service",0,0,Shell,https://github.com/sipf/config-service,"## Spring cloud service configuration
 
-This project is used for proof of concept only. Of course, you can contribute, you just need to fork 
+This project is used for proof of concept only. Of course, you can contribute, you just need to fork
 and PR yo",sipf
 config-service-data,Configuration data for spring cloud config (POC only),0,0,None specified,https://github.com/sipf/config-service-data,"# Spring Configuration data
 ",sipf
@@ -297,7 +297,7 @@ Deploy zipcode
 curl -L -s https://github.com/shambarick/netpf-k8s/",sipf
 news-ws,API for pushing news. The docker hub link : https://hub.docker.com/r/sipf/news-ws,0,0,Shell,https://github.com/sipf/news-ws,"## News-ws
 
-This project is used for proof of concept only. Of course, you can contribute, you just need to fork 
+This project is used for proof of concept only. Of course, you can contribute, you just need to fork
 and PR your feature.
 
 You can access",sipf
@@ -307,7 +307,7 @@ organism-ws,API centralize any type of organisms. The docker hub link : https://
 portal-ui,No description,0,0,None specified,https://github.com/sipf/portal-ui,README not available,sipf
 procedure-ws,API centralize any type of procedure. The docker hub link : https://hub.docker.com/r/sipf/procedure-ws,0,0,Shell,https://github.com/sipf/procedure-ws,"## Procedure-ws
 
-This project is used for proof of concept only. Of course, you can contribute, you just need to fork 
+This project is used for proof of concept only. Of course, you can contribute, you just need to fork
 and PR your feature.
 
 You can a",sipf
@@ -317,7 +317,7 @@ This project is used for proof of concept only. Of course, you can contribute, y
 and PR your featur",sipf
 service-ws,"API centralize any type of web application, API, Mobile app...etc. The docker hub link : https://hub.docker.com/r/sipf/service-ws",1,0,Shell,https://github.com/sipf/service-ws,"## Procedure-ws
 
-This project is used for proof of concept only. Of course, you can contribute, you just need to fork 
+This project is used for proof of concept only. Of course, you can contribute, you just need to fork
 and PR your feature.
 
 You can a",sipf
@@ -344,7 +344,7 @@ tps,Dématérialiser et simplifier les démarches administratives ,0,0,Ruby,http
 [demarches-simplifiees.fr](https://www.demarches-simplifiees.fr) est un site web conçu afin de répondre au be",sipf
 zipcode-ws,API for PF zip codes (code postaux). The docker hub link : https://hub.docker.com/r/sipf/zipcode-ws,0,0,Shell,https://github.com/sipf/zipcode-ws,"## Zipcode-ws
 
-This project is used for proof of concept only. Of course, you can contribute, you just need to fork 
+This project is used for proof of concept only. Of course, you can contribute, you just need to fork
 and PR your feature.
 
 You can acc",sipf
@@ -369,7 +369,7 @@ Any pre-requis",NLCR
 ansible-common,Simple Ansible role for basic configuration of machines in National Library of the Czech Republic,0,0,None specified,https://github.com/NLCR/ansible-common,"Machine commons
 =========
 
-This role is common across machines of National Library of the Czech Republic.  
+This role is common across machines of National Library of the Czech Republic.
 This role installs few handy apps (git, vi",NLCR
 ansible-czidlo,Role to manage Czidlo installation,0,0,None specified,https://github.com/NLCR/ansible-czidlo,"CZIDLO
 =========
@@ -634,7 +634,7 @@ registrdigitalizace.soapclient,Automatically exported from code.google.com/p/reg
 registrdigitalizace.soapservices,Automatically exported from code.google.com/p/registrdigitalizace.soapservices,0,0,XSLT,https://github.com/NLCR/registrdigitalizace.soapservices,registrdigitalizace.soapservices,NLCR
 SeznamDNNT,Registry for Out of Commerce Literary Works,7,1,Java,https://github.com/NLCR/SeznamDNNT,"# Seznam DNNT
 
-Systém SDNNT je připraven ve verzi 1.0 pro zpřístupnění po ukončení testování verze 0.9.  
+Systém SDNNT je připraven ve verzi 1.0 pro zpřístupnění po ukončení testování verze 0.9.
 Zahrnuje funkcionalitu požadovanou NK + zapr",NLCR
 Software-pro-validaci-dat,No description,0,0,None specified,https://github.com/NLCR/Software-pro-validaci-dat,README not available,NLCR
 Standard_NDK,Máme nový web https://standardy.ndk.cz. Záloha dokumentů z webu je stále dostupná na uložišti https://owncloud.cesnet.cz/index.php/s/yB70zl80HuZdKhP.,7,0,None specified,https://github.com/NLCR/Standard_NDK,"# AKTUALITY #
@@ -736,10 +736,10 @@ To install Swagger to be used trhrough the command line.
 After it's installe",AltaConsejeriaTIC
 OFBTriviaFront,No description,1,0,JavaScript,https://github.com/AltaConsejeriaTIC/OFBTriviaFront,"# OFBTriviaFront
 ## How to run
- 
+
  * Install with `npm install`
  * Run with `npm start`
- 
+
 ## How to set up
 
  * Edit `env.js` file with your backend end",AltaConsejeriaTIC
@@ -748,12 +748,12 @@ secretariamujer,No description,0,0,PHP,https://github.com/AltaConsejeriaTIC/secr
 Soberania-Alimentaria,"Este proyecto tiene como objetivo desarrollar e implementar un invernadero de 1mx1m, controlando variables de temperatura, ventilación, riego e iluminación desde una pagina web, para monitorearle desde un ordenador (PC-Portatil), tablet o movil que disponga conexion a internet.",1,0,Arduino,https://github.com/AltaConsejeriaTIC/Soberania-Alimentaria,"# Soberania Alimentaria
 
 <p align=""center""><em><strong>APORTES PARA LA CUARTA REVOLUCION VERDE:</strong> Softaware y Hardware libre para una sociedad ",AltaConsejeriaTIC
-toxidrogasun,"Toxidrogas UN es una iniciativa del grupo de investigación ""Sustancias Psicoactivas"" del Departamento de Toxicología de la Universidad Nacional de Colombia que tiene como finalidad la  unificacíon de información relativa al tema de la toxicología de sustancias psicoactivas, ademas de un servicio consulta a preguntas e interrogantes  dirigido a la comunidad en general, el cual será atendido por un grupo interdiciplinario de toxicólogos, psicólogos, psiquiatras y especialistas en la temática. ",0,0,PHP,https://github.com/AltaConsejeriaTIC/toxidrogasun,"#   TOXIDROGAS UN   
+toxidrogasun,"Toxidrogas UN es una iniciativa del grupo de investigación ""Sustancias Psicoactivas"" del Departamento de Toxicología de la Universidad Nacional de Colombia que tiene como finalidad la  unificacíon de información relativa al tema de la toxicología de sustancias psicoactivas, ademas de un servicio consulta a preguntas e interrogantes  dirigido a la comunidad en general, el cual será atendido por un grupo interdiciplinario de toxicólogos, psicólogos, psiquiatras y especialistas en la temática. ",0,0,PHP,https://github.com/AltaConsejeriaTIC/toxidrogasun,"#   TOXIDROGAS UN
 
-##     Licencia   
+##     Licencia
 GPL 3.0
 
-##   Descripción 
+##   Descripción
 
 Toxidrogas UN es una iniciativa del grupo de investigación ""Sustancias Psicoactiv",AltaConsejeriaTIC
 ur-bacata,Videojuego que permite a la ciudanía generar conciencia sobre cómo es darle un buen rumbo a la ciudad a través de un crecimiento urbano integral.,0,0,JavaScript,https://github.com/AltaConsejeriaTIC/ur-bacata,"# Ur-Bacatá
@@ -786,7 +786,7 @@ Demo of a WordPress application which follows 12 Factor App principles.
 44con-ctf-info,"Info on CTF organised by Ministry of Justice, taking place at 44con 2016 London",0,1,None specified,https://github.com/ministryofjustice/44con-ctf-info,"
 ##This doc
 This doc will be updated during the conf as needed so keep an eye for it. Twitter for MOJ Digital: [@Justice_Digital](https://twitter.com/",ministryofjustice
-accelerated_claims,** Unmaintained repository! **  Accelerated Claims app,0,1,Ruby,https://github.com/ministryofjustice/accelerated_claims,"# ** Unmaintained repository! ** 
+accelerated_claims,** Unmaintained repository! **  Accelerated Claims app,0,1,Ruby,https://github.com/ministryofjustice/accelerated_claims,"# ** Unmaintained repository! **
 
 # Accelerated Claim application (aka 'Civil-Claims' and 'Accelerated Possessions')
 
@@ -810,7 +810,7 @@ Timeout warning is a component that:
 - Is shown after a period of inactivity
 - Warns users before a session timeout t",ministryofjustice
 accredited-programmes-community-prototype,A community prototype of Accredited Programmes.,1,0,HTML,https://github.com/ministryofjustice/accredited-programmes-community-prototype,"# accredited-programmes-prototype-main
- 
+
 ",ministryofjustice
 accredited-programmes-prototype,Prototype for HMPPS Accredited Programmes using the GOV.UK Prototype Kit and the MOJ Pattern Library.,1,0,HTML,https://github.com/ministryofjustice/accredited-programmes-prototype,README not available,ministryofjustice
 acronyms,"List of abbreviations used within the MoJ, and their definitions.",11,6,CSS,https://github.com/ministryofjustice/acronyms,"# Ministry of Justice Acronyms
@@ -860,7 +860,7 @@ analytical-platform-actions-runner,Analytical Platform Actions Runner • This r
 
 [![Ministry of Justice Repository Compliance Badge](https://github-community.service.justice.gov.uk/repository-s",ministryofjustice
 analytical-platform-adhoc-scripts,Repository to store useful one off scripts ,0,1,Python,https://github.com/ministryofjustice/analytical-platform-adhoc-scripts,"# Analytical Platform Adhoc Scripts
-This repository is intended to store useful one off scripts 
+This repository is intended to store useful one off scripts
 
 ## Current adhoc scripts
 ### **`repositories.py`**
@@ -1004,7 +1004,7 @@ analytics-platform-airflow-example-dags,Example dags that users can refer to whe
 
 > Example DAGs for users to refer to when writing their own
 
-These are example DAGs for apache-airflow 
+These are example DAGs for apache-airflow
 
 **NOTE**: Currently u",ministryofjustice
 analytics-platform-atlantis-docker,Docker image for Atlantis + terrahelp,0,1,Dockerfile,https://github.com/ministryofjustice/analytics-platform-atlantis-docker,"# Atlantis Docker image
@@ -1027,7 +1027,7 @@ analytics-platform-common-concourse-tasks,Utility tasks for Concourse,0,1,Python
 
 * decrypt-gitcrypt.yaml
   **DEPRECATED** This functionality is provided by the `git` resource.
-  
+
 * ec2-metadata.yaml
   Fetches AWS cr",ministryofjustice
 analytics-platform-concourse-auth0-client-resource,Auth0 Client resource for Concourse,0,1,Python,https://github.com/ministryofjustice/analytics-platform-concourse-auth0-client-resource,"[![Docker Repository on Quay](https://quay.io/repository/mojanalytics/concourse-auth0-resource/status ""Docker Repository on Quay"")](https://quay.io/re",ministryofjustice
@@ -1249,7 +1249,7 @@ You'll find stuff for :
 
 - vim/gvim
 - byobu/tmux
-- htop 
+- htop
 - rvm/gem/ruby/irb/pry/ap...",erasme
 erabackup,erabackup - ERASME's tool for // and easy backups,1,1,None specified,https://github.com/erasme/erabackup,"erabackup - ERASME's tool for // and easy backups
 
@@ -1368,7 +1368,7 @@ hakunapi,OGC API Features Java server,14,3,Java,https://github.com/nlsfi/hakunap
 
 # Hakunapi OGC API Features Server
 
-A server implementation of OGC API Features 
+A server implementation of OGC API Features
 * ",nlsfi
 HASlib,Galileo High Accuracy Service decoder library,57,17,Python,https://github.com/nlsfi/HASlib,"# HASlib
 
@@ -1532,7 +1532,7 @@ DevInfoToDSD,No description,4,3,Jupyter Notebook,https://github.com/UNStats/DevI
 This repo will walk you through the process of converting a DevInfo Access Database to files that can be published to your ArcGIS Hub",UNStats
 explore_dc_sdg,Explore Data Commons for SDGs,0,0,Jupyter Notebook,https://github.com/UNStats/explore_dc_sdg,"# About this repo
 
-This repo includes code for an initial exploration of Google Data Commons using the python API. 
+This repo includes code for an initial exploration of Google Data Commons using the python API.
 
 # Getting started
 
@@ -1668,11 +1668,11 @@ ansible-prometheus,Deploy Prometheus monitoring system,0,0,Python,https://github
 # Ansibl",dsaidgovsg
 argo-cd,Declarative Continuous Deployment for Kubernetes,0,0,None specified,https://github.com/dsaidgovsg/argo-cd,"**Releases:**
 [![Release Version](https://img.shields.io/github/v/release/argoproj/argo-cd?label=argo-cd)](https://github.com/argoproj/argo-cd/release",dsaidgovsg
-benchmarking-differential-privacy-tools,No description,1,1,Jupyter Notebook,https://github.com/dsaidgovsg/benchmarking-differential-privacy-tools,"# Benchmarking Differential Privacy Python Tools 
+benchmarking-differential-privacy-tools,No description,1,1,Jupyter Notebook,https://github.com/dsaidgovsg/benchmarking-differential-privacy-tools,"# Benchmarking Differential Privacy Python Tools
 ------------------------
 
 This repository contains the implementation of benchmarked differential pr",dsaidgovsg
-benchmarking-synthetic-data-generators,No description,0,1,Jupyter Notebook,https://github.com/dsaidgovsg/benchmarking-synthetic-data-generators,"# Benchmarking Synthetic Data Generation Models 
+benchmarking-synthetic-data-generators,No description,0,1,Jupyter Notebook,https://github.com/dsaidgovsg/benchmarking-synthetic-data-generators,"# Benchmarking Synthetic Data Generation Models
 
 | Argument | Type | Default Value | Description | Possible Values |
 |----------|------|-------------",dsaidgovsg
@@ -1719,8 +1719,8 @@ Case-study to show how network (or graph) analysis could help organisation of ev
 ### Participant Table
 
 ",dsaidgovsg
-datavis-examples,Repo with sample dataset and codes to show some simple visualization.,1,1,Jupyter Notebook,https://github.com/dsaidgovsg/datavis-examples,"After the World War II, antibiotics were considered as ""wonder drugs"", 
-since they were easy remedy for what had been intractable ailments. 
+datavis-examples,Repo with sample dataset and codes to show some simple visualization.,1,1,Jupyter Notebook,https://github.com/dsaidgovsg/datavis-examples,"After the World War II, antibiotics were considered as ""wonder drugs"",
+since they were easy remedy for what had been intractable ailments.
 To learn ",dsaidgovsg
 detectron2,Detectron2 is FAIR's next-generation platform for object detection and segmentation.,0,0,Python,https://github.com/dsaidgovsg/detectron2,"<img src="".github/Detectron2-Logo-Horz.svg"" width=""300"" >
 
@@ -1747,7 +1747,7 @@ docker-openldap,OpenLDAP as a Docker image,0,0,Shell,https://github.com/dsaidgov
 The image is based on Debian stable (""stretch"" at the moment). The Dockerfile is
 inspired by [cnry/openldap](https://",dsaidgovsg
 extract-email-from-http-header,No description,0,0,Python,https://github.com/dsaidgovsg/extract-email-from-http-header,"# extract-email-from-header
-Utility package to help extract email from HTTP Request headers. 
+Utility package to help extract email from HTTP Request headers.
 ",dsaidgovsg
 fastapi,"FastAPI framework, high performance, easy to learn, fast to code, ready for production",0,0,None specified,https://github.com/dsaidgovsg/fastapi,"<p align=""center"">
   <a href=""https://fastapi.tiangolo.com""><img src=""https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"" alt=""FastAPI""></a>
@@ -1815,25 +1815,25 @@ ilytics,"gunicorn, flask, and darknet model",1,2,C,https://github.com/dsaidgovsg
 
 ## Backend
 
-This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.sg 
+This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.sg
 
 ## Deploying new wei",dsaidgovsg
 ilytics-frontend,https://www.ilytics.sg,0,0,Vue,https://github.com/dsaidgovsg/ilytics-frontend,"<img src=""logo.png"" width=""200"">
 
 ## Frontend
 
-This repo contains the frontend(vue.js) for ilytics.sg 
+This repo contains the frontend(vue.js) for ilytics.sg
 
 ## Run Instruction
 
 - `npm install`
- 
+
 - `npm r",dsaidgovsg
 ilytics-henry,"gunicorn, flask, and darknet model",0,0,None specified,https://github.com/dsaidgovsg/ilytics-henry,"<img src=""logo.png"" width=""200"">
 
 ## Backend
 
-This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.sg 
+This repo contains the backend(gunicorn, flask, and darknet model) for ilytics.sg
 
 ## Deploying new wei",dsaidgovsg
 iOneMySgMap,A tile server to serve map tiles for Singapore based off the Singapore Metro Extract,0,0,Shell,https://github.com/dsaidgovsg/iOneMySgMap,"# iOneMySgMap
@@ -1974,7 +1974,7 @@ Streamlit Component, for a Chat-bot UI, [example app](https://share.streamlit.io
 
 authors - [@yas",dsaidgovsg
 stack-2022-differential-privacy-workshop,No description,4,2,Jupyter Notebook,https://github.com/dsaidgovsg/stack-2022-differential-privacy-workshop,"
-# ![](images/stack_logo.png) Workshop on Differential Private Statistics Release 
+# ![](images/stack_logo.png) Workshop on Differential Private Statistics Release
 
 Differential privacy is a rigorous mathematical definition of priv",dsaidgovsg
 swagger-ui-plugins-monorepo,"swagger-ui plugins: layout, otp auth, saml auth plugins",0,1,JavaScript,https://github.com/dsaidgovsg/swagger-ui-plugins-monorepo,"#  swagger-ui-plugins-monorepo
@@ -2613,7 +2613,7 @@ To make it easy for you to get started with GitLab, here's a list of recommended
 Already a pro? Ju",governmentbg
 IIS-modul-Questions-EU-Portal,Договор № ОП-055-02-81/15.09.2020 „Надграждане на Интегрираната информационна система и  Интернет портала на Народното събрание”,0,0,CSS,https://github.com/governmentbg/IIS-modul-Questions-EU-Portal,"# 055-02-81_15.09.2020
 
-Надграждане на Интегрираната информационна система и Интернет портала на Народното събрание 
+Надграждане на Интегрираната информационна система и Интернет портала на Народното събрание
 ",governmentbg
 IS-NAPOO,"Договор П-02-1-2/17.01.2022 Разработване, внедряване, тестване и поддръжка на софтуер на НАПОО, вкл. нови функционалности и актуализиране интеграцията между системата за документооборот и Информационната система на НАПОО по проект: „Качество и ефективност”BG05M9OP001-3.020-0001",0,0,C#,https://github.com/governmentbg/IS-NAPOO,"# P-02-1-2
 
@@ -2758,11 +2758,11 @@ assessor-housing-estimates,County-level scripts that process assessor extracts t
  County-level scripts that process assessor extracts to create estimates of annual net change in housing development in t",psrc
 baseyear2018explorer,Shiny app for exploring 2018 base year data,0,0,R,https://github.com/psrc/baseyear2018explorer,"# Base year 2018 Explorer
 
-Explore parcel and buildings level data. The 
+Explore parcel and buildings level data. The
 shiny app is available at [this internal link](aws-linux:3838/baseyear2018exp",psrc
 baseyear2023explorer,Shiny app for exploring 2023 base year data,0,0,R,https://github.com/psrc/baseyear2023explorer,"# Base year 2023 Explorer
 
-Explore parcel and buildings level data. The 
+Explore parcel and buildings level data. The
 shiny app is available at [this internal link](aws-linux:3838/baseyear2023exp",psrc
 bill-analysis,No description,0,0,R,https://github.com/psrc/bill-analysis,README not available,psrc
 census-data-profiles,Creates Census Data profiles from the Census API,0,0,Python,https://github.com/psrc/census-data-profiles,"# Census Data Profiles
@@ -2790,7 +2790,7 @@ city_walkability,Tutorial for '15-minute city' walkability analysis,0,0,None spe
 The goal of this reproduction package is to empower other people to create their own accessibility an",psrc
 cloud,config files for integrated modeling in the cloud,1,0,Python,https://github.com/psrc/cloud,"# cloud
 
-Configure model servers with a common set of version-controlled code and settings. 
+Configure model servers with a common set of version-controlled code and settings.
 - [Initial Machine Setup](https://github.com/psrc/cloud/w",psrc
 combine_gtfs_feeds,A tool to combine gtfs datasets into one feed.,8,0,Python,https://github.com/psrc/combine_gtfs_feeds,"# combine_gtfs_feeds
 A tool to combine gtfs feeds into one feed/dataset. The main purpose of combine_gtfs_feeds is to be able work from one GTFS feed ",psrc
@@ -2807,7 +2807,7 @@ ctpp-explorer,A shiny app to browse CTPP data from the US Census Bureau,5,0,R,ht
 The RShiny app shows commute mode shares in Puget Sound Reg",psrc
 data-portal-tools,No description,1,0,Python,https://github.com/psrc/data-portal-tools,"# data-portal-tools
 
-This repo is intended to house classes to be used for import and export to PSRC's data portal hosted on ArcGIS Online.  
+This repo is intended to house classes to be used for import and export to PSRC's data portal hosted on ArcGIS Online.
 
 ### How",psrc
 data-requests,A place used to house code used in various data request,0,0,R,https://github.com/psrc/data-requests,"# data-requests
@@ -2872,7 +2872,7 @@ geopandas_osm,Query the OSM Overpass API and get a GeoDataFrame,0,0,Python,https
 ======
 
 A GeoPandas interface to query OpenStreetMap Overpass API
-   
+
 Quick start
 -------------------------
 
@@ -2897,7 +2897,7 @@ github-class-km,Test repository for Kristin,0,0,None specified,https://github.co
 ",psrc
 github-class-lauren,junk repository for practice,0,0,None specified,https://github.com/psrc/github-class-lauren,README not available,psrc
 github-class-mary,creating new repositoy to practice using github ,0,0,None specified,https://github.com/psrc/github-class-mary,"# github-class-mary
- creating new repositoy to practice using github 
+ creating new repositoy to practice using github
 ",psrc
 github-class-megan,for GitHub desktop testing.,0,0,None specified,https://github.com/psrc/github-class-megan,README not available,psrc
 heritage-month,for creating summaries for heritage month blog posts,0,0,HTML,https://github.com/psrc/heritage-month,"# heritage-month
@@ -2992,7 +2992,7 @@ network_builder,No description,1,0,Python,https://github.com/psrc/network_builde
 
 Set up a virtual environment via Anaconda prompt
   - `conda create --name network_builder`
-  
+
 Install the following libraries
   - ",psrc
 Network_ModelIO,No description,1,1,Visual Basic,https://github.com/psrc/Network_ModelIO,README not available,psrc
@@ -3043,7 +3043,7 @@ Postman collection til at afprøve forbindelse imod DUPLA
 dupla-underretning-klient,Eksempel kode til forbindelse til DUPLA underretningspligt,0,0,Groovy,https://github.com/skat/dupla-underretning-klient,"# dupla-underretning-klient
 Eksempel kode til forbindelse til DUPLA underretningspligt
 ",skat
-emcs-b2b-ws,Repository with relevant artefacts and information in relation to SKAT's EMCS B2B Web Service Gateway ,6,3,None specified,https://github.com/skat/emcs-b2b-ws,"# Artefacts and information in relation to SKAT's EMCS B2B Web Services Gateway 
+emcs-b2b-ws,Repository with relevant artefacts and information in relation to SKAT's EMCS B2B Web Service Gateway ,6,3,None specified,https://github.com/skat/emcs-b2b-ws,"# Artefacts and information in relation to SKAT's EMCS B2B Web Services Gateway
 
 This repository provides relevant artefacts and information in relat",skat
 emcs-b2b-ws-sample-client-dotnet-wcf,Sample client for the EMCS B2B Web Service Gateway developed in .NET using WCF,3,0,C#,https://github.com/skat/emcs-b2b-ws-sample-client-dotnet-wcf,"# EMCS B2B Sample Web Service Client written in .NET v4.6 using WCF
@@ -3137,7 +3137,7 @@ ckanext-dgvat_translate,CKAN extension for adding a widget to translate (synced)
 ckanext-dgvat_xls,Custom feature for CKAN (based on data.gv.at implementation),0,0,Python,https://github.com/datagvat/ckanext-dgvat_xls,"Dgvat XLS-Export Extension
 ==========================
 
-The dgvat XLS-export extension allows group-admin to export datasets from their organizations 
+The dgvat XLS-export extension allows group-admin to export datasets from their organizations
 ",datagvat
 DCAT-AP.at,No description,0,0,CSS,https://github.com/datagvat/DCAT-AP.at,"# DCAT-AP.at
 
@@ -3332,31 +3332,31 @@ A transmogrifier pipeline to convert PloneSoftwareCenter",CanaimaGNULinux
 wiki.principal,Repositorio público para el respaldo y versionamiento de la Enciclopedia Colaborativa de la Plataforma Canaima.,3,0,PHP,https://github.com/CanaimaGNULinux/wiki.principal,README not available,CanaimaGNULinux
 Clinical-Backend,No description,2,0,PHP,https://github.com/MohGovIL/Clinical-Backend,"## What is clinikal?
 
-Clinikal is a Electric Medical Records application.  
+Clinikal is a Electric Medical Records application.
 Clinical offers a new experience of administrative and medical management ",MohGovIL
-Clinical-composer-installers,No description,0,0,PHP,https://github.com/MohGovIL/Clinical-composer-installers,"This is an extension of the composer installer, and is used to install Clinikal modules in the Openemr codebase.  
+Clinical-composer-installers,No description,0,0,PHP,https://github.com/MohGovIL/Clinical-composer-installers,"This is an extension of the composer installer, and is used to install Clinikal modules in the Openemr codebase.
 An explanation on how to use this e",MohGovIL
 Clinical-DevOps,No description,2,0,Shell,https://github.com/MohGovIL/Clinical-DevOps,"## What is clinikal?
 
-Clinikal is a Electric Medical Records application.  
+Clinikal is a Electric Medical Records application.
 Clinical offers a new experience of administrative and medical manageme",MohGovIL
-Clinical-Documentation,No description,0,0,None specified,https://github.com/MohGovIL/Clinical-Documentation,"This repository contains the source code for the documentation on this site:  
+Clinical-Documentation,No description,0,0,None specified,https://github.com/MohGovIL/Clinical-Documentation,"This repository contains the source code for the documentation on this site:
 https://clinikal-documentation.readthedocs.io/en/latest/
 
 The documenta",MohGovIL
 Clinical-React,No description,1,0,JavaScript,https://github.com/MohGovIL/Clinical-React,"## What is clinikal?
 
-Clinikal is a Electric Medical Records application.  
+Clinikal is a Electric Medical Records application.
 Clinical offers a new experience of administrative and medical management ",MohGovIL
 Clinical-Translation,No description,0,0,CSS,https://github.com/MohGovIL/Clinical-Translation,"## Clinikal-translation
 
 Mini php application for managing and expanding OpenEMR translation system with a new constants and Hebrew translations.  ",MohGovIL
 Clinical-Vertical-emergency-medicine-backend,No description,0,0,PHP,https://github.com/MohGovIL/Clinical-Vertical-emergency-medicine-backend,"## What is clinikal?
 
-Clinikal is a Electric Medical Records application.  
+Clinikal is a Electric Medical Records application.
 Clinical offers a new experience of administrative and medical management ",MohGovIL
 Clinical-vertical-imaging-backend,No description,0,0,PHP,https://github.com/MohGovIL/Clinical-vertical-imaging-backend,"# Description
-The module in this repository contains functionality relevant to imaging centers.  
+The module in this repository contains functionality relevant to imaging centers.
 Note that the default data loaded into the database ",MohGovIL
 hamagen-react-native,Israel's Ministry of Health's COVID-19 Exposure Prevention App,510,153,TypeScript,https://github.com/MohGovIL/hamagen-react-native,"# Hamagen
 ![Build](https://github.com/MohGovIL/hamagen-react-native/workflows/Build/badge.svg)
@@ -3463,7 +3463,7 @@ Java JRE 11
 
 ## Spustenie demo aplikacie
 Spustenie ",slovak-egov
-vladny-cloud,No description,0,1,None specified,https://github.com/slovak-egov/vladny-cloud,"Dokumentácia k vládnemu cloudu dostupná v tomto repozitári: 
+vladny-cloud,No description,0,1,None specified,https://github.com/slovak-egov/vladny-cloud,"Dokumentácia k vládnemu cloudu dostupná v tomto repozitári:
 - [Naming Convention OCI](https://github.com/slovak-egov/vladny-cloud/blob/main/oci-namin",slovak-egov
 web_cms_kav_app,No description,0,1,PHP,https://github.com/slovak-egov/web_cms_kav_app,"## Drupal app
 ÚPVS: WEB Rozhranie pre spravu obsahu https://cms.slovensko.sk
@@ -3584,7 +3584,7 @@ Un repositorio de recursos comunes para nuestros proyectos.
 ",mxabierto
 async-team,Documentation about how to run an async team (e.g. a remote team in different places),0,1,None specified,https://github.com/mxabierto/async-team,"# async-team
 
-Some documentation about how to run an async team (e.g. a remote team in different places). 
+Some documentation about how to run an async team (e.g. a remote team in different places).
 
 ### About
 
@@ -3836,9 +3836,9 @@ spps,Dashboard SPPS DataLab,0,0,HTML,https://github.com/mxabierto/spps,"# MIIPPS
 Dashboard SPPS-DataLab
 
 # Setup instructions
-## Dependencies 
-1. Postgre SQL database >= 9.4 
-2. NodeJS v6 or later 
+## Dependencies
+1. Postgre SQL database >= 9.4
+2. NodeJS v6 or later
 
 ## Web app
 1. `cd spps/",mxabierto
@@ -4008,7 +4008,7 @@ iap,No description,1,0,SCSS,https://github.com/amagovpt/iap,"# Interoperabilidad
 O que é a iAP, Interoperabilidade na Administração Pública?
 É uma plataforma central, orientada a servi",amagovpt
 ISCAPI,Repositório da API de  Integração de Serviços Comuns ,0,3,C#,https://github.com/amagovpt/ISCAPI,"# API de Integração de Serviços Comuns
-Repositório da Integração de Serviços Comuns 
+Repositório da Integração de Serviços Comuns
 ",amagovpt
 kit-selo,Kit Selo de Usabilidade e Acessibilidade,4,3,HTML,https://github.com/amagovpt/kit-selo,"# Selo de Usabilidade e Acessibilidade
 
@@ -4132,7 +4132,7 @@ make sure node v20+ and yarn are installed.
 
  ```bash
    git clone https://github.com/VMV",VMVT-DevHub
-birdbanding-client,Angular-based front-end for FALCON (NZ Bird Banding Database),1,0,TypeScript,https://github.com/docgovtnz/birdbanding-client,"# doc-birdbanding-client 
+birdbanding-client,Angular-based front-end for FALCON (NZ Bird Banding Database),1,0,TypeScript,https://github.com/docgovtnz/birdbanding-client,"# doc-birdbanding-client
 
 Background: https://docgovtnz.github.io/docs/projects/falcon
 
@@ -4184,12 +4184,12 @@ https://r-spatial.github.io/mapview/
 
 Located in the [mapview folder](ma",docgovtnz
 rtg,No description,0,0,HTML,https://github.com/docgovtnz/rtg,"# rtg
- 
+
 ",docgovtnz
 spbal,No description,1,1,HTML,https://github.com/docgovtnz/spbal,"
 R package spbal.
 
-A package to encapsulate a number of spatially balanced sampling algorithms, namely, 
+A package to encapsulate a number of spatially balanced sampling algorithms, namely,
 BAS (equal, unequal, seed point, panels), Hal",docgovtnz
 codefest.taipei,No description,0,0,Vue,https://github.com/taipei-doit/codefest.taipei,"# CodeFest Taipei
 
@@ -4241,7 +4241,7 @@ townpass2024-venue-rental,場租媒合: 這樣對不隊,0,0,JavaScript,https://g
 
 
 - All Project files below!
-  
+
 - link: https://drive.google.com/drive/folders/",taipei-doit
 townpass2024-weather,即時雨晴: 我被其他隊抓走了,0,0,Dart,https://github.com/taipei-doit/townpass2024-weather,README not available,taipei-doit
 townpass2024-welfare,家戶福利: MSP Player,0,0,TypeScript,https://github.com/taipei-doit/townpass2024-welfare,"# React + TypeScript + Vite
@@ -4252,7 +4252,7 @@ Currently, two offic",taipei-doit
 YouBike-Optimization,"A project focused on YouBike optimization, including improvement of dispatch strategies and prediction of potential demand.",15,2,Python,https://github.com/taipei-doit/YouBike-Optimization,"# Description
 YouBike plays an extremely significant role in Taipei City's transportation system. Many people use YouBike as their primary commuting o",taipei-doit
 atomium,The very base theme,9,5,PHP,https://github.com/ec-europa/atomium,"# Atomium
-[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/atomium/status.svg?branch=7.x-3.x)](https://drone.fpfis.eu/ec-europa/atomium) 
+[![Build Status](https://drone.fpfis.eu/api/badges/ec-europa/atomium/status.svg?branch=7.x-3.x)](https://drone.fpfis.eu/ec-europa/atomium)
 ",ec-europa
 atomium_europa,A subtheme based on atomium for Europa,0,0,PHP,https://github.com/ec-europa/atomium_europa,"# ECL example
 
@@ -4378,7 +4378,7 @@ Repository for tools/helpers used on the NEXT-Europa project
 ",ec-europa
 ec-nems-platform,"[DIGIT] Modules, features and theme for the nems platform",0,3,PHP,https://github.com/ec-europa/ec-nems-platform,"## NEMS Platform Instructions
 
-To incorporate the nems platform into your subsite project with toolkit 
+To incorporate the nems platform into your subsite project with toolkit
 you need to add the following to your resource",ec-europa
 ec-reps-platform,"[COMM] Modules, features and theme for the reps platform",0,4,PHP,https://github.com/ec-europa/ec-reps-platform,"## REPS Platform Instructions
 
@@ -4392,8 +4392,8 @@ notify Salt when an instance is",ec-europa
 ecas-phpcas-parser,phpcas attribute parser callback for ECAS,2,1,PHP,https://github.com/ec-europa/ecas-phpcas-parser,"#EcasPhpCASParser
 
 ## Why
-Default parsing of ECAS attributes is currently broken with phpCAS, 
-groups end-up in an un-parsable concentaned string. 
+Default parsing of ECAS attributes is currently broken with phpCAS,
+groups end-up in an un-parsable concentaned string.
 
 #",ec-europa
 ecl-ssg, Node application using gatsby to generate static websites using ECL webcomponents.,0,1,TypeScript,https://github.com/ec-europa/ecl-ssg,"<p align=""center"">
@@ -4469,7 +4469,7 @@ See https://drone.fpfis.eu/ec-europa/fpfis-repo
 gelf_log,"GELF logging module for Drupal 6/7, no depedencies",2,1,None specified,https://github.com/ec-europa/gelf_log,"GELF Log
 ========
 
-Gelf log is a light Drupal module sending errors formatted with 
+Gelf log is a light Drupal module sending errors formatted with
 the GELF protocol.
 
 Using UDP prevents any locking to occur when s",ec-europa
@@ -4597,7 +4597,7 @@ Documentation to be done.
 PhpDrush,Php library for interacting with Drush Drupal cli tool,2,0,PHP,https://github.com/ec-europa/PhpDrush,"# Drush PHP
 
 Php library for interacting with [Drush](https://github.com/drush-ops/drush) Drupal cli tool
- 
+
 ## Warning
 
 You shall not use this library",ec-europa
@@ -4757,7 +4757,7 @@ Azure_LZBCA-AIZDB,Azure Landing Zone Base Cloud Architecture - Architecture info
 Azure Landing Zone Base Cloud Architecture - Architecture infonuagique zone d'atterrissage de base
 
 This initiative is a contribut",canada-ca
-blog-dto,Canada.ca blog: Digital Transformation Office,3,2,HTML,https://github.com/canada-ca/blog-dto,"#blog-dto  
+blog-dto,Canada.ca blog: Digital Transformation Office,3,2,HTML,https://github.com/canada-ca/blog-dto,"#blog-dto
 
 Prep repo for the move
 ",canada-ca
@@ -4881,7 +4881,7 @@ guardrails-ransomware-prevention_mesures-de-protection-rancongiciels,Minimum gua
 ([Français](#mesures-de-protection-pour-la-prévention-et-latténuation-des-rançongiciels))
 
 ## P",canada-ca
-HC-Technology-and-Business-Innovation_Innovations-Technologiques-et-d-Affaires-SC,No description,0,0,None specified,https://github.com/canada-ca/HC-Technology-and-Business-Innovation_Innovations-Technologiques-et-d-Affaires-SC,"# 
+HC-Technology-and-Business-Innovation_Innovations-Technologiques-et-d-Affaires-SC,No description,0,0,None specified,https://github.com/canada-ca/HC-Technology-and-Business-Innovation_Innovations-Technologiques-et-d-Affaires-SC,"#
 <h3> Welcome to the Technology and Business Innovation Unit (TBI) repository</h3>
 <un>
 
@@ -4901,7 +4901,7 @@ navigator,"Real-time, collaborative, threat modeling tool. / Un outil collaborat
 
 ![Lint, format, and test workflow",canada-ca
 NextGen-HR-Pay,Repository to hold a copy of the Architecture Modeling ,1,2,None specified,https://github.com/canada-ca/NextGen-HR-Pay,"# NextGen-HR-Pay
-Repository to hold a copy of the Architecture Modeling 
+Repository to hold a copy of the Architecture Modeling
 ",canada-ca
 ofd-joep,Open First Day - Journée Ouvert en premier,2,3,HTML,https://github.com/canada-ca/ofd-joep,"# Open First Day - Journée Ouvert en premier
 
@@ -5386,7 +5386,7 @@ EDGEyes
 2018_molit_creazy7530,2018,1,0,HTML,https://github.com/molit-korea/2018_molit_creazy7530,README not available,molit-korea
 2018_molit_DataBrothers,2018 국토부 해커톤,0,0,R,https://github.com/molit-korea/2018_molit_DataBrothers,README not available,molit-korea
 2018_molit_dataRunners,2018 Molit Hackathon,0,0,R,https://github.com/molit-korea/2018_molit_dataRunners,"# 강남지역 교통흐름 극대화를 위한 제안
-by 2018 Molit Hackathon Team Data Runners 
+by 2018 Molit Hackathon Team Data Runners
 
 ## Team Info
 * 성창현 : Team Leader, Data Analysis
@@ -5430,7 +5430,7 @@ by 2018 Molit Hackathon Team Data Runners
 ## Road Detection
  - Copyright 2019 DEV (Lee Donggun, Ryu dongjun)
    - Hompage : http://infolab.kunsan.ac.kr
-   
+
  - Team Info
   ",molit-korea
 2019_molit_Fortuna,No description,1,0,None specified,https://github.com/molit-korea/2019_molit_Fortuna,# 2019_molit_Fortuna,molit-korea
@@ -5649,15 +5649,15 @@ pioneeR,R package for running a Shiny app for DEA analysis,7,2,R,https://github.
 R package for running",Riksrevisjonen
 pods-hackathon-2023,OAG's case for the UiO Political Data Science Hackathon 2023,1,0,None specified,https://github.com/Riksrevisjonen/pods-hackathon-2023,"# PODS Hackathon 2023
 
-This repo contains the case description, stakeholder presentation and data for OAGN's case for the UiO PODS Hackathon 2023. 
+This repo contains the case description, stakeholder presentation and data for OAGN's case for the UiO PODS Hackathon 2023.
 
 
 ",Riksrevisjonen
 rr-python-utils,A collection of Python helper modules for The Office of the Auditor General of Norway (OAGN). ,0,0,Python,https://github.com/Riksrevisjonen/rr-python-utils,"# rr-python-utils
 
-A collection of Python helper modules for The Office of the Auditor General of Norway (OAGN). 
+A collection of Python helper modules for The Office of the Auditor General of Norway (OAGN).
 
-## Installation 
+## Installation
 
 Install from Gith",Riksrevisjonen
 rrplot,Custom ggplot theme for The Office of the Auditor General of Norway,1,0,R,https://github.com/Riksrevisjonen/rrplot,"
@@ -5685,7 +5685,7 @@ Pipeline is organized as a multistaged deployment with nested folder structure m
 PIIFinder,Python Application using spaCy to find PII,2,1,Python,https://github.com/SanDiegoCountySheriff/PIIFinder,"# PIIFinder
 Python application using spaCy to find Personal Identifying Information in any text file.
 
-## Installation  
+## Installation
 1. The first step is to insta",SanDiegoCountySheriff
 TAKAM,"TAKAM is a progressive web app (PWA) designed by the San Diego County Sheriff DevOps team that allows end-users to self-service a server package that can be imported into any TAK client such as WinTAK, iTAK and ATAK",2,2,JavaScript,https://github.com/SanDiegoCountySheriff/TAKAM,"# TAKAM SSO Portal
 
@@ -5794,7 +5794,7 @@ ocds_complaint_extension,No description,0,1,None specified,https://github.com/op
 
 The **complaint extension** of the Open Contracting Data Standard is used to provide structured data for claims and complaints regarding ",openprocurement
 ocds_contractNumber_extension,No description,0,0,None specified,https://github.com/openprocurement/ocds_contractNumber_extension,"# Contact Number
-This extension introduces one field that can be used to provide editable number 
+This extension introduces one field that can be used to provide editable number
 of the contract.
 ## Overview
 The field introduced by",openprocurement
@@ -5808,14 +5808,14 @@ ocds_deliveryDate_extension,No description,0,0,None specified,https://github.com
 Period during which the item should be delivered
 
 # Overview
-The field introduced by this extension is `items/deliveryDate`. 
+The field introduced by this extension is `items/deliveryDate`.
 It can ",openprocurement
 ocds_eligibility_extension,No description,0,0,None specified,https://github.com/openprocurement/ocds_eligibility_extension,"## Eligibility
-This extension introduces three fields that can be used to 
+This extension introduces three fields that can be used to
 show compliance of eligibility criteria in the tender documents.
 ## Overvie",openprocurement
 ocds_guarantee_extension,No description,0,0,None specified,https://github.com/openprocurement/ocds_guarantee_extension,"## Guarantee
-This extension shows a sum of money which the Economic Operator  may set out in 
+This extension shows a sum of money which the Economic Operator  may set out in
 tender documentation and which the Participant (Award of",openprocurement
 ocds_linkedDocument_extension,No description,0,0,None specified,https://github.com/openprocurement/ocds_linkedDocument_extension,"## Linked Document
 The extension shows entity to which the document belongs
@@ -6016,7 +6016,7 @@ openprocurement.client.python,No description,5,33,Python,https://github.com/open
 openprocurement.concord,No description,0,5,Python,https://github.com/openprocurement/openprocurement.concord,"Documentation
 =============
 
-OpenProcurement is initiative to develop software 
+OpenProcurement is initiative to develop software
 powering tenders database and reverse auction.
 
 'openprocurement.conco",openprocurement
@@ -6086,7 +6086,7 @@ openprocurement.schemas.dgf,No description,0,7,Python,https://github.com/openpro
 
 1) run `docs.py` to generate rst-files
 
-2) run `bin/docs.py` to generate documentation  
+2) run `bin/docs.py` to generate documentation
 ",openprocurement
 abacus,Scripts om onroerend erfgoed te tellen,1,0,Python,https://github.com/OnroerendErfgoed/abacus,"# Onroerend Erfgoed Abacus
 
@@ -6209,7 +6209,7 @@ housenum-be-r-parser,Splits ranges of Belgian house numbers into individual ones
 =====================
 
 A small library for merging and splitting sequences of Belgian house numbers.
-    
+
 .. image:: https://app.",onroerenderfgoed
 janssens,Your friendly neighbourhood duplicate image finder,0,0,Python,https://github.com/OnroerendErfgoed/janssens,"# Janssens: your friendly neighbourhood duplicate image finder
 
@@ -6235,15 +6235,15 @@ language-tags,Dealing with IANA language tags in Python,14,4,Python,https://gith
 Lukas,A PHP Search Query Parser,25,7,PHP,https://github.com/OnroerendErfgoed/Lukas,"Lukas - Search Query Handler
 ============================
 
-Lukas is a library that helps in implementing a custom search query language. 
+Lukas is a library that helps in implementing a custom search query language.
 It offers so",onroerenderfgoed
 monnik,Easier access to Flanders Heritage REST API's,1,0,Python,https://github.com/OnroerendErfgoed/monnik,"Monnik
 ======
 
-Monnik is a Python library that makes it easier to query and interact with the 
+Monnik is a Python library that makes it easier to query and interact with the
 REST API's provided by `Agentschap Onroerend Erfgoed <h",onroerenderfgoed
 oe-inspire,Make Onroerend Erfgoed inspire compliant ,0,0,HTML,https://github.com/OnroerendErfgoed/oe-inspire,"# oe-inspire
-Make Onroerend Erfgoed inspire compliant 
+Make Onroerend Erfgoed inspire compliant
 ",onroerenderfgoed
 oe-sphinx-theme,No description,0,1,CSS,https://github.com/OnroerendErfgoed/oe-sphinx-theme,"OE Sphinx Theme
 ================
@@ -6276,7 +6276,7 @@ ol3-amd,amd build of openlayers3 for internal usage,1,0,JavaScript,https://githu
 ======================
 Used for internal distribution.
 
-The build is done with the new 'task' system in Openlayers: 
+The build is done with the new 'task' system in Openlayers:
 [doc](http",onroerenderfgoed
 Onroerend-Erfgoed-SLD,SLD stylesheets created by Onroerend Erfgoed,5,0,Scheme,https://github.com/OnroerendErfgoed/Onroerend-Erfgoed-SLD,"Gebruik
 -------
@@ -6306,7 +6306,7 @@ php-housenum-be-r-parser,PHP library for merging and splittings sequences of Bel
 ========================
 
 A small library for merging and splitting sequences of Belgian housenumbers.
-    
+
 .. image:: https:",onroerenderfgoed
 proefsleuven,Code gebruikt voor het onderzoeksproject 'Archeologisch vooronderzoek met proefsleuven: op zoek naar een optimale strategie'.,2,0,Python,https://github.com/OnroerendErfgoed/proefsleuven,"Proefsleuven
 ============
@@ -6453,7 +6453,7 @@ VioeConvertor,Application to convert between WGS84 and Lambert72,2,0,Python,http
 
 Application to convert between WGS84 and Lambert72
 ",onroerenderfgoed
-VioeCs,PHP Coding standard for VIOE projects.,2,0,None specified,https://github.com/OnroerendErfgoed/VioeCs,"A simple ruleset for PHP_CodeSniffer. 
+VioeCs,PHP Coding standard for VIOE projects.,2,0,None specified,https://github.com/OnroerendErfgoed/VioeCs,"A simple ruleset for PHP_CodeSniffer.
 ",onroerenderfgoed
 vue_component_library,Library with all Vue.js components for Onroerend Erfgoed,0,0,TypeScript,https://github.com/OnroerendErfgoed/vue_component_library,"# Vue component library
 
@@ -6774,7 +6774,7 @@ geoportal-gateway,Gateway to publish individual specialized portals of the maste
 
 The gateway is based on Spring Cloud and its primary purpose is to serve portals created by the gdi-admin-manager (a legacy s",it-at-m
 githubpeople,No description,0,0,Dockerfile,https://github.com/it-at-m/githubpeople,"## Customize this file after creating the new REPO and remove this lines.
-What to adjust:  
+What to adjust:
 * Add the your project or repo name direct under the logo.",it-at-m
 government.github.com,"Gather, curate, and feature stories of public servants and civic hackers using GitHub as part of their open government innovations",0,0,None specified,https://github.com/it-at-m/government.github.com,# GitHub and Government [![Test site build](https://github.com/github/government.github.com/actions/workflows/build.yml/badge.svg)](https://github.com,it-at-m
 helm-charts,it@M Helm Charts ,7,4,Smarty,https://github.com/it-at-m/helm-charts,"[![ArtifactHub][artifacthub-shield]][artifacthub-url]
@@ -6843,7 +6843,7 @@ Kindona is a flutter-based application for helping users orientate inside of bui
 with a map (similar google map",it-at-m
 KiwiDemo,Kiwi-Demo,2,0,HTML,https://github.com/it-at-m/KiwiDemo,"# KiwiDemo #
 
-Dies war der vorübersetzte Code von [Kiwi](https://github.com/it-at-m/UnicodeEingabeKiwi2) der Demo-Zwecken dient: 
+Dies war der vorübersetzte Code von [Kiwi](https://github.com/it-at-m/UnicodeEingabeKiwi2) der Demo-Zwecken dient:
 [https://it-at-m.git",it-at-m
 kobit-backend,Conflict Resolution Web Application for government organisations and businesses,2,2,Java,https://github.com/it-at-m/kobit-backend,"# UFO APP Backend
 
@@ -6904,7 +6904,7 @@ mobidam-eai-commons-starter,No description,0,0,Java,https://github.com/it-at-m/m
 mobidam-json-to-csv-converter,No description,0,0,Python,https://github.com/it-at-m/mobidam-json-to-csv-converter,"# Vorbereitung
 - Python >=3.8.7 installieren (https://it-services.muenchen.de/sp?id=sc_cat_item&sys_id=67f8144b1b252154a70c433c8b4bcb4d&table=sc_cat_i",it-at-m
 mobidam-mdl-eai,No description,0,0,Java,https://github.com/it-at-m/mobidam-mdl-eai,"## Customize this file after creating the new REPO and remove this lines.
-What to adjust:  
+What to adjust:
 * Add the your project or repo name direct under the logo.",it-at-m
 mobidam-mobilithek-eai,No description,0,0,Java,https://github.com/it-at-m/mobidam-mobilithek-eai,"<div id=""top""></div>
 
@@ -6965,7 +6965,7 @@ Content repository for [opensource.muenchen.de](https://opensource.muenchen.de).
 Made with [vitepress](http",it-at-m
 ospolandscape,OSPO Landscape,0,0,None specified,https://github.com/it-at-m/ospolandscape,[![Dependency Status](https://img.shields.io/david/todogroup/ospolandscape.svg?style=flat-square)](https://david-dm.org/ospo/ospolandscape) [![Netlify,it-at-m
 oss-repository-en-template,This repo is a base template for all open-source repositories in the it@m organization,2,2,Dockerfile,https://github.com/it-at-m/oss-repository-en-template,"## Customize this file after creating the new REPO and remove this lines.
-What to adjust:  
+What to adjust:
 * Add the your project or repo name direct under the logo.",it-at-m
 owncloud-docker-helm-charts,ownCloud Server Helm charts,0,0,None specified,https://github.com/it-at-m/owncloud-docker-helm-charts,"# ownCloud: Helm Charts
 
@@ -6982,7 +6982,7 @@ policy-as-code,it@M policy as code for https://github.com/advanced-security/poli
 
 We no longer use [advanced-security/policy-as-code](https://github.com/advanced-security/policy-as-code) for license compliance ",it-at-m
 postkorb-gateway,No description,0,0,Dockerfile,https://github.com/it-at-m/postkorb-gateway,"## Customize this file after creating the new REPO and remove this lines.
-What to adjust:  
+What to adjust:
 * Add the your project or repo name direct under the logo.",it-at-m
 Praktikumsplaner,No description,4,1,Java,https://github.com/it-at-m/Praktikumsplaner,"# Praktikumsplaner
 
@@ -7012,7 +7012,7 @@ jack_mackerel,Repository for joint jack mackerel model,1,1,R,https://github.com/
 =============
 
 Repository for the SPRFMO joint jack mackerel model
-Readme file   
+Readme file
 # File structure
 
 ## ""Code"" directory
@@ -7039,7 +7039,7 @@ MDB,Stock assessment models based on Catch and Effort,0,0,R,https://github.com/i
 cam-portal,WordPress theme for Provincial website,0,2,PHP,https://github.com/e-Government-Cambodia/cam-portal,"# cam-portal
 ",e-Government-Cambodia
 cambodia-portal,WP Theme of Cambodia national Portal website,0,0,HTML,https://github.com/e-Government-Cambodia/cambodia-portal,"# cambodia-portal
- 
+
 ",e-Government-Cambodia
 cnphtml,No description,0,0,HTML,https://github.com/e-Government-Cambodia/cnphtml,README not available,e-Government-Cambodia
 editor-user-creator,WordPress Plugin to assign special Editor can create user.,0,0,PHP,https://github.com/e-Government-Cambodia/editor-user-creator,"# Editor user Creator
@@ -7158,7 +7158,7 @@ udata2,Social data platform,6,1,Python,https://github.com/opendatalu/udata2,"uDa
 [![Build status][circleci-badge]][circleci-url]
 [![Python Requirements Status][requires-io-badge]][requires-io-url]
 [![JavaScript Depende",opendatalu
-HornMorpho2.5,"HORNMORPHO is a Python program that analyzes Amharic, Oromo, and Tigrinya words into their constituent morphemes (meaningful parts) and generates words, given a root or stem and a representation of the word’s grammatical structure.",1,1,Python,https://github.com/ethiopian/HornMorpho2.5,"# HornMorpho 2.5 
+HornMorpho2.5,"HORNMORPHO is a Python program that analyzes Amharic, Oromo, and Tigrinya words into their constituent morphemes (meaningful parts) and generates words, given a root or stem and a representation of the word’s grammatical structure.",1,1,Python,https://github.com/ethiopian/HornMorpho2.5,"# HornMorpho 2.5
 
 HORNMORPHO is a Python program that analyzes Amharic, Oromo, and Tigrinya words into their constituent morphemes (meaningful parts)",ethiopian
 repos,Collection of repos to help develop habesha apps. Created by @nathenapse,65,22,HTML,https://github.com/ethiopian/repos,"
@@ -7201,7 +7201,7 @@ Repo voor scripts ontwikkeld voor IGI/GEO/VM
 coinsViz,visualization library for COINS models,0,0,Python,https://github.com/provincieNH/coinsViz,"# coinsViz
 Visualisatie tooltje om COINS OTL's in graphml uit te drukken
 
-De OTL moet via een sparql endpoint te benaderen zijn. 
+De OTL moet via een sparql endpoint te benaderen zijn.
 De gegenereerde grap",provincieNH
 ConnectedData,repository for ConnectedData Data lab stuff,0,0,Python,https://github.com/provincieNH/ConnectedData,"# ConnectedData
 repository for ConnectedData Data lab stuff
@@ -7328,7 +7328,7 @@ Payments Building Block relies on two external dependencies:
 #### Logto
 
 Used for aut",ogcio
-pwa-poc-cms-homepage-v1,POC for PWA starterkit for gov.ie homepage as learning guide,0,0,JavaScript,https://github.com/ogcio/pwa-poc-cms-homepage-v1,"# Gov.ie Home page implemented with Web Components 
+pwa-poc-cms-homepage-v1,POC for PWA starterkit for gov.ie homepage as learning guide,0,0,JavaScript,https://github.com/ogcio/pwa-poc-cms-homepage-v1,"# Gov.ie Home page implemented with Web Components
 
 ### Project layout
 
@@ -7438,13 +7438,13 @@ askgov2,No description,0,1,TypeScript,https://github.com/opengovsg/askgov2,"# As
 
 Answers from the Singapore Government (v2)
 
-## Tools 
+## Tools
 
 * Needed to run in development:
   * [git](https://git-scm.com/download/mac)
     * [O",opengovsg
 askgovsg,Answers from the Singapore Government,17,6,TypeScript,https://github.com/opengovsg/askgovsg,"# AskGov
-Answers from the Singapore Government 
+Answers from the Singapore Government
 
 ## Tech Stack
 
@@ -7593,7 +7593,7 @@ FormSG,Form builder for the Singapore Government,298,95,TypeScript,https://githu
 [![Contributor Coven",opengovsg
 formsg-intl,"A modified version of FormSG, suitable for other organisations",2,0,TypeScript,https://github.com/opengovsg/formsg-intl,"# FormSG International Edition
 
-Builds and publishes a Docker image to 
+Builds and publishes a Docker image to
 opengovsg/formsg-intl
 
 # Overview
@@ -7643,7 +7643,7 @@ gh-actions-ecs-deploy-task-definition-to-scheduled-task,Creates a new ECS task d
 
 Registers an Amazon ECS task definition and deploys it to scheduled task",opengovsg
 github-synthetic-tests,This repo is used to create synthetic tests to verify Github's functionality ,0,0,None specified,https://github.com/opengovsg/github-synthetic-tests,"# github-synthetic-tests
-This repo is used to create synthetic tests to verify Github's functionality 
+This repo is used to create synthetic tests to verify Github's functionality
 ",opengovsg
 GoGovSG,The official link shortener of the Singapore Government,106,39,TypeScript,https://github.com/opengovsg/GoGovSG,"# GoGovSG
 
@@ -7706,14 +7706,14 @@ A mock Singpass/Corppass/Myinfo v3/sgID v2 server for dev purposes
 [![Gitpod Ready-to-Code](h",opengovsg
 mockpass-on-netlify,A repository to deploy MockPass on Netlify (or Vercel),0,0,JavaScript,https://github.com/opengovsg/mockpass-on-netlify,"# MockPass on Netlify (or Vercel)
 
-A repository to deploy MockPass on Netlify using Netlify Functions, 
+A repository to deploy MockPass on Netlify using Netlify Functions,
 and Vercel using Vercel Functions
 
 
 ## Deploy ",opengovsg
 mui-select-button,A React button with select dropdown menu using Material-UI,2,0,TypeScript,https://github.com/opengovsg/mui-select-button,"# mui-select-button
 
-A Material UI button that includes the dropdown menu found in Select. 
+A Material UI button that includes the dropdown menu found in Select.
 Use this for a button with user-selectable behaviour
 
 A de",opengovsg
@@ -7729,7 +7729,7 @@ nodebb-theme-common,No description,0,0,Smarty,https://github.com/opengovsg/nodeb
 =========================
 
 This theme was built specifically for Common.
- 
+
 ## Installation
 
 `npm install nodebb-theme-common`
@@ -7846,12 +7846,12 @@ description: >-
   Read this guide for integration and/or testing information with Postman v2.
   You will need to use Postman v2 for sending SMSes ",opengovsg
 q-rstu,A React Native app wrapping around CPF e-cashier,1,0,JavaScript,https://github.com/opengovsg/q-rstu,"# qRSTU
-A React Native app wrapping around CPF e-cashier that works in tandem with 
+A React Native app wrapping around CPF e-cashier that works in tandem with
 [q-rstu-server](https://github.com/opengovsg/q-rstu-server)
 
 ## Qu",opengovsg
 q-rstu-server,A proof-of-concept demonstrating an alternative interface to CPF e-cashier,0,0,JavaScript,https://github.com/opengovsg/q-rstu-server,"# qRSTU Prototype
-A proof-of-concept (PoC) demonstrating an alternative interface to 
+A proof-of-concept (PoC) demonstrating an alternative interface to
 [CPF e-cashier](https://www.cpf.gov.sg/eSvc/Web/Cashier/ECashier",opengovsg
 queuesg,"Queue is a simple queue management system that utilises Trello as a backend admin, for a quick and simple way to create pop-up queues",20,12,JavaScript,https://github.com/opengovsg/queuesg,"# Queue
 
@@ -7859,7 +7859,7 @@ Queue is an open source project for creating a simple queue management system. T
 quizSG,Make government quizzes great again!,0,0,TypeScript,https://github.com/opengovsg/quizSG,"# TypeScript Project Files Template for OGP
 
 ## Folder Structure
-Two separate TypeScript projects, `frontend/` and `backend/`, 
+Two separate TypeScript projects, `frontend/` and `backend/`,
 for frontend and backe",opengovsg
 rdsproxy-test,No description,1,0,C,https://github.com/opengovsg/rdsproxy-test,"## Reproducing Mismatched Results Using RDS Proxy
 
@@ -7873,7 +7873,7 @@ react-native-disable-battery-optimizations-android,A react native library for ch
 
 #",opengovsg
 redeem-ce,"A platform for digital monetary vouchers, as well as associated processes and bookkeeping",2,0,TypeScript,https://github.com/opengovsg/redeem-ce,"# Redeem Community Edition
-A platform for digital monetary vouchers, as well as associated 
+A platform for digital monetary vouchers, as well as associated
 processes and bookkeeping
 
 ## Background
@@ -7985,7 +7985,7 @@ commitlint-circle,Lint all relevant commits for a change or PR on Circle CI,0,0,
 
 # commitlint-circle
 
-This package is a convenience wrapper around `commitlint`, 
+This package is a convenience wrapper around `commitlint`,
 providin",govtechsg
 containerstack-doc-crds,This repository stores containerstack crds which meant to be published in doc portal,0,0,None specified,https://github.com/GovTechSG/containerstack-doc-crds,"# containerstack-doc-crds
 ",govtechsg
@@ -7999,7 +7999,7 @@ crossplane-provider-aws,Crossplane Amazon Web Services (AWS) infrastructure prov
 
 This `provider-aws` repository is the Crossplane infrastructure provider for
 [Amazon Web Services (AWS)](https://aws.amaz",govtechsg
-csharp-apex-api-security,🔑  C# helper utility that sign HTTP Authorization Scheme for API authentication,4,4,C#,https://github.com/GovTechSG/csharp-apex-api-security,"# APEX API C# Security Utility 
+csharp-apex-api-security,🔑  C# helper utility that sign HTTP Authorization Scheme for API authentication,4,4,C#,https://github.com/GovTechSG/csharp-apex-api-security,"# APEX API C# Security Utility
 [![Build Status](https://travis-ci.org/GovTechSG/csharp-apex-api-security.svg?branch=master)](https://travis-ci.org/Go",govtechsg
 cstack-ecr-repo-list,Quick UI into an AWS ECR repository,1,0,JavaScript,https://github.com/GovTechSG/cstack-ecr-repo-list,"# Introduction
 
@@ -8315,7 +8315,7 @@ PokemonTrainer,No description,0,0,None specified,https://github.com/GovTechSG/Po
 Write a DApp that allows a user to collect pokemon.
 
 # Contract: PokemonTrainer
-should    
+should
 - have a function that allows a user to ",govtechsg
 polr,":aerial_tramway: A modern, minimalist, and lightweight URL shortener",0,0,PHP,https://github.com/GovTechSG/polr,"# [![Logo](http://i.imgur.com/aOtrJNz.png)](https://project.polr.me)
 
@@ -8335,7 +8335,7 @@ private-network-automated,Automate the creation of a Parity Proof of Authority N
 Automate the creation of a Parity [Proof of Authority](https://paritytech.github.io/wiki/Proof-of-Authori",govtechsg
 product-review-platform,Review service for bgp,1,8,Ruby,https://github.com/GovTechSG/product-review-platform,"# Product Review Platform
 
-<a href=""https://teamcity.gahmen.tech/viewType.html?buildTypeId=ProductReviewPlatform_UnitTest&guest=1""> 
+<a href=""https://teamcity.gahmen.tech/viewType.html?buildTypeId=ProductReviewPlatform_UnitTest&guest=1"">
 <img src=""https:/",govtechsg
 projflex,No description,0,0,JavaScript,https://github.com/GovTechSG/projflex,"# flexToolkit
 Prototype for Flex Toolkit
@@ -8375,7 +8375,7 @@ a11y-dev-workshop,No description,6,2,HTML,https://github.com/alphagov/a11y-dev-w
 * [Exercise 4](exercise4.md)
 * [E",alphagov
 accessibility,A repo to organize the guidelines and best practices for accessibility at 18f.,0,2,Ruby,https://github.com/alphagov/accessibility,"# Accessibility
-This repo will contain the guidelines and best practices for 508 accessibility at 18f. 
+This repo will contain the guidelines and best practices for 508 accessibility at 18f.
 The site is in draft.
 
 ## This site is built u",alphagov
@@ -8915,7 +8915,7 @@ this is a shiny app being developed to visualize predicted animal movement from 
 in order to run this app you",NMML
 Hierarchical_DS,hierachical distance sampling ,1,4,R,https://github.com/NMML/Hierarchical_DS,README not available,NMML
 kfdnm,"R package for fitting known-fate, dynamic N-mixture models",1,4,R,https://github.com/NMML/kfdnm,README not available,NMML
-mml-manual,A guide to working at AFSC's Marine Mammal Lab,4,0,TeX,https://github.com/NMML/mml-manual,"# Welcome to the MML Manual! 
+mml-manual,A guide to working at AFSC's Marine Mammal Lab,4,0,TeX,https://github.com/NMML/mml-manual,"# Welcome to the MML Manual!
 
 This Quarto book is intended to be used for current staff of the Marine Mammal Laboratory at the Alaska Fisheries Scien",NMML
 mml-uas-engineering,A repository of parts designed by the AFSC's Marine Mammal Laboratory (MML),0,0,None specified,https://github.com/NMML/mml-uas-engineering,"# Marine Mammal Laboratory UAS Engineering Repository
@@ -8947,7 +8947,7 @@ tip,TIP Code,0,1,JavaScript,https://github.com/oimt/tip,"tip
 
 TIP Code
 
-TIP is a unique opportunity for undergraduate and graduate students to gain training and experience in state 
+TIP is a unique opportunity for undergraduate and graduate students to gain training and experience in state
 government and assist",oimt
 vmfirstrepository,first repository created by victorinomacapagal and initialized with the README file upon initial creation...,0,0,None specified,https://github.com/oimt/vmfirstrepository,"vmfirstrepository
 =================
@@ -8958,7 +8958,7 @@ first repository created by victorinomacapagal and initialized with the README f
 # Summary
 
  Product  |  Organisation-wide Github Actions Workflows
---- | --- 
+--- | ---
 Description | Github Actions workflows which are used across ",IATI
 activity-details-split-by-fields,No description,0,0,Python,https://github.com/IATI/activity-details-split-by-fields,"# IATI Activity Details Split By Fields
 
@@ -9016,8 +9016,8 @@ Please see https://iatistandard.org/en/guidance/publishing-data/ for guidance ",
 D-Portal,No description,31,23,JavaScript,https://github.com/IATI/D-Portal,"Summary
 =======
 
- Product  | D-portal  
---- | --- 
+ Product  | D-portal
+--- | ---
 Description | Search IATI data on development and humanitarian activities on specific events or the",IATI
 DAC-Codelists,No description,1,0,Python,https://github.com/IATI/DAC-Codelists,"## Python Environment Setup
 
@@ -9205,7 +9205,7 @@ iati-registry-suitecrm-extension,No description,0,0,PHP,https://github.com/IATI/
 
 ## Summary
 
- Product  | IATI Registry SuiteCRM Extension 
+ Product  | IATI Registry SuiteCRM Extension
 --- | ---
 Description |The (new) IATI Registry is a CIA",IATI
 IATI-Rulesets,Various conditional and restraint rules for IATI data,6,7,Python,https://github.com/IATI/IATI-Rulesets,"IATI-Rulesets
@@ -9424,7 +9424,7 @@ CanFlood,Flood Risk modelling toolbox for Canada,30,7,Python,https://github.com/
 [![Documentatio",NRCan
 chyf,Web application that provides hydrology services based on the Common Hydrology Features (CHyF) data model,11,4,Java,https://github.com/NRCan/chyf,"# About CHyF Software
 
-The Common Hydrology Features (CHyF) open source software, demonstrated on the CHyF Pilot Demo, 
+The Common Hydrology Features (CHyF) open source software, demonstrated on the CHyF Pilot Demo,
 was developed by Refractions R",NRCan
 chyf-FGPviewer-extension,No description,0,1,TypeScript,https://github.com/NRCan/chyf-FGPviewer-extension,"# GeoBase RAMP extensions
 
@@ -9597,7 +9597,7 @@ cciaa.modulistica,"An additional view for Plone folders, for better manage repos
 Introduction
 ============
 
-The italian word `modulistica`__ means ""*documentation*"", ""*downloadable forms*"". 
+The italian word `modulistica`__ means ""*documentation*"", ""*downloadable forms*"".
 
 __ http://www.wordrefere",PloneGov-IT
 cciaa.portlet.calendar,Alternative calendar portlet for Plone that perform some additional search,0,0,Python,https://github.com/PloneGov-IT/cciaa.portlet.calendar,"Introduction
@@ -9655,7 +9655,7 @@ Int",PloneGov-IT
 collective.outputfilters.enhancelinks,An additional outputfilter that enhance file and image links informations in rich text,2,1,Python,https://github.com/PloneGov-IT/collective.outputfilters.enhancelinks,"==============================================================================
 collective.outputfilters.enhancelinks
 =================================",PloneGov-IT
-collective.pfg.userjoin,A PloneFormGen adapter for subscribe users to the site,0,0,Python,https://github.com/PloneGov-IT/collective.pfg.userjoin,"Easily **subscribe** new user to you Plone site by using a **custom PloneFormGen join form**  
+collective.pfg.userjoin,A PloneFormGen adapter for subscribe users to the site,0,0,Python,https://github.com/PloneGov-IT/collective.pfg.userjoin,"Easily **subscribe** new user to you Plone site by using a **custom PloneFormGen join form**
 
 .. contents:: **Table fo contents**
 
