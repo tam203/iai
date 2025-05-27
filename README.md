@@ -22,4 +22,4 @@ Add a dev dependency e.g. `flake8`
 `uv add --dev flake8`
 
 Run notebooks
-`uv run --with jupyter jupyter lab --notebook-dir=notebooks`
+`uv run -- jupyter jupyter lab --notebook-dir=notebooks`
