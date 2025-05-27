@@ -12,6 +12,9 @@ See: [uv Getting started](https://docs.astral.sh/uv/getting-started/).
 Install local version of package
 `uv pip install -e .`
 
+Install pre-commit hooks
+`uv run -- pre-commit install`
+
 Run all pre-commit checks on all files
 `uv run -- pre-commit run --all-files`
 
