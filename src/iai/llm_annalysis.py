@@ -10,25 +10,21 @@ import pandas as pd
 
 class LLMClassAnalysis:
 
-    def __init__(
-        self,
-        run_id: str,
-        api_token: str = None,
-        deployment: str = None,
-        endpoint: str = None,
-    ):
+    def __init__(self, run_id: str, api_token: str = None, deployment: str = None, endpoint: str = None):
         self.run_id = run_id
         self.api_token = api_token or AZURE_OPENAI_API_KEY
         self.deployment = deployment or DEPLOYMENT_NAME
         self.endpoint = endpoint or ENDPOINT_URL
 
-    def classify_repos(self, df, topic_list, model_name="gpt-4o"):
+
+
+    def classify_repos(self,df, topic_list, model_name="gpt-4o"):
         # Initialize Azure OpenAI client
         llm = AzureChatOpenAI(
             openai_api_version="2025-01-01-preview",
             azure_deployment=self.deployment,
             azure_endpoint=self.endpoint,
-            api_key=self.api_token,
+            api_key=self.api_token
         )
 
         summary_prompt = PromptTemplate(
@@ -82,9 +78,7 @@ class LLMClassAnalysis:
         def classify_repo(readme):
             row = df.loc[df["readme"] == readme].iloc[0]
             summary = generate_summary(row)
-            prompt = topic_prompt.format(
-                summary=summary, topic_list=", ".join(topic_list)
-            )
+            prompt = topic_prompt.format(summary=summary, topic_list=", ".join(topic_list))
             response = llm.invoke(prompt).content
 
             try:

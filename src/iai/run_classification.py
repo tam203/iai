@@ -3,7 +3,7 @@ import logging
 
 import pandas as pd
 
-from iai.config import AZURE_OPENAI_API_KEY, DEPLOYMENT_NAME, ENDPOINT_URL
+from iai.config import AZURE_OPENAI_API_KEY, TOPIC_LIST
 from iai.llm_annalysis import LLMClassAnalysis
 from iai.utils import DATA_DIR, get_filepath_in_run_data
 
@@ -130,7 +130,7 @@ def main():
     # API token, deployment, and endpoint will be picked from iai.config by default
     analyzer = LLMClassAnalysis(run_id=args.run_id)
 
-    topic_list = ["ai", "web development", "data science", "cybersecurity"]
+    topic_list=TOPIC_LIST
     logger.info(f"Starting classification with initial topics: {topic_list}")
 
     classified_df, updated_topic_list = analyzer.classify_repos(df, topic_list)

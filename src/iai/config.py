@@ -27,3 +27,5 @@ TARGET_REPOS = [
     "ec-europa",
     "opengovsg",
 ]
+
+TOPIC_LIST = ["ai", "data", "data science", "cybersecurity", "ai agents", "ai ethics", "ai regulation", "automation", "innovation" ]
