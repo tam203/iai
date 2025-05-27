@@ -1,5 +1,9 @@
 # iai
-A repo for an i dot ai assessment.
+A repo for an i dot ai assessment. This has code for scanning repos and clasifing their topics.
+
+Some of the code is based off https://github.com/lexicond/gov_tech_aggregator
+Some is AI Generated (Google Gemini)
+
 
 ## UV
 

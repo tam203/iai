@@ -29,7 +29,7 @@ class GitHubScanner:
 
     # --- Methods for Government Repositories Scan ---
 
-    def _fetch_gov_github_accounts_yaml(
+    def fetch_gov_github_accounts_yaml(
         self, url: str
     ) -> Optional[Dict[str, List[str]]]:
         """Fetches and parses the YAML file listing government GitHub accounts."""
@@ -229,7 +229,7 @@ class GitHubScanner:
             )
             return None
 
-        gov_yaml_data = self._fetch_gov_github_accounts_yaml(url_to_fetch)
+        gov_yaml_data = self.fetch_gov_github_accounts_yaml(url_to_fetch)
         if not gov_yaml_data:
             return None
 
