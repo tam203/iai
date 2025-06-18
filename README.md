@@ -27,3 +27,7 @@ Add a dev dependency e.g. `flake8`
 
 Run notebooks
 `uv run -- jupyter jupyter lab --notebook-dir=notebooks`
+
+Run the scanning of GitHub orgs/repos. Use `--run_id` to update existing run / recover from errors
+`uv run -- python src/iai/run_scan.py`
+`uv run -- python src/iai/run_scan.py --run_id 20250618_153140_a475925c`

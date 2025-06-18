@@ -2,7 +2,6 @@ from langchain.prompts import PromptTemplate
 from langchain_openai import AzureChatOpenAI
 from tqdm import tqdm
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
-from langchain.prompts import PromptTemplate
 from langchain_core.exceptions import OutputParserException
 from iai.config import AZURE_OPENAI_API_KEY, DEPLOYMENT_NAME, ENDPOINT_URL
 import pandas as pd
@@ -34,7 +33,9 @@ class LLMClassAnalysis:
         summary_prompt = PromptTemplate(
             input_variables=["description", "readme"],
             template="""
-            Please provide a summary of the following GitHub repository based on its description and README.md content. If the README.md is not in English, please first translate it to English and then generate a summary. The summary should be concise and in fewer than 5 sentences.
+            Please provide a summary of the following GitHub repository based on its description and README.md content.
+            If the README.md is not in English, please first translate it to English and then generate a summary.
+            The summary should be concise and in fewer than 5 sentences.
 
             Repository description:
             {description}
@@ -46,17 +47,15 @@ class LLMClassAnalysis:
             """,
         )
 
-        response_schemas = [
-            ResponseSchema(
-                name="topic", description="The selected topic for the repository."
-            )
-        ]
+        response_schemas = [ResponseSchema(name="topic", description="The selected topic for the repository.")]
         output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
 
         topic_prompt = PromptTemplate(
             input_variables=["summary", "topic_list"],
             template="""
-            Given the following summary of a GitHub repository and a list of potential topics, select the most appropriate topic for the repository. If none of the topics in the list are suitable, generate a new topic label.
+            Given the following summary of a GitHub repository and a list of potential topics,
+            select the most appropriate topic for the repository. If none of the topics in the list are suitable,
+            generate a new topic label.
 
             Repository summary:
             {summary}
@@ -82,9 +81,7 @@ class LLMClassAnalysis:
         def classify_repo(readme):
             row = df.loc[df["readme"] == readme].iloc[0]
             summary = generate_summary(row)
-            prompt = topic_prompt.format(
-                summary=summary, topic_list=", ".join(topic_list)
-            )
+            prompt = topic_prompt.format(summary=summary, topic_list=", ".join(topic_list))
             response = llm.invoke(prompt).content
 
             try:

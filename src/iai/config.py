@@ -20,12 +20,12 @@ GOVERNMENT_ACCOUNTS_URL = "https://raw.githubusercontent.com/github/government.g
 
 TARGET_REPOS = [
     "alphagov",
-    "i-dot-ai",
-    "canada-ca",
-    "govtechsg",
-    "GSA",
-    "ec-europa",
-    "opengovsg",
+    # "i-dot-ai",
+    # "canada-ca",
+    # "govtechsg",
+    # "GSA",
+    # "ec-europa",
+    # "opengovsg",
 ]
 
 TOPIC_LIST = [
