@@ -24,9 +24,7 @@ def get_run_data_path(run_id: str, ensure_exists: bool = True) -> Path:
     return run_path
 
 
-def get_filepath_in_run_data(
-    run_id: str, filename: str, ensure_run_dir_exists: bool = True
-) -> Path:
+def get_filepath_in_run_data(run_id: str, filename: str, ensure_run_dir_exists: bool = True) -> Path:
     """Constructs a full file path within a specific run's data directory."""
     run_data_path = get_run_data_path(run_id, ensure_exists=ensure_run_dir_exists)
     return run_data_path / filename

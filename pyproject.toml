@@ -36,3 +36,6 @@ backend-path = ["."]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+
+[tool.black]
+line-length = 150

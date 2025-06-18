@@ -16,9 +16,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     """Main function to run the LLM classification process."""
-    parser = argparse.ArgumentParser(
-        description="Run LLM classification on repository data."
-    )
+    parser = argparse.ArgumentParser(description="Run LLM classification on repository data.")
     parser.add_argument(
         "--run_id",
         type=str,
@@ -41,8 +39,7 @@ def main():
         "--limit",
         type=int,
         default=None,
-        help="Limit the number of repositories to classify (processed in descending order of stars). "
-        "Default: no limit.",
+        help="Limit the number of repositories to classify (processed in descending order of stars). " "Default: no limit.",
     )
     args = parser.parse_args()
 
@@ -52,9 +49,7 @@ def main():
 
     # Check for Azure OpenAI API Key
     if not AZURE_OPENAI_API_KEY:
-        logger.error(
-            "Azure OpenAI API key (AZURE_OPENAI_API_KEY) is not set in environment or config."
-        )
+        logger.error("Azure OpenAI API key (AZURE_OPENAI_API_KEY) is not set in environment or config.")
         logger.error("LLM classification cannot proceed without API credentials.")
         return
 
@@ -83,52 +78,36 @@ def main():
         elif args.limit is not None and args.limit > 0:
             # Only warn about missing 'stars' if a limit is actually going to be applied
             logger.warning(
-                "'stars' column not found. Cannot sort by stars. "
-                "If a limit is applied, it will be based on the current order of rows in the CSV."
+                "'stars' column not found. Cannot sort by stars. " "If a limit is applied, it will be based on the current order of rows in the CSV."
             )
 
         # Apply limit
         if args.limit is not None and args.limit > 0:
             original_count = len(df)
             if original_count > args.limit:
-                logger.info(
-                    f"Limiting classification to the top {args.limit} repositories (out of {original_count})."
-                )
+                logger.info(f"Limiting classification to the top {args.limit} repositories (out of {original_count}).")
                 df = df.head(args.limit)
             else:
-                logger.info(
-                    f"Limit of {args.limit} requested, but only {original_count} "
-                    "repositories available. Processing all available."
-                )
+                logger.info(f"Limit of {args.limit} requested, but only {original_count} " "repositories available. Processing all available.")
         elif args.limit is not None and args.limit <= 0:
-            logger.warning(
-                f"Invalid limit '{args.limit}' (must be a positive integer). Processing all repositories."
-            )
+            logger.warning(f"Invalid limit '{args.limit}' (must be a positive integer). Processing all repositories.")
         # Reset index after sorting/limiting to ensure clean indexing for subsequent operations
         df = df.reset_index(drop=True)
 
     # Ensure 'description' and 'readme_snippet' (to be renamed to 'readme') columns exist
     if "description" not in df.columns:
-        logger.warning(
-            "'description' column not found in input CSV. It will be treated as empty for classification."
-        )
+        logger.warning("'description' column not found in input CSV. It will be treated as empty for classification.")
         df["description"] = ""
 
     if "readme_snippet" in df.columns:
         df.rename(columns={"readme_snippet": "readme"}, inplace=True)
         logger.info("Renamed 'readme_snippet' column to 'readme'.")
     elif "readme" not in df.columns:
-        logger.warning(
-            "'readme_snippet' or 'readme' column not found. 'readme' content will be treated as empty for classification."
-        )
+        logger.warning("'readme_snippet' or 'readme' column not found. 'readme' content will be treated as empty for classification.")
         df["readme"] = ""
 
-    if (
-        df.empty and args.limit is not None and args.limit > 0
-    ):  # Check if df became empty after limiting
-        logger.info(
-            "DataFrame is empty after applying the limit. No repositories to classify."
-        )
+    if df.empty and args.limit is not None and args.limit > 0:  # Check if df became empty after limiting
+        logger.info("DataFrame is empty after applying the limit. No repositories to classify.")
         # classified_df will be empty, and an empty CSV will be saved.
 
     # Initialize LLMClassAnalysis
