@@ -3,7 +3,7 @@ import logging
 
 import pandas as pd
 
-from iai.config import AZURE_OPENAI_API_KEY, TOPIC_LIST
+from iai.config import GOOGLE_API_KEY, TOPIC_LIST
 from iai.llm_annalysis import LLMClassAnalysis
 from iai.utils import DATA_DIR, get_filepath_in_run_data
 
@@ -14,8 +14,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def main():
-    """Main function to run the LLM classification process."""
+def _parse_args():
+    """Parses command-line arguments."""
     parser = argparse.ArgumentParser(description="Run LLM classification on repository data.")
     parser.add_argument(
         "--run_id",
@@ -41,34 +41,40 @@ def main():
         default=None,
         help="Limit the number of repositories to classify (processed in descending order of stars). " "Default: no limit.",
     )
-    args = parser.parse_args()
+    return parser.parse_args()
 
+
+def _load_and_prepare_data(args):
+    """Loads data from CSV, sorts, limits, and prepares DataFrame columns."""
     logger.info(f"Starting LLM classification for Run ID: {args.run_id}")
     run_data_path = DATA_DIR / args.run_id
     logger.info(f"Data for this run will be read from and saved to: {run_data_path}")
 
-    # Check for Azure OpenAI API Key
-    if not AZURE_OPENAI_API_KEY:
-        logger.error("Azure OpenAI API key (AZURE_OPENAI_API_KEY) is not set in environment or config.")
-        logger.error("LLM classification cannot proceed without API credentials.")
-        return
+    input_file_path = get_filepath_in_run_data(args.run_id, args.input_csv)
+    output_file_path = get_filepath_in_run_data(args.run_id, args.output_csv)
+
+    if not GOOGLE_API_KEY:  # Moved API key check here as it's part of setup/preparation
+        logger.error("Google API key (GOOGLE_API_KEY) is not set in environment or config.")
+        logger.error("LLM classification cannot proceed without Google API credentials.")
+        return None, output_file_path
 
     input_file_path = get_filepath_in_run_data(args.run_id, args.input_csv)
     output_file_path = get_filepath_in_run_data(args.run_id, args.output_csv)
 
     try:
-        logger.info(f"Loading data from {input_file_path}...")
+        logger.info(f"Attempting to load data from {input_file_path}...")
         df = pd.read_csv(input_file_path)
     except FileNotFoundError:
         logger.error(f"Input file not found: {input_file_path}")
-        return
+        return None, output_file_path  # Return None for df to signal failure
     except Exception as e:
         logger.error(f"Error loading CSV {input_file_path}: {e}")
-        return
+        return None, output_file_path
 
     if df.empty:
         logger.info("Input DataFrame is empty. No repositories to classify.")
         # If the DataFrame is empty, we can't sort or limit.
+        # Return the empty df and output path so main can save an empty file.
         # LLMClassAnalysis should handle an empty df, producing an empty classified_df.
     else:
         # Sort by stars if the column exists
@@ -106,18 +112,28 @@ def main():
         logger.warning("'readme_snippet' or 'readme' column not found. 'readme' content will be treated as empty for classification.")
         df["readme"] = ""
 
-    if df.empty and args.limit is not None and args.limit > 0:  # Check if df became empty after limiting
-        logger.info("DataFrame is empty after applying the limit. No repositories to classify.")
-        # classified_df will be empty, and an empty CSV will be saved.
+    return df, output_file_path
 
-    # Initialize LLMClassAnalysis
-    # API token, deployment, and endpoint will be picked from iai.config by default
+
+def main():
+    """Main function to run the LLM classification process."""
+    args = _parse_args()
+    df, output_file_path = _load_and_prepare_data(args)
+
+    # If data loading failed or resulted in an empty DataFrame, exit early
+    if df is None or df.empty:
+        if df is not None and df.empty:  # Only save if df was loaded but empty
+            df.to_csv(output_file_path, index=False, encoding="utf-8")
+            logger.info(f"Empty DataFrame saved to {output_file_path}. Exiting.")
+        return  # Exit if df is None or empty
+
     analyzer = LLMClassAnalysis(run_id=args.run_id)
 
-    topic_list = TOPIC_LIST
-    logger.info(f"Starting classification with initial topics: {topic_list}")
+    logger.info(f"Starting classification using {analyzer.__class__.__name__} for {len(df)} items.")
 
-    classified_df, updated_topic_list = analyzer.classify_repos(df, topic_list)
+    # Use a copy of TOPIC_LIST to avoid modifying the global list directly if it's mutated by the analyzer
+    classified_df, updated_topic_list = analyzer.classify_repos(df, list(TOPIC_LIST))
+    logger.info(f"Classification complete. {len(classified_df)} items classified. Updated topic list has {len(updated_topic_list)} topics.")
 
     logger.info(f"Classification complete. Updated topic list: {updated_topic_list}")
 

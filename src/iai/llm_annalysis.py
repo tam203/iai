@@ -1,33 +1,25 @@
 from langchain.prompts import PromptTemplate
-from langchain_openai import AzureChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from tqdm import tqdm
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 from langchain_core.exceptions import OutputParserException
-from iai.config import AZURE_OPENAI_API_KEY, DEPLOYMENT_NAME, ENDPOINT_URL
+from iai.config import GOOGLE_API_KEY  # Assuming GOOGLE_API_KEY is in iai.config
 import pandas as pd
 
 
 class LLMClassAnalysis:
 
-    def __init__(
-        self,
-        run_id: str,
-        api_token: str = None,
-        deployment: str = None,
-        endpoint: str = None,
-    ):
+    def __init__(self, run_id: str):
         self.run_id = run_id
-        self.api_token = api_token or AZURE_OPENAI_API_KEY
-        self.deployment = deployment or DEPLOYMENT_NAME
-        self.endpoint = endpoint or ENDPOINT_URL
+        # Assuming GOOGLE_API_KEY is set in iai.config or environment
+        self.google_api_key = GOOGLE_API_KEY
 
     def classify_repos(self, df, topic_list, model_name="gpt-4o"):
         # Initialize Azure OpenAI client
-        llm = AzureChatOpenAI(
-            openai_api_version="2025-01-01-preview",
-            azure_deployment=self.deployment,
-            azure_endpoint=self.endpoint,
-            api_key=self.api_token,
+        # Initialize Google Gemini client
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-2.5-flash",  # Use the specified Gemini model
+            google_api_key=self.google_api_key,
         )
 
         summary_prompt = PromptTemplate(
