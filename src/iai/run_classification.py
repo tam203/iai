@@ -4,7 +4,7 @@ import logging
 import pandas as pd
 
 from iai.config import GOOGLE_API_KEY, TOPIC_LIST
-from iai.llm_annalysis import LLMClassAnalysis
+from iai.classifiers.one_at_a_time_classifier import OneAtATimeClassifier
 from iai.utils import DATA_DIR, get_filepath_in_run_data
 
 logging.basicConfig(
@@ -127,7 +127,7 @@ def main():
             logger.info(f"Empty DataFrame saved to {output_file_path}. Exiting.")
         return  # Exit if df is None or empty
 
-    analyzer = LLMClassAnalysis(run_id=args.run_id)
+    analyzer = OneAtATimeClassifier(run_id=args.run_id)
 
     logger.info(f"Starting classification using {analyzer.__class__.__name__} for {len(df)} items.")
 

@@ -3,11 +3,13 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from tqdm import tqdm
 from langchain.output_parsers import StructuredOutputParser, ResponseSchema
 from langchain_core.exceptions import OutputParserException
-from iai.config import GOOGLE_API_KEY  # Assuming GOOGLE_API_KEY is in iai.config
 import pandas as pd
 
+from iai.config import GOOGLE_API_KEY  # Assuming GOOGLE_API_KEY is in iai.config
+from iai.classifiers.base import ClassifierInterface
 
-class LLMClassAnalysis:
+
+class OneAtATimeClassifier(ClassifierInterface):
 
     def __init__(self, run_id: str):
         self.run_id = run_id
