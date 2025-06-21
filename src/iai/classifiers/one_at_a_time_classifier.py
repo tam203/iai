@@ -1,8 +1,7 @@
 from langchain.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 from tqdm import tqdm
-from langchain.output_parsers import StructuredOutputParser, ResponseSchema
-from langchain_core.exceptions import OutputParserException
+from langchain_core.output_parsers import StrOutputParser
 import pandas as pd
 
 from iai.config import GOOGLE_API_KEY  # Assuming GOOGLE_API_KEY is in iai.config
@@ -16,11 +15,11 @@ class OneAtATimeClassifier(ClassifierInterface):
         # Assuming GOOGLE_API_KEY is set in iai.config or environment
         self.google_api_key = GOOGLE_API_KEY
 
-    def classify_repos(self, df, topic_list, model_name="gpt-4o"):
+    def classify_repos(self, df, topic_list):
         # Initialize Azure OpenAI client
         # Initialize Google Gemini client
         llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",  # Use the specified Gemini model
+            model="gemini-2.5-flash",  # TODO: move to config
             google_api_key=self.google_api_key,
         )
 
@@ -41,15 +40,12 @@ class OneAtATimeClassifier(ClassifierInterface):
             """,
         )
 
-        response_schemas = [ResponseSchema(name="topic", description="The selected topic for the repository.")]
-        output_parser = StructuredOutputParser.from_response_schemas(response_schemas)
-
         topic_prompt = PromptTemplate(
             input_variables=["summary", "topic_list"],
             template="""
             Given the following summary of a GitHub repository and a list of potential topics,
             select the most appropriate topic for the repository. If none of the topics in the list are suitable,
-            generate a new topic label.
+            provide a new, concise topic label.
 
             Repository summary:
             {summary}
@@ -57,41 +53,35 @@ class OneAtATimeClassifier(ClassifierInterface):
             Potential topics:
             {topic_list}
 
-            Selected topic:
-            {{topic}}
-
-            PLEASE ONLY RETURN THE TOPIC LABEL AS THE RESPONSE. DO NOT INCLUDE ANY ADDITIONAL TEXT.
+            Return only the selected or new topic label, and nothing else.
+            Topic:
             """,
-            output_parser=output_parser,
         )
 
-        def generate_summary(row):
+        def classify_and_summarize_row(row):
+            """
+            Generates a summary and classifies a repository based on a DataFrame row.
+            This function is applied once per row to avoid redundant API calls.
+            """
+            # Chain 1: Generate Summary
             description = row["description"] if pd.notnull(row["description"]) else ""
             readme = row["readme"] if pd.notnull(row["readme"]) else ""
-            prompt = summary_prompt.format(description=description, readme=readme)
-            summary = llm.invoke(prompt).content
-            return summary
+            summary_chain = summary_prompt | llm | StrOutputParser()
+            summary = summary_chain.invoke({"description": description, "readme": readme})
 
-        def classify_repo(readme):
-            row = df.loc[df["readme"] == readme].iloc[0]
-            summary = generate_summary(row)
-            prompt = topic_prompt.format(summary=summary, topic_list=", ".join(topic_list))
-            response = llm.invoke(prompt).content
+            # Chain 2: Classify Topic using the generated summary
+            topic_chain = topic_prompt | llm | StrOutputParser()
+            topic = topic_chain.invoke({"summary": summary, "topic_list": ", ".join(topic_list)})
 
-            try:
-                topic = output_parser.parse(response)["topic"]
-            except OutputParserException:
-                # Handle the case when the response is not a valid JSON
-                topic = response.strip()  # Extract the topic as a plain string
-
+            # Update master topic list if a new topic is found
             if topic not in topic_list:
                 topic_list.append(topic)
 
-            return topic
+            # Return a Series to efficiently create both columns in the DataFrame
+            return pd.Series([topic, summary], index=["topic", "summary"])
 
-        tqdm.pandas(desc="Classifying repositories")
-        df["topic"] = df["readme"].progress_apply(classify_repo)
-
-        df["summary"] = df.apply(generate_summary, axis=1)
+        tqdm.pandas(desc="Classifying and Summarizing Repositories")
+        # Apply the combined function once per row, creating two new columns
+        df[["topic", "summary"]] = df.progress_apply(classify_and_summarize_row, axis=1)
 
         return df, topic_list
