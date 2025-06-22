@@ -3,8 +3,9 @@ import logging
 
 import pandas as pd
 
-from iai.config import GOOGLE_API_KEY, TOPIC_LIST
+from iai.config import GOOGLE_API_KEY, LLM_RATE_LIMIT_SECONDS, TOPIC_LIST
 from iai.classifiers.one_at_a_time_classifier import OneAtATimeClassifier
+from iai.classifiers.batch_topic_classifier import BatchTopicClassifier
 from iai.utils import DATA_DIR, get_filepath_in_run_data
 
 logging.basicConfig(
@@ -41,6 +42,22 @@ def _parse_args():
         default=None,
         help="Limit the number of repositories to classify (processed in descending order of stars). " "Default: no limit.",
     )
+    parser.add_argument(
+        "--classifier",
+        type=str,
+        choices=["one_at_a_time", "batch"],
+        default="one_at_a_time",
+        help=(
+            "The classification strategy to use. 'one_at_a_time' classifies each repo individually. "
+            "'batch' clusters all repos and generates topics dynamically."
+        ),
+    )
+    parser.add_argument(
+        "--rate_limit",
+        type=float,
+        default=LLM_RATE_LIMIT_SECONDS,
+        help=("Seconds to wait between LLM calls to avoid quota limits. " f"Default from config: {LLM_RATE_LIMIT_SECONDS}s."),
+    )
     return parser.parse_args()
 
 
@@ -50,26 +67,23 @@ def _load_and_prepare_data(args):
     run_data_path = DATA_DIR / args.run_id
     logger.info(f"Data for this run will be read from and saved to: {run_data_path}")
 
-    input_file_path = get_filepath_in_run_data(args.run_id, args.input_csv)
-    output_file_path = get_filepath_in_run_data(args.run_id, args.output_csv)
-
     if not GOOGLE_API_KEY:  # Moved API key check here as it's part of setup/preparation
         logger.error("Google API key (GOOGLE_API_KEY) is not set in environment or config.")
         logger.error("LLM classification cannot proceed without Google API credentials.")
-        return None, output_file_path
+        return None, None, None
 
     input_file_path = get_filepath_in_run_data(args.run_id, args.input_csv)
     output_file_path = get_filepath_in_run_data(args.run_id, args.output_csv)
 
     try:
         logger.info(f"Attempting to load data from {input_file_path}...")
-        df = pd.read_csv(input_file_path)
+        df = pd.read_csv(input_file_path)  # This is now the file that will be updated with summaries
     except FileNotFoundError:
         logger.error(f"Input file not found: {input_file_path}")
-        return None, output_file_path  # Return None for df to signal failure
+        return None, input_file_path, output_file_path  # Return None for df to signal failure
     except Exception as e:
         logger.error(f"Error loading CSV {input_file_path}: {e}")
-        return None, output_file_path
+        return None, input_file_path, output_file_path
 
     if df.empty:
         logger.info("Input DataFrame is empty. No repositories to classify.")
@@ -112,30 +126,38 @@ def _load_and_prepare_data(args):
         logger.warning("'readme_snippet' or 'readme' column not found. 'readme' content will be treated as empty for classification.")
         df["readme"] = ""
 
-    return df, output_file_path
+    return df, input_file_path, output_file_path
 
 
 def main():
     """Main function to run the LLM classification process."""
     args = _parse_args()
-    df, output_file_path = _load_and_prepare_data(args)
+    df, input_file_path, output_file_path = _load_and_prepare_data(args)
 
     # If data loading failed or resulted in an empty DataFrame, exit early
-    if df is None or df.empty:
+    if df is None or input_file_path is None or df.empty:
         if df is not None and df.empty:  # Only save if df was loaded but empty
             df.to_csv(output_file_path, index=False, encoding="utf-8")
             logger.info(f"Empty DataFrame saved to {output_file_path}. Exiting.")
         return  # Exit if df is None or empty
 
-    analyzer = OneAtATimeClassifier(run_id=args.run_id)
+    # --- Classifier Selection ---
+    if args.classifier == "one_at_a_time":
+        analyzer = OneAtATimeClassifier(run_id=args.run_id, rate_limit_seconds=args.rate_limit)
+    elif args.classifier == "batch":
+        analyzer = BatchTopicClassifier(run_id=args.run_id, rate_limit_seconds=args.rate_limit)
+    else:
+        # This case is handled by argparse choices, but as a safeguard:
+        logger.error(f"Unknown classifier: {args.classifier}")
+        return
 
     logger.info(f"Starting classification using {analyzer.__class__.__name__} for {len(df)} items.")
 
-    # Use a copy of TOPIC_LIST to avoid modifying the global list directly if it's mutated by the analyzer
-    classified_df, updated_topic_list = analyzer.classify_repos(df, list(TOPIC_LIST))
-    logger.info(f"Classification complete. {len(classified_df)} items classified. Updated topic list has {len(updated_topic_list)} topics.")
-
-    logger.info(f"Classification complete. Updated topic list: {updated_topic_list}")
+    # Use a copy of TOPIC_LIST for one_at_a_time; the batch classifier will ignore it and generate its own.
+    initial_topics = list(TOPIC_LIST)
+    classified_df, updated_topic_list = analyzer.classify_repos(df, initial_topics, summaries_output_path=str(input_file_path))
+    logger.info(f"Classification complete. {len(classified_df)} items classified. Final topic list has {len(updated_topic_list)} topics.")
+    logger.info(f"Final topic list: {updated_topic_list}")
 
     try:
         classified_df.to_csv(output_file_path, index=False, encoding="utf-8")

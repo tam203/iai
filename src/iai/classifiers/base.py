@@ -20,7 +20,7 @@ class ClassifierInterface(ABC):
         self.run_id = run_id
 
     @abstractmethod
-    def classify_repos(self, df: pd.DataFrame, topic_list: List[str]) -> Tuple[pd.DataFrame, List[str]]:
+    def classify_repos(self, df: pd.DataFrame, topic_list: List[str], summaries_output_path: str) -> Tuple[pd.DataFrame, List[str]]:
         """
         Classifies repositories based on their data and a given list of topics.
 
@@ -30,6 +30,8 @@ class ClassifierInterface(ABC):
                 that the classifier can use.
             topic_list: A list of predefined topics. The classifier might
                         add new topics to this list if it discovers them.
+            summaries_output_path: The path to the CSV file where summaries
+                                   are read from and written to.
 
         Returns:
             A tuple containing:
