@@ -45,8 +45,12 @@ def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_second
         input_variables=["description", "readme"],
         template="""
         Please provide a summary of the following GitHub repository based on its description and README.md content.
-        If the README.md is not in English, please first translate it to English and then generate a summary.
+        If the README.md or description is not in English, please first translate it to English and then generate a summary.
+
         The summary should be concise and in fewer than 5 sentences.
+        The summary should focus on what the repository should enable, provide, do.
+        The summary should not include information about the type of license.
+        The summary should not comment on where more information can be found or what information was not available.
 
         Repository description:
         {description}
@@ -68,6 +72,9 @@ def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_second
 
     logger.info(f"Generating summaries for {len(rows_to_process)} repositories...")
 
+    save_interval = 40  # Save progress every 40 summaries
+    rows_since_last_save = 0
+
     for index, row in tqdm(rows_to_process.iterrows(), total=len(rows_to_process), desc="Generating Summaries"):
         description = row["description"] if pd.notnull(row["description"]) else ""
         readme = row["readme"] if pd.notnull(row["readme"]) else ""
@@ -81,8 +88,14 @@ def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_second
             logger.error(f"Error generating summary for row index {index}: {e}")
             df.loc[index, "summary"] = "Error generating summary."
 
-        # Save after each summary generation (or error)
-        df.to_csv(output_csv_path, index=False)
+        rows_since_last_save += 1
+        # Save progress periodically to avoid data loss on interruption without
+        # incurring the I/O overhead of saving on every single iteration.
+        if rows_since_last_save >= save_interval:
+            df.to_csv(output_csv_path, index=False, encoding="utf-8")
+            rows_since_last_save = 0
 
+    # Perform a final save to ensure all generated summaries are written to disk.
+    df.to_csv(output_csv_path, index=False, encoding="utf-8")
     logger.info("Summary generation complete.")
     return df

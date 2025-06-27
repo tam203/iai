@@ -154,8 +154,8 @@ def main():
     logger.info(f"Starting classification using {analyzer.__class__.__name__} for {len(df)} items.")
 
     # Use a copy of TOPIC_LIST for one_at_a_time; the batch classifier will ignore it and generate its own.
-    initial_topics = list(TOPIC_LIST)
-    classified_df, updated_topic_list = analyzer.classify_repos(df, initial_topics, summaries_output_path=str(input_file_path))
+    initial_topics = list(TOPIC_LIST)  # This is ignored by batch classifier, but needed for one_at_a_time
+    classified_df, updated_topic_list = analyzer.classify_repos(df, initial_topics, summaries_output_path=str(output_file_path))
     logger.info(f"Classification complete. {len(classified_df)} items classified. Final topic list has {len(updated_topic_list)} topics.")
     logger.info(f"Final topic list: {updated_topic_list}")
 

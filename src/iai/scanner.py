@@ -28,6 +28,8 @@ class GitHubScanner:
         "url",
         "readme_snippet",
         "last_scanned_utc",
+        "created_at",
+        "pushed_at",
     ]
 
     def __init__(self, run_id: str, api_token: str = None):
@@ -167,6 +169,8 @@ class GitHubScanner:
                 "language": repo_api_data.get("language") or "None specified",
                 "url": repo_api_data.get("html_url", ""),
                 "readme_snippet": "README not available",  # Default
+                "created_at": repo_api_data.get("created_at"),
+                "pushed_at": repo_api_data.get("pushed_at"),
             }
 
             # Fetch the README file
@@ -179,7 +183,7 @@ class GitHubScanner:
                     if readme_download_url:
                         readme_content_response = requests.get(readme_download_url, timeout=10)
                         if readme_content_response.status_code == 200:
-                            repo_details["readme_snippet"] = readme_content_response.text[:150]  # Truncate
+                            repo_details["readme_snippet"] = readme_content_response.text[:800]  # Truncate long README
                         else:
                             logger.debug(f"Failed to download README for {repo_identifier}, status: {readme_content_response.status_code}")
                     else:

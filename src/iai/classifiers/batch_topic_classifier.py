@@ -1,5 +1,6 @@
 import logging
 from typing import List, Tuple
+import ast
 import time
 
 import hdbscan
@@ -87,23 +88,66 @@ class BatchTopicClassifier(ClassifierInterface):
         df = generate_summaries(df, output_csv_path=summaries_output_path, rate_limit_seconds=self.rate_limit_seconds)
         logger.info("Summaries generated.")
 
-        # --- Step 2: Generate Embeddings ---
-        logger.info("Step 2: Generating embeddings from summaries...")
-        summaries = df["summary"].tolist()
-        embeddings = self.embedding_model.embed_documents(summaries)
-        logger.info(f"Embeddings generated for {len(embeddings)} summaries.")
+        # --- Step 2: Generate/Load Embeddings ---
+        embedding_col = "embedding"
+        if embedding_col not in df.columns:
+            df[embedding_col] = pd.NA
 
-        # --- Step 3: Cluster the Embeddings ---
-        logger.info("Step 3: Clustering embeddings using HDBSCAN...")
+        # Identify rows that need embeddings (where summary exists but embedding is missing)
+        rows_to_embed_mask = df["summary"].notna() & df[embedding_col].isnull()
+        rows_to_embed = df[rows_to_embed_mask]
+
+        if not rows_to_embed.empty:
+            logger.info(f"Step 2: Generating embeddings for {len(rows_to_embed)} new summaries...")
+            summaries_to_embed = rows_to_embed["summary"].tolist()
+            new_embeddings = self.embedding_model.embed_documents(summaries_to_embed)
+
+            # Store as string representation of the list
+            df.loc[rows_to_embed_mask, embedding_col] = [str(e) for e in new_embeddings]
+
+            # Save the DataFrame with the new embeddings, overwriting the file
+            logger.info(f"Saving DataFrame with new embeddings to {summaries_output_path}")
+            try:
+                df.to_csv(summaries_output_path, index=False, encoding="utf-8")
+            except Exception as e:
+                logger.error(f"Error saving CSV with embeddings to {summaries_output_path}: {e}")
+        else:
+            logger.info("Step 2: All embeddings already present in the file.")
+
+        # --- Step 3: Parse Embeddings and Prepare for Clustering ---
+        logger.info("Step 3: Parsing stored embeddings for clustering...")
+
+        def parse_embedding(embedding_str: str) -> list | None:
+            if pd.isnull(embedding_str):
+                return None
+            try:
+                return ast.literal_eval(embedding_str)
+            except (ValueError, SyntaxError):
+                logger.warning(f"Could not parse embedding string, returning None. String: {embedding_str[:100]}...")
+                return None
+
+        df["parsed_embedding"] = df[embedding_col].apply(parse_embedding)
+        df_to_cluster = df[df["parsed_embedding"].notna()].copy()
+        if df_to_cluster.empty:
+            logger.warning("No valid embeddings found to perform clustering. All repos will be 'Uncategorized'.")
+            df["topic"] = "Uncategorized"
+            df = df.drop(columns=["parsed_embedding"])
+            return df, ["Uncategorized"]
+
+        embeddings = np.array(df_to_cluster["parsed_embedding"].tolist())
+        logger.info(f"Embeddings parsed for {len(embeddings)} summaries.")
+
+        # --- Step 4: Cluster the Embeddings ---
+        logger.info("Step 4: Clustering embeddings using HDBSCAN...")
         # min_cluster_size can be tuned. A smaller value allows for more niche topics.
         clusterer = hdbscan.HDBSCAN(min_cluster_size=5, min_samples=1, metric="euclidean", gen_min_span_tree=True)
-        cluster_labels = clusterer.fit_predict(np.array(embeddings))
-        df["cluster_id"] = cluster_labels
+        cluster_labels = clusterer.fit_predict(embeddings)
+        df_to_cluster["cluster_id"] = cluster_labels
         logger.info(f"Clustering complete. Found {len(np.unique(cluster_labels)) - 1} topics (excluding outliers).")
 
-        # --- Step 4: Generate Topic Labels for Each Cluster ---
-        logger.info("Step 4: Generating topic labels for each cluster using LLM...")
-        unique_clusters = sorted(df["cluster_id"].unique())
+        # --- Step 5: Generate Topic Labels for Each Cluster ---
+        logger.info("Step 5: Generating topic labels for each cluster using LLM...")
+        unique_clusters = sorted(df_to_cluster["cluster_id"].unique())
         topic_map = {}
         generated_topics = []
 
@@ -113,7 +157,7 @@ class BatchTopicClassifier(ClassifierInterface):
                 continue
 
             # Get representative summaries for the cluster
-            cluster_df = df[df["cluster_id"] == cluster_id]
+            cluster_df = df_to_cluster[df_to_cluster["cluster_id"] == cluster_id]
             sample_size = min(5, len(cluster_df))
             cluster_summaries = cluster_df["summary"].sample(n=sample_size, random_state=42).tolist()
 
@@ -126,10 +170,15 @@ class BatchTopicClassifier(ClassifierInterface):
                 logger.debug(f"Rate limiting: sleeping for {self.rate_limit_seconds}s.")
                 time.sleep(self.rate_limit_seconds)
 
-        # --- Step 5: Assign Topic Labels ---
-        logger.info("Step 5: Assigning topic labels to repositories...")
-        df["topic"] = df["cluster_id"].map(topic_map)
-        df = df.drop(columns=["cluster_id"])
+        # --- Step 6: Assign Topic Labels ---
+        logger.info("Step 6: Assigning topic labels to repositories...")
+        df_to_cluster["topic"] = df_to_cluster["cluster_id"].map(topic_map)
+
+        # Merge the topic back into the original dataframe
+        df = df.merge(df_to_cluster[["topic"]], left_index=True, right_index=True, how="left")
+        df["topic"] = df["topic"].fillna("Uncategorized")
+
+        df = df.drop(columns=["parsed_embedding"])
 
         final_topic_list = sorted(list(set(generated_topics + ["Uncategorized"])))
 
