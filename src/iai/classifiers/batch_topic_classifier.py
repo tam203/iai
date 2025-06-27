@@ -14,8 +14,7 @@ from langchain_google_genai import (
 )
 
 from iai.classifiers.base import ClassifierInterface
-from iai.config import GOOGLE_API_KEY
-from iai.llm_utils import generate_summaries
+from iai.config import EMBEDDING_MODEL_NAME, GOOGLE_API_KEY, LLM_MODEL_NAME
 
 
 logger = logging.getLogger(__name__)
@@ -38,8 +37,8 @@ class BatchTopicClassifier(ClassifierInterface):
                                 limits.
         """
         super().__init__(run_id)
-        self.embedding_model = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=GOOGLE_API_KEY)
-        self.llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=GOOGLE_API_KEY)
+        self.embedding_model = GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL_NAME, google_api_key=GOOGLE_API_KEY)
+        self.llm = ChatGoogleGenerativeAI(model=LLM_MODEL_NAME, google_api_key=GOOGLE_API_KEY)
         self.rate_limit_seconds = rate_limit_seconds
 
     def _generate_topic_label(self, summaries: List[str]) -> str:
@@ -81,12 +80,7 @@ class BatchTopicClassifier(ClassifierInterface):
             df["topic"] = None
             return df, []
 
-        logger.info("Starting batch topic classification...")
-
-        # --- Step 1: Generate Summaries ---
-        logger.info("Step 1: Generating summaries for repositories...")
-        df = generate_summaries(df, output_csv_path=summaries_output_path, rate_limit_seconds=self.rate_limit_seconds)
-        logger.info("Summaries generated.")
+        logger.info("Starting batch topic classification (assuming summaries are already generated)...")
 
         # --- Step 2: Generate/Load Embeddings ---
         embedding_col = "embedding"

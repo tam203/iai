@@ -10,7 +10,9 @@ AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 DEPLOYMENT_NAME = os.getenv("DEPLOYMENT_NAME")
 ENDPOINT_URL = os.getenv("ENDPOINT_URL")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-LLM_RATE_LIMIT_SECONDS = float(os.getenv("LLM_RATE_LIMIT_SECONDS", "0.2"))
+LLM_RATE_LIMIT_SECONDS = float(os.getenv("LLM_RATE_LIMIT_SECONDS", "0"))
+LLM_MODEL_NAME = os.getenv("LLM_MODEL_NAME", "gemini-1.5-flash")  # gemini-2.5-flash-lite-preview-06-17
+EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "models/text-embedding-004")
 
 
 DEFAULT_SEARCH_QUERIES = [

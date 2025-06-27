@@ -28,7 +28,7 @@ def _parse_args():
     parser.add_argument(
         "--input_csv",
         type=str,
-        default="gov_repositories_catalog.csv",
+        default="summarized_gov_repositories.csv",
         help="Filename of the input CSV within the run_id directory.",
     )
     parser.add_argument(
@@ -132,6 +132,10 @@ def _load_and_prepare_data(args):
     elif "readme" not in df.columns:
         logger.warning("'readme_snippet' or 'readme' column not found. 'readme' content will be treated as empty for classification.")
         df["readme"] = ""
+
+    if "summary" not in df.columns:
+        logger.error("'summary' column not found in input CSV. Summarization must be run before classification.")
+        return None, input_file_path, output_file_path
 
     return df, input_file_path, output_file_path
 

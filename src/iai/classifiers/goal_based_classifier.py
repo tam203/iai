@@ -10,8 +10,8 @@ from langchain_core.output_parsers import StrOutputParser
 from tqdm import tqdm
 
 from iai.classifiers.base import ClassifierInterface
-from iai.config import GOOGLE_API_KEY, GOALS
-from iai.llm_utils import generate_summaries
+from iai.config import GOOGLE_API_KEY, GOALS, LLM_MODEL_NAME
+
 
 logger = logging.getLogger(__name__)
 
@@ -33,7 +33,7 @@ class GoalBasedClassifier(ClassifierInterface):
         """
         super().__init__(run_id)
         self.llm = ChatGoogleGenerativeAI(
-            model="gemini-1.5-flash",
+            model=LLM_MODEL_NAME,
             google_api_key=GOOGLE_API_KEY,
         )
         self.rate_limit_seconds = rate_limit_seconds
@@ -109,10 +109,7 @@ class GoalBasedClassifier(ClassifierInterface):
         """
         if df.empty:
             return df, []
-
-        logger.info("Step 1: Ensuring summaries are generated for repositories...")
-        df = generate_summaries(df, output_csv_path=summaries_output_path, rate_limit_seconds=self.rate_limit_seconds)
-
+        logger.info("Starting goal-based classification (assuming summaries are already generated)...")
         logger.info("Step 2: Evaluating repositories against defined goals...")
         tqdm.pandas(desc="Evaluating Repositories for Goals")
 

@@ -29,7 +29,17 @@ Run notebooks
 `uv run -- jupyter jupyter lab --notebook-dir=notebooks`
 
 Run the scanning of GitHub orgs/repos. Use `--run_id` to update existing run / recover from errors
-`uv run -- python src/iai/run_scan.py`
+
+The full pipeline involves three steps:
+
+1.  **Scan GitHub repositories:**
+    `uv run -- python src/iai/run_scan.py --run_id <YOUR_RUN_ID>`
+2.  **Generate LLM summaries for repositories:**
+    `uv run -- python src/iai/run_summarization.py --run_id <YOUR_RUN_ID>`
+3.  **Classify repositories using LLM:**
+    `uv run -- python src/iai/run_classification.py --run_id <YOUR_RUN_ID> --classifier [one_at_a_time|batch|goal_based]`
+
+Example usage for a full pipeline run:
 `uv run -- python src/iai/run_scan.py --run_id 20250618_153140_a475925c`
---classifier batch
---classifier one_at_a_time
+`uv run -- python src/iai/run_summarization.py --run_id 20250618_153140_a475925c`
+`uv run -- python src/iai/run_classification.py --run_id 20250618_153140_a475925c --classifier batch`

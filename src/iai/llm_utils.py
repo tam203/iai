@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
 from tqdm import tqdm
 
-from iai.config import GOOGLE_API_KEY
+from iai.config import GOOGLE_API_KEY, LLM_MODEL_NAME
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +37,7 @@ def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_second
         df["summary"] = pd.NA
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-1.5-flash",
+        model=LLM_MODEL_NAME,
         google_api_key=GOOGLE_API_KEY,
     )
 

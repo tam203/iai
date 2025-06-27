@@ -6,9 +6,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from tqdm import tqdm
 from langchain_core.output_parsers import StrOutputParser
 
-from iai.config import GOOGLE_API_KEY  # Assuming GOOGLE_API_KEY is in iai.config
+from iai.config import GOOGLE_API_KEY, LLM_MODEL_NAME
 from iai.classifiers.base import ClassifierInterface
-from iai.llm_utils import generate_summaries
 
 logger = logging.getLogger(__name__)
 
@@ -28,18 +27,13 @@ class OneAtATimeClassifier(ClassifierInterface):
         self.rate_limit_seconds = rate_limit_seconds
 
     def classify_repos(self, df, topic_list, summaries_output_path: str):
-        # Step 1: Generate summaries for all repositories.
-        # This ensures the 'summary' column is available for classification.
-        if "summary" not in df.columns or df["summary"].isnull().any():
-            df = generate_summaries(
-                df,
-                output_csv_path=summaries_output_path,
-                rate_limit_seconds=self.rate_limit_seconds,
-            )
+        logger.info("Starting one-at-a-time classification (assuming summaries are already generated)...")
+        if "summary" not in df.columns:
+            raise ValueError("DataFrame must contain a 'summary' column for one-at-a-time classification.")
 
         # Initialize Google Gemini client
         llm = ChatGoogleGenerativeAI(
-            model="gemini-1.5-flash",
+            model=LLM_MODEL_NAME,
             google_api_key=self.google_api_key,
         )
 
