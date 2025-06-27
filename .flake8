@@ -9,3 +9,4 @@
      dist
  per-file-ignores =
      __init__.py:F401
+     src/iai/classifiers/goal_based_classifier.py: E501

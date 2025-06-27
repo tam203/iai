@@ -42,3 +42,33 @@ TOPIC_LIST = [
     "automation",
     "innovation",
 ]
+
+GOALS = [
+    {
+        "name": "Economic Growth and Stability",
+        "description": "Contributes to a stronger UK economy by providing tools"
+        " for financial analysis, supporting businesses, or increasing public "
+        "sector efficiency to help reduce national debt and control inflation.",
+    },
+    {
+        "name": "Healthcare Modernisation",
+        "description": "Supports the NHS by developing digital tools,"
+        " data analytics, or new technologies to improve patient care,"
+        " streamline operations, and cut waiting lists.",
+    },
+    {
+        "name": "National Security and Border Control",
+        "description": "Enhances the UK's national security through projects related to border management,"
+        " law enforcement technology, cybersecurity, or defence systems.",
+    },
+    {
+        "name": "Energy Security and Net Zero",
+        "description": "Aids the UK's transition to Net Zero and enhances energy security through renewable energy technology,"
+        " grid management, or climate data analysis.",
+    },
+    {
+        "name": "Education and Skills",
+        "description": "Advances the UK's education system and workforce skills through educational technology,"
+        " data analysis on attainment, or platforms for vocational training.",
+    },
+]

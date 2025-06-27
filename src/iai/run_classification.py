@@ -5,6 +5,7 @@ import pandas as pd
 
 from iai.config import GOOGLE_API_KEY, LLM_RATE_LIMIT_SECONDS, TOPIC_LIST
 from iai.classifiers.one_at_a_time_classifier import OneAtATimeClassifier
+from iai.classifiers.goal_based_classifier import GoalBasedClassifier
 from iai.classifiers.batch_topic_classifier import BatchTopicClassifier
 from iai.utils import DATA_DIR, get_filepath_in_run_data
 
@@ -33,7 +34,7 @@ def _parse_args():
     parser.add_argument(
         "--output_csv",
         type=str,
-        default="classified_gov_repositories.csv",
+        default=None,
         help="Filename for the output CSV within the run_id directory.",
     )
     parser.add_argument(
@@ -45,7 +46,7 @@ def _parse_args():
     parser.add_argument(
         "--classifier",
         type=str,
-        choices=["one_at_a_time", "batch"],
+        choices=["one_at_a_time", "batch", "goal_based"],
         default="one_at_a_time",
         help=(
             "The classification strategy to use. 'one_at_a_time' classifies each repo individually. "
@@ -72,8 +73,14 @@ def _load_and_prepare_data(args):
         logger.error("LLM classification cannot proceed without Google API credentials.")
         return None, None, None
 
+    # Determine output_csv_filename based on whether it was provided or needs to be generated
+    output_csv_filename = args.output_csv
+    if output_csv_filename is None:
+        output_csv_filename = f"classified_gov_repositories_{args.classifier}.csv"
+        logger.info(f"No output CSV filename provided. Using default: {output_csv_filename}")
+
     input_file_path = get_filepath_in_run_data(args.run_id, args.input_csv)
-    output_file_path = get_filepath_in_run_data(args.run_id, args.output_csv)
+    output_file_path = get_filepath_in_run_data(args.run_id, output_csv_filename)
 
     try:
         logger.info(f"Attempting to load data from {input_file_path}...")
@@ -146,6 +153,8 @@ def main():
         analyzer = OneAtATimeClassifier(run_id=args.run_id, rate_limit_seconds=args.rate_limit)
     elif args.classifier == "batch":
         analyzer = BatchTopicClassifier(run_id=args.run_id, rate_limit_seconds=args.rate_limit)
+    elif args.classifier == "goal_based":
+        analyzer = GoalBasedClassifier(run_id=args.run_id, rate_limit_seconds=args.rate_limit)
     else:
         # This case is handled by argparse choices, but as a safeguard:
         logger.error(f"Unknown classifier: {args.classifier}")
