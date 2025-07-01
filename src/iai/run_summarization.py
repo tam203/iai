@@ -5,6 +5,7 @@ import pandas as pd
 
 from iai.config import GOOGLE_API_KEY, LLM_RATE_LIMIT_SECONDS
 from iai.llm_utils import generate_summaries
+from iai.prompt_repository import PromptType
 from iai.utils import DATA_DIR, get_filepath_in_run_data
 
 logging.basicConfig(
@@ -39,7 +40,21 @@ def _parse_args():
         "--limit",
         type=int,
         default=None,
-        help="Limit the number of repositories to summarize (processed in descending order of stars). " "Default: no limit.",
+        help="Limit the number of repositories to summarize (processed in descending order based on --sort_by). " "Default: no limit.",
+    )
+    parser.add_argument(
+        "--sort_by",
+        type=str,
+        choices=["stars", "created_at"],
+        default="created_at",
+        help="The field to sort repositories by before applying a limit. Default: 'created_at'.",
+    )
+    parser.add_argument(
+        "--prompt_type",
+        type=PromptType,
+        choices=list(PromptType),
+        default=PromptType.SUMMARY_DEFAULT,
+        help="The type of prompt (summarizer) to use for summarization. Default: summary_default.",
     )
     parser.add_argument(
         "--rate_limit",
@@ -77,9 +92,15 @@ def _load_and_prepare_data(args):
     if df.empty:
         logger.info("Input DataFrame is empty. No repositories to summarize.")
     else:
-        if "stars" in df.columns:
-            logger.info("Sorting repositories by 'stars' in descending order.")
-            df = df.sort_values(by="stars", ascending=False)
+        sort_column = args.sort_by
+        if sort_column in df.columns:
+            logger.info(f"Sorting repositories by '{sort_column}' in descending order.")
+            df = df.sort_values(by=sort_column, ascending=False)
+        elif args.limit is not None and args.limit > 0:
+            logger.warning(
+                f"Sort column '{sort_column}' not found. Cannot sort. "
+                "If a limit is applied, it will be based on the current order of rows in the CSV."
+            )
 
         if args.limit is not None and args.limit > 0:
             original_count = len(df)
@@ -106,8 +127,13 @@ def main():
     if df is None:  # Error during loading or API key missing
         return
 
-    logger.info(f"Generating summaries for {len(df)} repositories...")
-    summarized_df = generate_summaries(df, output_csv_path=output_file_path, rate_limit_seconds=args.rate_limit)
+    logger.info(f"Generating summaries for {len(df)} repositories using '{args.prompt_type.value}' prompt...")
+    summarized_df = generate_summaries(
+        df,
+        output_csv_path=output_file_path,
+        prompt_type=args.prompt_type,
+        rate_limit_seconds=args.rate_limit,
+    )
 
     try:
         summarized_df.to_csv(output_file_path, index=False, encoding="utf-8")

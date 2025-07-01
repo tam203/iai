@@ -8,11 +8,17 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from tqdm import tqdm
 
 from iai.config import GOOGLE_API_KEY, LLM_MODEL_NAME
+from iai.prompt_repository import PromptType
 
 logger = logging.getLogger(__name__)
 
 
-def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_seconds: float = 0.0) -> pd.DataFrame:
+def generate_summaries(
+    df: pd.DataFrame,
+    output_csv_path: str,
+    prompt_type: PromptType,
+    rate_limit_seconds: float = 0.0,
+) -> pd.DataFrame:
     """
     Generates summaries for each repository in the DataFrame.
 
@@ -24,6 +30,7 @@ def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_second
         df: DataFrame with 'description' and 'readme' columns.
         output_csv_path: Path to the output CSV file. Summaries will be
                          written here progressively.
+        prompt_type: The type of prompt to use for summarization.
         rate_limit_seconds: Seconds to wait between LLM calls to avoid quota
                             limits. Defaults to 0.0.
 
@@ -41,25 +48,10 @@ def generate_summaries(df: pd.DataFrame, output_csv_path: str, rate_limit_second
         google_api_key=GOOGLE_API_KEY,
     )
 
+    prompt_content = prompt_type.get_content()
     summary_prompt = PromptTemplate(
         input_variables=["description", "readme"],
-        template="""
-        Please provide a summary of the following GitHub repository based on its description and README.md content.
-        If the README.md or description is not in English, please first translate it to English and then generate a summary.
-
-        The summary should be concise and in fewer than 5 sentences.
-        The summary should focus on what the repository should enable, provide, do.
-        The summary should not include information about the type of license.
-        The summary should not comment on where more information can be found or what information was not available.
-
-        Repository description:
-        {description}
-
-        README.md content:
-        {readme}
-
-        Summary:
-        """,
+        template=prompt_content,
     )
 
     summary_chain = summary_prompt | llm | StrOutputParser()

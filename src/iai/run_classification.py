@@ -41,7 +41,14 @@ def _parse_args():
         "--limit",
         type=int,
         default=None,
-        help="Limit the number of repositories to classify (processed in descending order of stars). " "Default: no limit.",
+        help="Limit the number of repositories to classify (processed in descending order based on --sort_by). " "Default: no limit.",
+    )
+    parser.add_argument(
+        "--sort_by",
+        type=str,
+        choices=["stars", "created_at"],
+        default="created_at",
+        help="The field to sort repositories by before applying a limit. Default: 'created_at'.",
     )
     parser.add_argument(
         "--classifier",
@@ -98,14 +105,16 @@ def _load_and_prepare_data(args):
         # Return the empty df and output path so main can save an empty file.
         # LLMClassAnalysis should handle an empty df, producing an empty classified_df.
     else:
-        # Sort by stars if the column exists
-        if "stars" in df.columns:
-            logger.info("Sorting repositories by 'stars' in descending order.")
-            df = df.sort_values(by="stars", ascending=False)
+        # Sort by the specified field
+        sort_column = args.sort_by
+        if sort_column in df.columns:
+            logger.info(f"Sorting repositories by '{sort_column}' in descending order.")
+            df = df.sort_values(by=sort_column, ascending=False)
         elif args.limit is not None and args.limit > 0:
-            # Only warn about missing 'stars' if a limit is actually going to be applied
+            # Only warn about missing sort column if a limit is actually going to be applied
             logger.warning(
-                "'stars' column not found. Cannot sort by stars. " "If a limit is applied, it will be based on the current order of rows in the CSV."
+                f"Sort column '{sort_column}' not found. Cannot sort. "
+                "If a limit is applied, it will be based on the current order of rows in the CSV."
             )
 
         # Apply limit

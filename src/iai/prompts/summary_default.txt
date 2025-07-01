@@ -1,0 +1,15 @@
+Please provide a summary of the following GitHub repository based on its description and README.md content.
+If the README.md or description is not in English, please first translate it to English and then generate a summary.
+
+The summary should be concise and in fewer than 5 sentences.
+The summary should focus on what the repository should enable, provide, do.
+The summary should not include information about the type of license.
+The summary should not comment on where more information can be found or what information was not available.
+
+Repository description:
+{description}
+
+README.md content:
+{readme}
+
+Summary:
