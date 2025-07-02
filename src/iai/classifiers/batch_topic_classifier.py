@@ -2,9 +2,11 @@ import logging
 from typing import List, Tuple
 import ast
 import time
+import warnings
 
 import hdbscan
 import numpy as np
+import umap.umap_ as umap
 import pandas as pd
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -93,18 +95,36 @@ class BatchTopicClassifier(ClassifierInterface):
 
         if not rows_to_embed.empty:
             logger.info(f"Step 2: Generating embeddings for {len(rows_to_embed)} new summaries...")
-            summaries_to_embed = rows_to_embed["summary"].tolist()
-            new_embeddings = self.embedding_model.embed_documents(summaries_to_embed)
 
-            # Store as string representation of the list
-            df.loc[rows_to_embed_mask, embedding_col] = [str(e) for e in new_embeddings]
+            # Process in batches to save progress
+            batch_size = 10
+            num_batches = (len(rows_to_embed) + batch_size - 1) // batch_size
 
-            # Save the DataFrame with the new embeddings, overwriting the file
-            logger.info(f"Saving DataFrame with new embeddings to {summaries_output_path}")
-            try:
-                df.to_csv(summaries_output_path, index=False, encoding="utf-8")
-            except Exception as e:
-                logger.error(f"Error saving CSV with embeddings to {summaries_output_path}: {e}")
+            for i in range(num_batches):
+                start_index = i * batch_size
+                end_index = start_index + batch_size
+                batch_rows = rows_to_embed.iloc[start_index:end_index]
+
+                if batch_rows.empty:
+                    continue
+
+                logger.info(f"Processing embedding batch {i + 1}/{num_batches} ({len(batch_rows)} summaries)...")
+
+                summaries_to_embed = batch_rows["summary"].tolist()
+                new_embeddings = self.embedding_model.embed_documents(summaries_to_embed)
+
+                # Get original indices from batch_rows to update the main df
+                original_indices = batch_rows.index
+
+                # Store as string representation of the list
+                df.loc[original_indices, embedding_col] = [str(e) for e in new_embeddings]
+
+                # Save the DataFrame with the new embeddings, overwriting the file
+                logger.info(f"Saving progress with new embeddings to {summaries_output_path}")
+                try:
+                    df.to_csv(summaries_output_path, index=False, encoding="utf-8")
+                except Exception as e:
+                    logger.error(f"Error saving CSV with embeddings to {summaries_output_path}: {e}")
         else:
             logger.info("Step 2: All embeddings already present in the file.")
 
@@ -131,16 +151,32 @@ class BatchTopicClassifier(ClassifierInterface):
         embeddings = np.array(df_to_cluster["parsed_embedding"].tolist())
         logger.info(f"Embeddings parsed for {len(embeddings)} summaries.")
 
-        # --- Step 4: Cluster the Embeddings ---
-        logger.info("Step 4: Clustering embeddings using HDBSCAN...")
+        # --- Step 4: Reduce Embedding Dimensionality ---
+        # Reducing dimensionality can improve clustering performance by mitigating the
+        # "curse of dimensionality" and making density gradients clearer for HDBSCAN.
+        # UMAP is excellent for this as it preserves meaningful topological structure.
+        logger.info("Step 4: Reducing embedding dimensionality with UMAP...")
+        reducer = umap.UMAP(
+            n_neighbors=15,  # Balances local vs. global structure.
+            n_components=10,  # Target number of dimensions.
+            min_dist=0.0,  # How tightly to pack points. 0.0 is good for clustering.
+            metric="cosine",  # Cosine distance is often effective for text embeddings.
+        )
+        reduced_embeddings = reducer.fit_transform(embeddings)
+        logger.info(f"Dimensionality reduced to {reduced_embeddings.shape[1]} for {reduced_embeddings.shape[0]} embeddings.")
+
+        # --- Step 5: Cluster the Embeddings ---
+        logger.info("Step 5: Clustering reduced embeddings using HDBSCAN...")
         # min_cluster_size can be tuned. A smaller value allows for more niche topics.
         clusterer = hdbscan.HDBSCAN(min_cluster_size=5, min_samples=1, metric="euclidean", gen_min_span_tree=True)
-        cluster_labels = clusterer.fit_predict(embeddings)
+        with warnings.catch_warnings():
+            warnings.filterwarnings("ignore", category=FutureWarning)
+            cluster_labels = clusterer.fit_predict(reduced_embeddings)
         df_to_cluster["cluster_id"] = cluster_labels
         logger.info(f"Clustering complete. Found {len(np.unique(cluster_labels)) - 1} topics (excluding outliers).")
 
-        # --- Step 5: Generate Topic Labels for Each Cluster ---
-        logger.info("Step 5: Generating topic labels for each cluster using LLM...")
+        # --- Step 6: Generate Topic Labels for Each Cluster ---
+        logger.info("Step 6: Generating topic labels for each cluster using LLM...")
         unique_clusters = sorted(df_to_cluster["cluster_id"].unique())
         topic_map = {}
         generated_topics = []
@@ -164,8 +200,8 @@ class BatchTopicClassifier(ClassifierInterface):
                 logger.debug(f"Rate limiting: sleeping for {self.rate_limit_seconds}s.")
                 time.sleep(self.rate_limit_seconds)
 
-        # --- Step 6: Assign Topic Labels ---
-        logger.info("Step 6: Assigning topic labels to repositories...")
+        # --- Step 7: Assign Topic Labels ---
+        logger.info("Step 7: Assigning topic labels to repositories...")
         df_to_cluster["topic"] = df_to_cluster["cluster_id"].map(topic_map)
 
         # Merge the topic back into the original dataframe

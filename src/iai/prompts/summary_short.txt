@@ -1,8 +1,8 @@
 Please provide a very short summary of the purpose following GitHub repository based on its description and README.md content.
 If the README.md or description is not in English, please first translate it to English and then generate a summary.
 Focus on the intent and purpose of the repository. Not the state or ordination that created it, the programming language, or nature of the license.
-
-The summary should be very brief, around ten words, should not be sentences just relevant, expressive words.
+Avoid acronyms unless very common / well known.
+The summary should be very brief, around 20 words, should not be sentences just relevant, expressive words.
 
 Repository description:
 {description}
